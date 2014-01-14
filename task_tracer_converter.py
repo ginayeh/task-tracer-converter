@@ -72,7 +72,7 @@ def parse_log(input_name):
     task_id = info[1]
     timestamp = int(info[2])
 
-    if task_id not in data:
+    if log_type == 1 and task_id not in data:
       data[task_id] = Task(int(task_id))
 
     # CREATE:   [0, sourceEventId, create, ...]
@@ -110,15 +110,10 @@ def retrieve_profiler_start_end_time():
 
 def replace_undefined_timestamp(profiler_start_time, profiler_end_time):
   for task_id, task_object in data.iteritems():
-    if task_object.dispatch == 0:
-      task_object.dispatch = profiler_start_time
-      if task_object.start == 0:
-        task_object.start = profiler_start_time
-
+    if task_object.start == 0:
+      task_object.start = profiler_end_time
     if task_object.end == 0:
       task_object.end = profiler_end_time
-      if task_object.start == 0:
-        task_object.start = profiler_end_time
 
 def output_json(output_name, profiler_start_time, profiler_end_time):
   output_file = open(output_name, 'w')
