@@ -111,7 +111,7 @@ def parse_log(input_name):
   log_file.close()
   return num_line
 
-def output_json(output_name):
+def retrieve_profiler_start_end_time():
   all_timestamps = Set([])
   for task_id, task_object in data.iteritems():
     all_timestamps.add(task_object.dispatch)
@@ -122,9 +122,24 @@ def output_json(output_name):
   if 0 in all_timestamps:
     all_timestamps.remove(0)
 
+  return [min(all_timestamps), max(all_timestamps)]
+
+def replace_undefined_timestamp(profiler_start_time, profiler_end_time):
+  for task_id, task_object in data.iteritems():
+    if task_object.dispatch == 0:
+      task_object.dispatch = profiler_start_time
+      if task_object.start == 0:
+        task_object.start = profiler_start_time
+
+    if task_object.end == 0:
+      task_object.end = profiler_end_time
+      if task_object.start == 0:
+        task_object.start = profiler_end_time
+
+def output_json(output_name, profiler_start_time, profiler_end_time):
   output_file = open(output_name, 'w')
   output_file.write('{\"start\": %d, \"end\": %d, \"tasks\":'
-                    % (min(all_timestamps), max(all_timestamps)))
+                    % (profiler_start_time, profiler_end_time))
   output_file.write(json.dumps(data.values(), default=lambda o: o.__dict__,
                                indent=4))
   output_file.write('}')
@@ -146,7 +161,9 @@ def main(argv=sys.argv[:]):
     sys.exit()
   print len(data), 'tasks has been created successfully.'
 
-  output_json(args.output_file)
+  [profiler_start_time, profiler_end_time] = retrieve_profiler_start_end_time();
+  replace_undefined_timestamp(profiler_start_time, profiler_end_time);
+  output_json(args.output_file, profiler_start_time, profiler_end_time)
   print len(data), 'tasks has been written to JSON output successfully.'
 
 data = {}
