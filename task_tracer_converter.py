@@ -15,11 +15,10 @@ class Task(object):
     # Property _task_id is required for each object of Task
     self._task_id = task_id
 
-    # Basic information
-    self._source_event_id = 0
-    self._source_event_type = 0
-    self._process_id = 0
-    self._thread_id = 0
+    self._source_event_id = None
+    self._source_event_type = None
+    self._process_id = None
+    self._thread_id = None
 
     # Timestamp information
     self._dispatch = 0
@@ -50,62 +49,83 @@ class Task(object):
   def end(self, timestamp):
     self._end = timestamp
 
-  def set_basic_info(self, info):
-    if len(info) != 4:
-      return False
+  @property
+  def sourceEventId(self):
+    return self._source_event_id
 
-    self._source_event_id = int(info[0])
-    self._source_event_type = int(info[1])
-    self._process_id = int(info[2])
-    self._thread_id = int(info[3])
-    return True
+  @sourceEventId.setter
+  def sourceEventId(self, source_event_id):
+    self._source_event_id = source_event_id
 
-  def check_basic_info(self, info):
-    if any( [len(info) != 4,
-             int(info[0]) != self._source_event_id,
-             int(info[1]) != self._source_event_type,
-             int(info[2]) != self._process_id,
-             int(info[3]) != self._thread_id] ):
-      return False
+  @property
+  def sourceEventType(self):
+    return self._source_event_type
 
-    return True
+  @sourceEventType.setter
+  def sourceEventType(self, source_event_type):
+    self._source_event_type = source_event_type
+
+  @property
+  def processId(self):
+    return self._process_id
+
+  @processId.setter
+  def processId(self, process_id):
+    self._process_id = process_id
+
+  @property
+  def threadId(self):
+    return self._thread_id
+
+  @threadId.setter
+  def threadId(self, thread_id):
+    self._thread_id = thread_id
 
 def parse_log(input_name):
   log_file = open(input_name, 'r')
   num_line = 0
 
   for line in log_file:
-    # [tag, task_id, source_event_id, source_event_type, process_id,
-    #  thread_id, action_type, timestamp, (customized info)]
     tokens = line.split()
-    if len(tokens) < 8:
+    if (len(tokens) < 4):
       print 'Parse error: incomplete data (', line, ')'
-      return None
-
-    timestamp = int(tokens[7])
-    action_type = int(tokens[6])
-    if not action_type in (0, 1, 2):
-      print 'Parse error: invalid action type (', action_type, ')'
       log_file.close()
       return None
 
-    num_line += 1
-    task_id = tokens[1]
-    if task_id not in data:
-      data[task_id] = Task(int(task_id));
-      data[task_id].set_basic_info(tokens[2:6])
-#    else:
-#      if not data[task_id].check_basic_info(tokens[2:6]):
-#        print 'Parse error: inconsistent data (', line, ')'
-#        del data[task_id]
-#        log_file.close()
-#        return None
+    # [tag, log_type, task_id, timestamp, ...]
+    log_type = int(tokens[1])
+    task_id = tokens[2]
+    timestamp = int(tokens[3])
 
-    if action_type == 0:
+    if not log_type in (1, 2, 3):
+      print 'Parse error: invalid log type (', log_type, ')'
+      log_file.close()
+      return None
+
+    if any(((log_type == 1) and (len(tokens) != 6),
+           (log_type == 2) and (len(tokens) != 6),
+           (log_type == 3) and (len(tokens) != 4))):
+        print 'Parse error: incomplete data (', line, ')'
+        log_file.close()
+        return None
+
+    num_line += 1
+
+    if task_id not in data:
+      data[task_id] = Task(int(task_id))
+
+    if log_type == 1:
+      # [tag, log_type, task_id, dispatch, sourceEventId, sourceEventType]
       data[task_id].dispatch = timestamp
-    elif action_type == 1:
+      data[task_id].sourceEventId = int(tokens[4])
+      data[task_id].sourceEventType = int(tokens[5])
+    elif log_type == 2:
+      # [tag, log_type, task_id, start, processId, threadId]
       data[task_id].start = timestamp
+      data[task_id].processId = int(tokens[4])
+      data[task_id].threadId = int(tokens[5])
     else:
+      # [tag, log_type, task_id, end]
       data[task_id].end = timestamp
 
   log_file.close()
