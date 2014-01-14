@@ -6,130 +6,94 @@ import sys
 import argparse
 import json
 from sets import Set
+import sqlite3
 
 
 class Task(object):
   def __init__(self, task_id):
     super(Task, self).__init__()
 
-    # Property _task_id is required for each object of Task
-    self._task_id = task_id
+    # Property taskId is required for each object of Task
+    self.taskId = task_id
 
-    self._source_event_id = None
-    self._source_event_type = None
-    self._process_id = None
-    self._thread_id = None
+    self.sourceEventId = None
+    self.sourceEventType = None
+    self.processId = None
+    self.threadId = None
+    self.parentTaskId = None
 
     # Timestamp information
-    self._dispatch = 0
-    self._start = 0
-    self._end = 0
+    self.dispatch = 0
+    self.start = 0
+    self.end = 0
 
-  @property
-  def dispatch(self):
-    return self._dispatch
+def extract_info(log):
+  # Example:
+  # I/TaskTracer( 1570): 1 6743098656705 316475166353175 6743098656704 1 6743098656704
+  # I/TaskTracer( 1570): 2 6743098656705 316475166399378 1570 1570
+  # I/TaskTracer( 1570): 3 6743098656705 316475166399592
 
-  @dispatch.setter
-  def dispatch(self, timestamp):
-    self._dispatch = timestamp
+  # Remove log tag ('I/TaskTracer( 1570):')
+  log = log.split(':', 1)
+  info = log[1].split()
+  if (len(info) < 3):
+    print 'Parse error: incomplete data (', log, ')'
+    return None
 
-  @property
-  def start(self):
-    return self._start
+  log_type = int(info[0])
+  if not log_type in (0, 1, 2, 3):
+    print 'Parse error: invalid log type (', info[0], ')'
+    return None
 
-  @start.setter
-  def start(self, timestamp):
-    self._start = timestamp
+  if any(((log_type == 1) and (len(info) != 6),
+         (log_type == 2) and (len(info) != 5),
+         (log_type == 3) and (len(info) != 3))):
+    print 'Parse error: incomplete data (', log, ')'
+    return None
 
-  @property
-  def end(self):
-    return self._end
-
-  @end.setter
-  def end(self, timestamp):
-    self._end = timestamp
-
-  @property
-  def sourceEventId(self):
-    return self._source_event_id
-
-  @sourceEventId.setter
-  def sourceEventId(self, source_event_id):
-    self._source_event_id = source_event_id
-
-  @property
-  def sourceEventType(self):
-    return self._source_event_type
-
-  @sourceEventType.setter
-  def sourceEventType(self, source_event_type):
-    self._source_event_type = source_event_type
-
-  @property
-  def processId(self):
-    return self._process_id
-
-  @processId.setter
-  def processId(self, process_id):
-    self._process_id = process_id
-
-  @property
-  def threadId(self):
-    return self._thread_id
-
-  @threadId.setter
-  def threadId(self, thread_id):
-    self._thread_id = thread_id
+  return info
 
 def parse_log(input_name):
-  log_file = open(input_name, 'r')
   num_line = 0
 
-  for line in log_file:
-    tokens = line.split()
-    if (len(tokens) < 4):
-      print 'Parse error: incomplete data (', line, ')'
-      log_file.close()
-      return None
+  # Read log
+  with open(input_name, 'r') as log_file:
+    all_log = log_file.readlines()
 
-    # [tag, log_type, task_id, timestamp, ...]
-    log_type = int(tokens[1])
-    task_id = tokens[2]
-    timestamp = int(tokens[3])
-
-    if not log_type in (1, 2, 3):
-      print 'Parse error: invalid log type (', log_type, ')'
-      log_file.close()
-      return None
-
-    if any(((log_type == 1) and (len(tokens) != 6),
-           (log_type == 2) and (len(tokens) != 6),
-           (log_type == 3) and (len(tokens) != 4))):
-        print 'Parse error: incomplete data (', line, ')'
-        log_file.close()
-        return None
+  # Parse log line by line
+  for line in all_log:
+    info = extract_info(line)
+    if not info:
+      return False
 
     num_line += 1
+
+    log_type = int(info[0])
+    task_id = info[1]
+    timestamp = int(info[2])
 
     if task_id not in data:
       data[task_id] = Task(int(task_id))
 
+    # CREATE:   [0, sourceEventId, create, ...]
+    # DISPATCH: [1, taskId, dispatch, sourceEventId, sourceEventType, parentTaskId]
+    # START:    [2, taskId, start, processId, threadId]
+    # END:      [3, taskId, end]
     if log_type == 1:
-      # [tag, log_type, task_id, dispatch, sourceEventId, sourceEventType]
       data[task_id].dispatch = timestamp
-      data[task_id].sourceEventId = int(tokens[4])
-      data[task_id].sourceEventType = int(tokens[5])
+      data[task_id].sourceEventId = int(info[3])
+      data[task_id].sourceEventType = int(info[4])
+      data[task_id].parentTaskId = int(info[5])
     elif log_type == 2:
-      # [tag, log_type, task_id, start, processId, threadId]
       data[task_id].start = timestamp
-      data[task_id].processId = int(tokens[4])
-      data[task_id].threadId = int(tokens[5])
-    else:
-      # [tag, log_type, task_id, end]
+      data[task_id].processId = int(info[3])
+      data[task_id].threadId = int(info[4])
+    elif log_type == 3:
       data[task_id].end = timestamp
+    else:
+      pass
 
-  log_file.close()
-  return num_line
+  return True
 
 def retrieve_profiler_start_end_time():
   all_timestamps = Set([])
@@ -169,17 +133,99 @@ def get_arguments(argv):
   parser = argparse.ArgumentParser()
   parser.add_argument('-i', '--input-file', help='Input file', required=True)
   parser.add_argument('-o', '--output-file', help='Output file (Optional)',
-                      default='task_tracer_data.json', required=False)
+                      default='task_tracer_data.json')
+  parser.add_argument('-c', '--check-parent-task-id', action='store_const',
+                      const=True, help='Check parentTaskId (if possible)')
   return parser.parse_args()
+
+def create_table_and_insert_data():
+  print 'Create database \'task_tracer.db\'.'
+  conn = sqlite3.connect('task_tracer.db')
+  with conn:
+    cur = conn.cursor()
+
+    # Delete the table if exists and re-create the table
+    cur.execute('DROP TABLE IF EXISTS Tasks')
+    cur.execute(('CREATE TABLE Tasks('
+                 'taskId INT, threadId INT, start INT, end INT)'))
+
+    # Insert information into table
+    for task_id, task_obj in data.iteritems():
+      # Only tasks which includes complete information are inserted into database
+      if any((task_obj.threadId is None,
+              task_obj.start is 0,
+              task_obj.end is 0)):
+        continue
+
+      insert_cmd = ('INSERT INTO Tasks VALUES({}, {}, {}, {})'.format(task_id,
+                    task_obj.threadId, task_obj.start, task_obj.end))
+      cur.execute(insert_cmd)
+
+    cur.execute('SELECT * FROM Tasks')
+    num_records = len(cur.fetchall())
+    print 'Insert {} records into Table Tasks'.format(num_records)
+
+def check_parent_task_id():
+  create_table_and_insert_data()
+
+  conn = sqlite3.connect('task_tracer.db')
+  num_no_result = 0
+  num_multi_results = 0
+  num_error_result = 0
+
+  with conn:
+    cur = conn.cursor()
+
+    # Verify parentTaskId with query results
+    for task_id, task_obj in data.iteritems():
+      if task_obj.dispatch is 0:
+        continue
+
+      # Retrieve threadId from taskId
+      thread_id = int(task_id) >> 32
+      select_cmd = ('SELECT taskId FROM Tasks ' +
+                    'WHERE threadId={} AND '.format(thread_id) +
+                    'start<={} AND '.format(task_obj.dispatch) +
+                    'end>={}'.format(task_obj.dispatch))
+      cur.execute(select_cmd)
+
+      rows = cur.fetchall()
+      if len(rows) is 0:
+        num_no_result += 1
+        continue
+      elif len(rows) > 1:
+        num_multi_results += 1
+        continue
+      elif task_obj.parentTaskId != rows[0][0]:
+        print ("Verify error: inconsistent 'parentTaskId'. Input: " +
+               '{}, Query result: {}'.format(task_obj.parentTaskId, rows[0][0]))
+        num_error_result += 1
+        continue
+
+  num_total_tasks = float(len(data))
+  num_verified_task = len(data) - num_no_result - \
+                      num_multi_results - num_error_result
+  print ('{} tasks ({}%) failed to query parentTaskId in database.\n'.
+         format(num_no_result, float(num_no_result)/num_total_tasks) +
+         '{} tasks ({}%) got multiple results for parentTaskId in database.\n'.
+         format(num_multi_results, float(num_multi_results)/num_total_tasks) +
+         '{} tasks ({}%) got inconsistent parentTaskId in database.\n'.
+         format(num_error_result, float(num_error_result)/num_total_tasks) +
+         '{} tasks ({}%) are verified.'.
+         format(num_verified_task, float(num_verified_task)/num_total_tasks))
 
 def main(argv=sys.argv[:]):
   args = get_arguments(argv)
+
   print 'Input:', args.input_file
   print 'Output:', args.output_file
 
-  if not parse_log(args.input_file):
+  if parse_log(args.input_file) is False:
     sys.exit()
   print len(data), 'tasks has been created successfully.'
+
+  if args.check_parent_task_id:
+    check_parent_task_id()
 
   [profiler_start_time, profiler_end_time] = retrieve_profiler_start_end_time();
   replace_undefined_timestamp(profiler_start_time, profiler_end_time);
