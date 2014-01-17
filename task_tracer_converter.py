@@ -131,6 +131,8 @@ def get_arguments(argv):
                       default='task_tracer_data.json')
   parser.add_argument('-c', '--check-parent-task-id', action='store_const',
                       const=True, help='Check parentTaskId (if possible)')
+  parser.add_argument('-p', '--print-all-tasks', action='store_const',
+                      const=True, help='Print all tasks')
   return parser.parse_args()
 
 def create_table_and_insert_data():
@@ -209,6 +211,18 @@ def check_parent_task_id():
          '{} tasks ({}%) are verified.'.
          format(num_verified_task, float(num_verified_task)/num_total_tasks))
 
+def print_all_tasks():
+  for task_id, task_obj in data.iteritems():
+    print ('taskId: {}, '.format(task_id) +
+           'sourceEventType: {}, '.format(task_obj.sourceEventType) +
+           'sourceEventId: {}, '.format(task_obj.sourceEventId) +
+           'processId: {}, '.format(task_obj.processId) +
+           'threadID: {}, '.format(task_obj.threadId) +
+           'parentTaskId: {}, '.format(task_obj.parentTaskId) +
+           'dispatch: {}, '.format(task_obj.dispatch) +
+           'start: {}, '.format(task_obj.start) +
+           'end: {}'.format(task_obj.end))
+
 def main(argv=sys.argv[:]):
   args = get_arguments(argv)
 
@@ -224,8 +238,12 @@ def main(argv=sys.argv[:]):
 
   [profiler_start_time, profiler_end_time] = retrieve_profiler_start_end_time();
   replace_undefined_timestamp(profiler_start_time, profiler_end_time);
+
   output_json(args.output_file, profiler_start_time, profiler_end_time)
+
   print len(data), 'tasks has been written to JSON output successfully.'
+  if args.print_all_tasks:
+    print_all_tasks()
 
 data = {}
 
