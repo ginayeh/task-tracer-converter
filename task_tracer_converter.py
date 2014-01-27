@@ -8,6 +8,10 @@ import json
 from sets import Set
 import sqlite3
 
+class Label(object):
+  def __init__(self, timestamp, label):
+    self.timestamp = timestamp
+    self.label = label
 
 class Task(object):
   def __init__(self, task_id):
@@ -27,33 +31,50 @@ class Task(object):
     self.start = 0
     self.end = 0
 
+    self.labels = []
+
+  def add_label(self, timestamp, label):
+    label = Label(timestamp, label)
+    self.labels.append(label);
+
 def extract_info(log):
   # Example:
   # I/TaskTracer( 1570): 1 6743098656705 316475166353175 6743098656704 1 6743098656704
   # I/TaskTracer( 1570): 2 6743098656705 316475166399378 1570 1570
   # I/TaskTracer( 1570): 3 6743098656705 316475166399592
+  # I/TaskTracer( 1570): 4 6743098656705 316475166399400 "HelloWorld label"
 
-  # Remove log tag ('I/TaskTracer( 1570):')
-  log = log.split(':', 1)
-  info = log[1].split()
-  if (len(info) < 3):
-    print 'Parse error: incomplete data (', log, ')'
+  # Remove dummy log like '--------- beginning of ...'
+  if log.startswith('-'):
     return None
 
-  log_type = int(info[0])
-  if not log_type in (0, 1, 2, 3):
-    print 'Parse error: invalid log type (', info[0], ')'
-    return None
+  # Remove tag name. Ex. 'I/TaskTracer( 1570):'
+  [tag, log_no_tag] = log.split(':', 1)
+
+  # Retrieve log type
+  [log_type, log_no_tag_no_type] = log_no_tag.strip().split(' ', 1)
+  log_type = int(log_type)
+  if not log_type in range(0, 5):
+    print 'Parse error: invalid log type (', log_type, ')'
+    return False
+
+  info = None
+  if log_type == 4:
+    [taskId, timestamp, label] = log_no_tag_no_type.strip().split(' ', 2)
+    info = [log_type, taskId, timestamp, label.split('"')[1]]
+  else:
+    info = log_no_tag.split()
 
   if any(((log_type == 1) and (len(info) != 6),
-         (log_type == 2) and (len(info) != 5),
-         (log_type == 3) and (len(info) != 3))):
-    print 'Parse error: incomplete data (', log, ')'
-    return None
+          (log_type == 2) and (len(info) != 5),
+          (log_type == 3) and (len(info) != 3),
+          (log_type == 4) and (len(info) != 4))):
+    print 'Parse error: incomplete data (', log.strip(), ')'
+    return False
 
   return info
 
-def parse_log(input_name):
+def parse_log(input_name, show_warnings):
   num_line = 0
 
   # Read log
@@ -63,8 +84,11 @@ def parse_log(input_name):
   # Parse log line by line
   for line in all_log:
     info = extract_info(line)
-    if not info:
+
+    if info is False:
       return False
+    elif not info:
+      continue
 
     num_line += 1
 
@@ -79,17 +103,34 @@ def parse_log(input_name):
     # DISPATCH: [1, taskId, dispatch, sourceEventId, sourceEventType, parentTaskId]
     # START:    [2, taskId, start, processId, threadId]
     # END:      [3, taskId, end]
+    # LABEL:    [4, taskId, timestamp, label]
     if log_type == 1:
       data[task_id].dispatch = timestamp
       data[task_id].sourceEventId = int(info[3])
       data[task_id].sourceEventType = int(info[4])
       data[task_id].parentTaskId = int(info[5])
     elif log_type == 2:
+      if task_id not in data:
+        if show_warnings:
+          print 'Start is skipped since log is incomplete:', line.strip()
+        continue
+
       data[task_id].start = timestamp
       data[task_id].processId = int(info[3])
       data[task_id].threadId = int(info[4])
     elif log_type == 3:
+      if task_id not in data:
+        if show_warnings:
+          print 'End is skipped since log is incomplete:', line.strip()
+        continue
+
       data[task_id].end = timestamp
+    elif log_type == 4:
+      if task_id not in data:
+        if show_warnings:
+          print 'Label is skipped since log is incomplete:', line.strip()
+        continue
+      data[task_id].add_label(int(info[2]), info[3])
     else:
       pass
 
@@ -131,6 +172,8 @@ def get_arguments(argv):
                       default='task_tracer_data.json')
   parser.add_argument('-c', '--check-parent-task-id', action='store_const',
                       const=True, help='Check parentTaskId (if possible)')
+  parser.add_argument('-w', '--show-warnings', action='store_const', const=True,
+                      help='Show warnings')
   parser.add_argument('-p', '--print-all-tasks', action='store_const',
                       const=True, help='Print all tasks')
   return parser.parse_args()
@@ -213,6 +256,7 @@ def check_parent_task_id():
 
 def print_all_tasks():
   for task_id, task_obj in data.iteritems():
+    labels_str = json.dumps(task_obj.labels, default=lambda o: o.__dict__)
     print ('taskId: {}, '.format(task_id) +
            'sourceEventType: {}, '.format(task_obj.sourceEventType) +
            'sourceEventId: {}, '.format(task_obj.sourceEventId) +
@@ -221,7 +265,8 @@ def print_all_tasks():
            'parentTaskId: {}, '.format(task_obj.parentTaskId) +
            'dispatch: {}, '.format(task_obj.dispatch) +
            'start: {}, '.format(task_obj.start) +
-           'end: {}'.format(task_obj.end))
+           'end: {}, '.format(task_obj.end) +
+           'labels: {}'.format(labels_str))
 
 def main(argv=sys.argv[:]):
   args = get_arguments(argv)
@@ -229,7 +274,7 @@ def main(argv=sys.argv[:]):
   print 'Input:', args.input_file
   print 'Output:', args.output_file
 
-  if parse_log(args.input_file) is False:
+  if parse_log(args.input_file, args.show_warnings) is False:
     sys.exit()
   print len(data), 'tasks has been created successfully.'
 
