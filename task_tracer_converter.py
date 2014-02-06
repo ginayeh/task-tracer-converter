@@ -54,7 +54,7 @@ def extract_info(log):
   # Retrieve log type
   [log_type, log_no_tag_no_type] = log_no_tag.strip().split(' ', 1)
   log_type = int(log_type)
-  if not log_type in range(0, 5):
+  if not log_type in range(0, 6):
     print 'Parse error: invalid log type (', log_type, ')'
     return False
 
@@ -93,46 +93,43 @@ def parse_log(input_name, show_warnings):
     num_line += 1
 
     log_type = int(info[0])
-    task_id = info[1]
-    timestamp = int(info[2])
+    # TODO
+    if log_type == 5:
+      if show_warnings:
+        print ('Skip since the feature haven\'t completed yet. \'' +
+               line.strip() + '\'');
+      continue
 
-    if log_type == 1 and task_id not in data:
-      data[task_id] = Task(int(task_id))
+    task_id = info[1]
+    if task_id not in data:
+      if log_type == 1:
+        data[task_id] = Task(int(task_id))
+      else:
+        if show_warnings:
+          print ('Skip because of incomplete logs. \'' +
+                 line.strip() + '\'')
+        continue
 
     # CREATE:   [0, sourceEventId, create, ...]
     # DISPATCH: [1, taskId, dispatch, sourceEventId, sourceEventType, parentTaskId]
     # START:    [2, taskId, start, processId, threadId]
     # END:      [3, taskId, end]
     # LABEL:    [4, taskId, timestamp, label]
+    # VTABLE:   [5, taskId, vtable]
+    timestamp = int(info[2])
     if log_type == 1:
       data[task_id].dispatch = timestamp
       data[task_id].sourceEventId = int(info[3])
       data[task_id].sourceEventType = int(info[4])
       data[task_id].parentTaskId = int(info[5])
     elif log_type == 2:
-      if task_id not in data:
-        if show_warnings:
-          print 'Start is skipped since log is incomplete:', line.strip()
-        continue
-
       data[task_id].start = timestamp
       data[task_id].processId = int(info[3])
       data[task_id].threadId = int(info[4])
     elif log_type == 3:
-      if task_id not in data:
-        if show_warnings:
-          print 'End is skipped since log is incomplete:', line.strip()
-        continue
-
       data[task_id].end = timestamp
     elif log_type == 4:
-      if task_id not in data:
-        if show_warnings:
-          print 'Label is skipped since log is incomplete:', line.strip()
-        continue
       data[task_id].add_label(int(info[2]), info[3])
-    else:
-      pass
 
   return True
 
