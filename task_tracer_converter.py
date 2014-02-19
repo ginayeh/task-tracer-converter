@@ -83,7 +83,7 @@ def extract_info(log):
 
   # Retrieve other information
   info = None
-  if log_type == 4:
+  if log_type == 3:
     tokens = find_char_and_split(log, '"', 2)
     if not tokens: return False
     log = tokens[0]
@@ -110,14 +110,14 @@ def verify_info(info):
       False when verify failed.
   """
   log_type = int(info[0])
-  if not log_type in range(1, 6):
+  if not log_type in range(0, 5):
     print 'Verify error: invalid log type (', log_type, ')'
     return False
 
-  if any(((log_type == 1) and (len(info) != 6),
-          (log_type == 2) and (len(info) != 5),
-          (log_type == 3) and (len(info) != 3),
-           (log_type == 4) and (len(info) != 4))):
+  if any(((log_type == 0) and (len(info) != 6),
+          (log_type == 1) and (len(info) != 5),
+          (log_type == 2) and (len(info) != 3),
+           (log_type == 3) and (len(info) != 4))):
      print 'Verify error: incomplete data ', info
      return False
 
@@ -128,16 +128,16 @@ def set_task_info(info):
     Set task properties based on log_type.
 
     info: A list of information. Each type has its own format.
-      DISPATCH: [1 taskId dispatch sourceEventId sourceEventType parentTaskId]
-      START:    [2 taskId start processId threadId]
-      END:      [3 taskId end]
-      LABEL:    [4 taskId timestamp, label]
-      VTABLE:   [5 taskId vtable]
+      DISPATCH: [0 taskId dispatch sourceEventId sourceEventType parentTaskId]
+      START:    [1 taskId start processId processName threadId threadName]
+      END:      [2 taskId end]
+      LABEL:    [3 taskId timestamp, label]
+      VTABLE:   [4 taskId vtable]
   """
   log_type = int(info[0])
 
   # TODO
-  if log_type == 5:
+  if log_type == 4:
     if show_warnings:
       print ('Skip since the feature haven\'t completed yet. \'' +
              line.strip() + '\'');
@@ -145,7 +145,7 @@ def set_task_info(info):
 
   task_id = info[1]
   if task_id not in data:
-    if log_type == 1:
+    if log_type == 0:
       data[task_id] = Task(int(task_id))
     else:
       if show_warnings:
@@ -153,18 +153,18 @@ def set_task_info(info):
       return
 
   timestamp = int(info[2])
-  if log_type == 1:
+  if log_type == 0:
     data[task_id].dispatch = timestamp
     data[task_id].sourceEventId = int(info[3])
     data[task_id].sourceEventType = int(info[4])
     data[task_id].parentTaskId = int(info[5])
-  elif log_type == 2:
+  elif log_type == 1:
     data[task_id].start = timestamp
     data[task_id].processId = int(info[3])
     data[task_id].threadId = int(info[4])
-  elif log_type == 3:
+  elif log_type == 2:
     data[task_id].end = timestamp
-  elif log_type == 4:
+  elif log_type == 3:
     data[task_id].add_label(int(info[2]), info[3])
 
 def parse_log(input_name):
