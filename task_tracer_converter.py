@@ -41,7 +41,7 @@ class Task(object):
 
     # Timestamp information
     self.dispatch = 0
-    self.start = 0
+    self.begin = 0
     self.end = 0
 
     self.labels = []
@@ -156,7 +156,7 @@ def set_task_info(info):
 
     info: A list of information. Each type has its own format.
       DISPATCH: [0 taskId dispatch sourceEventId sourceEventType parentTaskId]
-      START:    [1 taskId start processId processName threadId threadName]
+      BEGIN:    [1 taskId begin processId processName threadId threadName]
       END:      [2 taskId end]
       LABEL:    [3 taskId timestamp, label]
       VTABLE:   [4 taskId vtable]
@@ -186,7 +186,7 @@ def set_task_info(info):
     data[task_id].sourceEventType = int(info[4])
     data[task_id].parentTaskId = int(info[5])
   elif log_type == 1:
-    data[task_id].start = timestamp
+    data[task_id].begin = timestamp
 
     process_id = int(info[3])
     data[task_id].processId = process_id
@@ -232,12 +232,12 @@ def parse_log(input_name):
 
   return True
 
-def retrieve_start_end_time():
+def retrieve_begin_end_time():
   """Scan through all timestamps and return the min and the max."""
   all_timestamps = Set([])
   for task_id, task_object in data.iteritems():
     all_timestamps.add(task_object.dispatch)
-    all_timestamps.add(task_object.start)
+    all_timestamps.add(task_object.begin)
     all_timestamps.add(task_object.end)
 
   # The initial value for these timestamps is 0, so we have to remove it.
@@ -249,22 +249,22 @@ def retrieve_start_end_time():
 def replace_undefined_timestamp(end_time):
   """Replace undefined timestamp with the max of all timestamps."""
   for task_id, task_object in data.iteritems():
-    if task_object.start == 0:
-      task_object.start = end_time
+    if task_object.begin == 0:
+      task_object.begin = end_time
     if task_object.end == 0:
       task_object.end = end_time
 
-def output_json(output_name, start_time, end_time):
+def output_json(output_name, begin_time, end_time):
   """
     Write data out in JSON format.
 
     output_name: Output filename.
-    start_time: the min of all timestamps.
+    begin_time: the min of all timestamps.
     end_time: the max of all timestamps.
   """
   output_file = open(output_name, 'w')
-  output_file.write('{\"start\": %d, \"end\": %d, \"processes\": '
-                    % (start_time, end_time))
+  output_file.write('{\"begin\": %d, \"end\": %d, \"processes\": '
+                    % (begin_time, end_time))
   output_file.write(json.dumps(processes.values(), default=lambda o:o.__dict__,
                     indent=4))
   output_file.write(', \"threads\": ')
@@ -301,18 +301,18 @@ def create_table_and_insert_data():
     # Delete the table if exists and re-create the table
     cur.execute('DROP TABLE IF EXISTS Tasks')
     cur.execute(('CREATE TABLE Tasks('
-                 'taskId INT, threadId INT, start INT, end INT)'))
+                 'taskId INT, threadId INT, begin INT, end INT)'))
 
     # Insert information into table
     for task_id, task_obj in data.iteritems():
       # Only tasks which includes complete information are inserted into database
       if any((task_obj.threadId is None,
-              task_obj.start is 0,
+              task_obj.begin is 0,
               task_obj.end is 0)):
         continue
 
       insert_cmd = ('INSERT INTO Tasks VALUES({}, {}, {}, {})'.format(task_id,
-                    task_obj.threadId, task_obj.start, task_obj.end))
+                    task_obj.threadId, task_obj.begin, task_obj.end))
       cur.execute(insert_cmd)
 
     cur.execute('SELECT * FROM Tasks')
@@ -332,7 +332,7 @@ def check_parent_task_id():
     Thus, only ONE task should be returned when we query the database with the
     following  conditions:
       1. parent.threadId = high_bits(child.taskId)
-      2. parent.start < child.dispatch
+      2. parent.begin < child.dispatch
       3. parent.end > child.dispatch
   """
   create_table_and_insert_data()
@@ -354,7 +354,7 @@ def check_parent_task_id():
       thread_id = int(task_id) >> 32
       select_cmd = ('SELECT taskId FROM Tasks ' +
                     'WHERE threadId={} AND '.format(thread_id) +
-                    'start<={} AND '.format(task_obj.dispatch) +
+                    'begin<={} AND '.format(task_obj.dispatch) +
                     'end>={}'.format(task_obj.dispatch))
       cur.execute(select_cmd)
 
@@ -394,7 +394,7 @@ def print_all_tasks():
            'threadID: {}, '.format(task_obj.threadId) +
            'parentTaskId: {}, '.format(task_obj.parentTaskId) +
            'dispatch: {}, '.format(task_obj.dispatch) +
-           'start: {}, '.format(task_obj.start) +
+           'begin: {}, '.format(task_obj.begin) +
            'end: {}, '.format(task_obj.end) +
            'labels: {}'.format(labels_str))
 
@@ -412,10 +412,10 @@ def main(argv=sys.argv[:]):
   if args.check_parent_task_id:
     check_parent_task_id()
 
-  [start_time, end_time] = retrieve_start_end_time();
+  [begin_time, end_time] = retrieve_begin_end_time();
   replace_undefined_timestamp(end_time);
 
-  output_json(args.output_file, start_time, end_time)
+  output_json(args.output_file, begin_time, end_time)
 
   print len(data), 'tasks has been written to JSON output successfully.'
   if args.print_all_tasks:
