@@ -10,8 +10,21 @@ import sqlite3
 
 class Label(object):
   def __init__(self, timestamp, label):
+    super(Label, self).__init__()
     self.timestamp = timestamp
     self.label = label
+
+class Process(object):
+  def __init__(self, process_id, process_name):
+    super(Process, self).__init__()
+    self.processId = process_id
+    self.processName = process_name
+
+class Thread(object):
+  def __init__(self, thread_id, thread_name):
+    super(Thread, self).__init__()
+    self.threadId = thread_id
+    self.threadName = thread_name
 
 class Task(object):
   def __init__(self, task_id):
@@ -81,17 +94,31 @@ def extract_info(log):
   log_type = int(tokens[0])
   log = tokens[1].strip()
 
-  # Retrieve other information
+  # log_type:
+  #   0 - DISPATCH. Ex. 0 taskId dispatch sourceEventId sourceEventType parentTaskId
+  #   1 - BEGIN.    Ex. 1 taskId begin processId "processName" threadId "threadName"
+  #   2 - STOP.     Ex. 2 taskId stop
+  #   3 - LABEL.    Ex. 3 taskId timestamp "label"
+  #   4 - VTABLE.   Ex. 4 address
   info = None
   if log_type == 3:
-    tokens = find_char_and_split(log, '"', 2)
+    tokens = find_char_and_split(log, ' ', 2)
     if not tokens: return False
-    log = tokens[0]
-    label = tokens[1]
+    info = [log_type] + tokens[0:2]
 
-    tokens = find_char_and_split(log)
+    tokens = find_char_and_split(tokens[2], '"', 2)
     if not tokens: return False
-    info = [log_type] + tokens[0:2] + [label]
+    info.append(tokens[1])
+  elif log_type == 1:
+    tokens = find_char_and_split(log, ' ', 3)
+    if not tokens: return False
+    info = [log_type] + tokens[0:3]
+
+    tokens = find_char_and_split(tokens[3], '"', 4)
+    if not tokens: return False
+    info.append(tokens[1])
+    info.append(tokens[2].strip())
+    info.append(tokens[3])
   else:
     tokens = find_char_and_split(log)
     if not tokens: return False
@@ -115,7 +142,7 @@ def verify_info(info):
     return False
 
   if any(((log_type == 0) and (len(info) != 6),
-          (log_type == 1) and (len(info) != 5),
+          (log_type == 1) and (len(info) != 7),
           (log_type == 2) and (len(info) != 3),
            (log_type == 3) and (len(info) != 4))):
      print 'Verify error: incomplete data ', info
@@ -160,8 +187,16 @@ def set_task_info(info):
     data[task_id].parentTaskId = int(info[5])
   elif log_type == 1:
     data[task_id].start = timestamp
-    data[task_id].processId = int(info[3])
-    data[task_id].threadId = int(info[4])
+
+    process_id = int(info[3])
+    data[task_id].processId = process_id
+    if process_id not in processes:
+      processes[process_id] = Process(process_id, info[4])
+
+    thread_id = int(info[5])
+    data[task_id].threadId = thread_id
+    if thread_id not in threads:
+      threads[thread_id] = Thread(thread_id, info[6])
   elif log_type == 2:
     data[task_id].end = timestamp
   elif log_type == 3:
@@ -228,10 +263,17 @@ def output_json(output_name, start_time, end_time):
     end_time: the max of all timestamps.
   """
   output_file = open(output_name, 'w')
-  output_file.write('{\"start\": %d, \"end\": %d, \"tasks\":'
+  output_file.write('{\"start\": %d, \"end\": %d, \"processes\": '
                     % (start_time, end_time))
+  output_file.write(json.dumps(processes.values(), default=lambda o:o.__dict__,
+                    indent=4))
+  output_file.write(', \"threads\": ')
+  output_file.write(json.dumps(threads.values(), default=lambda o:o.__dict__,
+                    indent=4))
+  output_file.write(', \"tasks\": ')
   output_file.write(json.dumps(data.values(), default=lambda o: o.__dict__,
                                indent=4))
+
   output_file.write('}')
   output_file.close()
 
@@ -381,6 +423,8 @@ def main(argv=sys.argv[:]):
 
 data = {}
 show_warnings = False
+processes = {}
+threads = {}
 
 if __name__ == '__main__':
   sys.exit(main())
