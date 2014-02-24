@@ -192,11 +192,17 @@ def set_task_info(info):
     data[task_id].processId = process_id
     if process_id not in processes:
       processes[process_id] = Process(process_id, info[4])
+    elif all((info[4] != processes[process_id].processName,
+              info[4] != "(Nuwa)",
+              info[4] != "(Preallocated app)")):
+      processes[process_id].processName = info[4]
 
     thread_id = int(info[5])
     data[task_id].threadId = thread_id
     if thread_id not in threads:
       threads[thread_id] = Thread(thread_id, info[6])
+    else:
+      threads[thread_id].threadName = info[6]
   elif log_type == 2:
     data[task_id].end = timestamp
   elif log_type == 3:
