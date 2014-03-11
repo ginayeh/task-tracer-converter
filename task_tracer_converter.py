@@ -193,6 +193,7 @@ def set_task_info(info):
     if process_id not in processes:
       processes[process_id] = Process(process_id, info[4])
     elif all((info[4] != processes[process_id].processName,
+              info[4] != "",
               info[4] != "(Nuwa)",
               info[4] != "(Preallocated app)")):
       processes[process_id].processName = info[4]
