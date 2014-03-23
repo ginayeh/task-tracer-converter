@@ -7,48 +7,52 @@ import argparse
 import json
 from sets import Set
 import sqlite3
+from collections import namedtuple
 
-class Label(object):
-  def __init__(self, timestamp, label):
-    super(Label, self).__init__()
-    self.timestamp = timestamp
-    self.label = label
 
-class Process(object):
-  def __init__(self, process_id, process_name):
-    super(Process, self).__init__()
-    self.processId = process_id
-    self.processName = process_name
+tasks = {}
+show_warnings = False
+processes = {}
+threads = {}
 
-class Thread(object):
-  def __init__(self, thread_id, thread_name):
-    super(Thread, self).__init__()
-    self.threadId = thread_id
-    self.threadName = thread_name
 
-class Task(object):
-  def __init__(self, task_id):
-    super(Task, self).__init__()
+class BaseObject(object):
+  def __init__(self, id, name=''):
+    self.id = id
+    self.name = name
 
-    # Property taskId is required for each object of Task
-    self.taskId = task_id
+  def pretty_dict(self):
+    return {key: value for key, value in self.__dict__.iteritems() if not key.startswith('_')}
 
-    self.sourceEventId = None
+class Process(BaseObject):
+  def __init__(self, id, name):
+    super(Process, self).__init__(id, name)
+    self._mem_offset = 0
+
+class Thread(BaseObject):
+  def __init__(self, id, name):
+    super(Thread, self).__init__(id, name)
+
+Label = namedtuple('Label', 'timestamp label')
+
+class Task(BaseObject):
+  def __init__(self, id):
+    super(Task, self).__init__(id)
+
+    self.sourceEventId = 0
     self.sourceEventType = None
-    self.processId = None
-    self.threadId = None
-    self.parentTaskId = None
+    self.processId = 0
+    self.threadId = 0
+    self.parentTaskId = 0
+    self.labels = []
 
     # Timestamp information
     self.dispatch = 0
     self.begin = 0
     self.end = 0
 
-    self.labels = []
-
   def add_label(self, timestamp, label):
-    label = Label(timestamp, label)
-    self.labels.append(label);
+    self.labels.append(Label(timestamp, label))
 
 def find_char_and_split(string, char=' ', num=-1):
   """
@@ -171,9 +175,9 @@ def set_task_info(info):
     return
 
   task_id = info[1]
-  if task_id not in data:
+  if task_id not in tasks:
     if log_type == 0:
-      data[task_id] = Task(int(task_id))
+      tasks[task_id] = Task(int(task_id))
     else:
       if show_warnings:
         print 'Skip because of incomplete logs. \'', line.strip(), '\''
@@ -181,33 +185,31 @@ def set_task_info(info):
 
   timestamp = int(info[2])
   if log_type == 0:
-    data[task_id].dispatch = timestamp
-    data[task_id].sourceEventId = int(info[3])
-    data[task_id].sourceEventType = int(info[4])
-    data[task_id].parentTaskId = int(info[5])
+    tasks[task_id].dispatch = timestamp
+    tasks[task_id].sourceEventId = int(info[3])
+    tasks[task_id].sourceEventType = int(info[4])
+    tasks[task_id].parentTaskId = int(info[5])
   elif log_type == 1:
-    data[task_id].begin = timestamp
+    tasks[task_id].begin = timestamp
 
     process_id = int(info[3])
-    data[task_id].processId = process_id
+    tasks[task_id].processId = process_id
     if process_id not in processes:
       processes[process_id] = Process(process_id, info[4])
-    elif all((info[4] != processes[process_id].processName,
-              info[4] != "",
-              info[4] != "(Nuwa)",
+    elif all((info[4] != processes[process_id].name,
               info[4] != "(Preallocated app)")):
-      processes[process_id].processName = info[4]
+      processes[process_id].name = info[4]
 
     thread_id = int(info[5])
-    data[task_id].threadId = thread_id
+    tasks[task_id].threadId = thread_id
     if thread_id not in threads:
       threads[thread_id] = Thread(thread_id, info[6])
     else:
-      threads[thread_id].threadName = info[6]
+      threads[thread_id].name = info[6]
   elif log_type == 2:
-    data[task_id].end = timestamp
+    tasks[task_id].end = timestamp
   elif log_type == 3:
-    data[task_id].add_label(int(info[2]), info[3])
+    tasks[task_id].add_label(int(info[2]), info[3])
 
 def parse_log(input_name):
   """
@@ -242,7 +244,7 @@ def parse_log(input_name):
 def retrieve_begin_end_time():
   """Scan through all timestamps and return the min and the max."""
   all_timestamps = Set([])
-  for task_id, task_object in data.iteritems():
+  for task_id, task_object in tasks.iteritems():
     all_timestamps.add(task_object.dispatch)
     all_timestamps.add(task_object.begin)
     all_timestamps.add(task_object.end)
@@ -255,7 +257,7 @@ def retrieve_begin_end_time():
 
 def replace_undefined_timestamp(end_time):
   """Replace undefined timestamp with the max of all timestamps."""
-  for task_id, task_object in data.iteritems():
+  for task_id, task_object in tasks.iteritems():
     if task_object.begin == 0:
       task_object.begin = end_time
     if task_object.end == 0:
@@ -263,7 +265,7 @@ def replace_undefined_timestamp(end_time):
 
 def output_json(output_name, begin_time, end_time):
   """
-    Write data out in JSON format.
+    Write tasks out in JSON format.
 
     output_name: Output filename.
     begin_time: the min of all timestamps.
@@ -272,13 +274,13 @@ def output_json(output_name, begin_time, end_time):
   output_file = open(output_name, 'w')
   output_file.write('{\"begin\": %d, \"end\": %d, \"processes\": '
                     % (begin_time, end_time))
-  output_file.write(json.dumps(processes.values(), default=lambda o:o.__dict__,
+  output_file.write(json.dumps(processes.values(), default=lambda o:o.pretty_dict(),
                     indent=4))
   output_file.write(', \"threads\": ')
-  output_file.write(json.dumps(threads.values(), default=lambda o:o.__dict__,
+  output_file.write(json.dumps(threads.values(), default=lambda o:o.pretty_dict(),
                     indent=4))
   output_file.write(', \"tasks\": ')
-  output_file.write(json.dumps(data.values(), default=lambda o: o.__dict__,
+  output_file.write(json.dumps(tasks.values(), default=lambda o: o.pretty_dict(),
                                indent=4))
 
   output_file.write('}')
@@ -298,7 +300,7 @@ def get_arguments(argv):
                       const=True, help='Print all tasks')
   return parser.parse_args()
 
-def create_table_and_insert_data():
+def create_table_and_insert_tasks():
   """Create a database and insert all tasks into a table."""
   print 'Create database \'task_tracer.db\'.'
   conn = sqlite3.connect('task_tracer.db')
@@ -311,7 +313,7 @@ def create_table_and_insert_data():
                  'taskId INT, threadId INT, begin INT, end INT)'))
 
     # Insert information into table
-    for task_id, task_obj in data.iteritems():
+    for task_id, task_obj in tasks.iteritems():
       # Only tasks which includes complete information are inserted into database
       if any((task_obj.threadId is None,
               task_obj.begin is 0,
@@ -342,7 +344,7 @@ def check_parent_task_id():
       2. parent.begin < child.dispatch
       3. parent.end > child.dispatch
   """
-  create_table_and_insert_data()
+  create_table_and_insert_tasks()
 
   conn = sqlite3.connect('task_tracer.db')
   num_no_result = 0
@@ -353,7 +355,7 @@ def check_parent_task_id():
     cur = conn.cursor()
 
     # Verify parentTaskId with query results
-    for task_id, task_obj in data.iteritems():
+    for task_id, task_obj in tasks.iteritems():
       if task_obj.dispatch is 0:
         continue
 
@@ -378,8 +380,8 @@ def check_parent_task_id():
         num_error_result += 1
         continue
 
-  num_total_tasks = float(len(data))
-  num_verified_task = len(data) - num_no_result - \
+  num_total_tasks = float(len(tasks))
+  num_verified_task = len(tasks) - num_no_result - \
                       num_multi_results - num_error_result
   print ('{} tasks ({}%) failed to query parentTaskId in database.\n'.
          format(num_no_result, float(num_no_result)/num_total_tasks) +
@@ -392,7 +394,7 @@ def check_parent_task_id():
 
 def print_all_tasks():
   """Print task information in text mode."""
-  for task_id, task_obj in data.iteritems():
+  for task_id, task_obj in tasks.iteritems():
     labels_str = json.dumps(task_obj.labels, default=lambda o: o.__dict__)
     print ('taskId: {}, '.format(task_id) +
            'sourceEventType: {}, '.format(task_obj.sourceEventType) +
@@ -414,7 +416,7 @@ def main(argv=sys.argv[:]):
   show_warnings = args.show_warnings
   if parse_log(args.input_file) is False:
     sys.exit()
-  print len(data), 'tasks has been created successfully.'
+  print len(tasks), 'tasks has been created successfully.'
 
   if args.check_parent_task_id:
     check_parent_task_id()
@@ -424,14 +426,9 @@ def main(argv=sys.argv[:]):
 
   output_json(args.output_file, begin_time, end_time)
 
-  print len(data), 'tasks has been written to JSON output successfully.'
+  print len(tasks), 'tasks has been written to JSON output successfully.'
   if args.print_all_tasks:
     print_all_tasks()
-
-data = {}
-show_warnings = False
-processes = {}
-threads = {}
 
 if __name__ == '__main__':
   sys.exit(main())
