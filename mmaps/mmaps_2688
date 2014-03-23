@@ -1,0 +1,161 @@
+00008000-00009000 r-xp 00000000 b3:13 32         /system/b2g/plugin-container
+00009000-0000a000 rw-p 00000000 b3:13 32         /system/b2g/plugin-container
+000c8000-000ca000 rw-p 00000000 00:00 0          [heap]
+000ca000-000cb000 rw-p 00000000 00:00 0          [heap]
+10000000-10001000 ---p 00000000 00:00 0 
+10001000-10100000 rw-p 00000000 00:00 0 
+4000a000-4000e000 r-xp 00000000 b3:13 488        /system/lib/libGLESv2.so
+4000e000-4000f000 rw-p 00004000 b3:13 488        /system/lib/libGLESv2.so
+40018000-4001d000 r-xp 00000000 b3:13 583        /system/lib/libnetutils.so
+4001d000-4001e000 rw-p 00005000 b3:13 583        /system/lib/libnetutils.so
+4001e000-40024000 r-xp 00000000 b3:13 574        /system/lib/libmemalloc.so
+40024000-40025000 rw-p 00006000 b3:13 574        /system/lib/libmemalloc.so
+40025000-40035000 rwxp 00000000 00:00 0 
+4003b000-4003e000 r-xp 00000000 b3:13 570        /system/lib/liblog.so
+4003e000-4003f000 rw-p 00003000 b3:13 570        /system/lib/liblog.so
+40048000-4005f000 r--s 00000000 00:0b 1079       /dev/__properties__ (deleted)
+4005f000-40060000 r--p 00000000 00:00 0 
+40060000-40075000 r-xp 00000000 b3:13 638        /system/lib/libui.so
+40075000-40077000 rw-p 00015000 b3:13 638        /system/lib/libui.so
+40077000-4007a000 r-xp 00000000 b3:13 594        /system/lib/libpowermanager.so
+4007a000-4007b000 rw-p 00003000 b3:13 594        /system/lib/libpowermanager.so
+4007b000-4007c000 r-xp 00000000 b3:13 619        /system/lib/libstagefright_enc_common.so
+4007c000-4007d000 rw-p 00001000 b3:13 619        /system/lib/libstagefright_enc_common.so
+4007d000-40092000 r-xp 00000000 b3:13 571        /system/lib/libm.so
+40092000-40093000 rw-p 00015000 b3:13 571        /system/lib/libm.so
+40093000-40095000 r-xp 00000000 b3:13 646        /system/lib/libwpa_client.so
+40095000-40096000 rw-p 00002000 b3:13 646        /system/lib/libwpa_client.so
+40096000-40099000 r-xp 00000000 b3:13 549        /system/lib/libgabi++.so
+40099000-4009a000 rw-p 00003000 b3:13 549        /system/lib/libgabi++.so
+4009e000-400b2000 r-xp 00000000 b3:13 25         /system/b2g/libmozglue.so
+400b2000-400e3000 r-xp 00013000 b3:13 25         /system/b2g/libmozglue.so
+400e3000-400e5000 rw-p 00043000 b3:13 25         /system/b2g/libmozglue.so
+400e5000-400e8000 rw-p 00000000 00:00 0 
+400e8000-4012a000 r-xp 00000000 b3:13 513        /system/lib/libc.so
+4012a000-4012d000 rw-p 00042000 b3:13 513        /system/lib/libc.so
+4012d000-40138000 rw-p 00000000 00:00 0 
+40138000-40139000 r-xp 00000000 b3:13 632        /system/lib/libstdc++.so
+40139000-4013a000 rw-p 00001000 b3:13 632        /system/lib/libstdc++.so
+4013a000-4023a000 rw-p 00000000 00:00 0 
+4023a000-40283000 r-xp 00000000 b3:13 523        /system/lib/libdbus.so
+40283000-40284000 rw-p 00049000 b3:13 523        /system/lib/libdbus.so
+40284000-40292000 r-xp 00000000 b3:13 522        /system/lib/libcutils.so
+40292000-40293000 rw-p 0000e000 b3:13 522        /system/lib/libcutils.so
+40293000-402a2000 rw-p 00000000 00:00 0 
+402a2000-402c5000 r-xp 00000000 b3:13 508        /system/lib/libbinder.so
+402c5000-402cb000 rw-p 00023000 b3:13 508        /system/lib/libbinder.so
+402cb000-402f8000 r-xp 00000000 b3:13 640        /system/lib/libutils.so
+402f8000-402fa000 rw-p 0002d000 b3:13 640        /system/lib/libutils.so
+402fa000-402ff000 r-xp 00000000 b3:13 559        /system/lib/libhardware_legacy.so
+402ff000-40300000 rw-p 00005000 b3:13 559        /system/lib/libhardware_legacy.so
+40300000-40342000 rw-p 00000000 00:00 0 
+40342000-40343000 r--p 00000000 00:00 0 
+40343000-40400000 rw-p 00000000 00:00 0 
+40400000-4069f000 r-xp 00000000 b3:13 30         /system/b2g/libxul.so
+4069f000-41ba0000 r-xp 00090000 b3:13 30         /system/b2g/libxul.so
+41ba0000-41dd3000 rw-p 01590000 b3:13 30         /system/b2g/libxul.so
+41dd3000-41f44000 rw-p 00000000 00:00 0 
+41f44000-41f96000 r-xp 00000000 b3:13 26         /system/b2g/libnss3.so
+41f96000-420d5000 r-xp 0004c000 b3:13 26         /system/b2g/libnss3.so
+420d5000-420e2000 rw-p 0018b000 b3:13 26         /system/b2g/libnss3.so
+420e2000-420e5000 rw-p 00000000 00:00 0 
+420e5000-42240000 r-xp 00000000 b3:13 616        /system/lib/libstagefright.so
+42240000-4224e000 rw-p 0015b000 b3:13 616        /system/lib/libstagefright.so
+4224e000-42265000 r-xp 00000000 b3:13 647        /system/lib/libz.so
+42265000-42266000 rw-p 00017000 b3:13 647        /system/lib/libz.so
+42266000-422c2000 r-xp 00000000 b3:13 572        /system/lib/libmedia.so
+422c2000-422d2000 rw-p 0005c000 b3:13 572        /system/lib/libmedia.so
+422d2000-422f2000 r-xp 00000000 b3:13 485        /system/lib/libEGL.so
+422f2000-422f6000 rw-p 00020000 b3:13 485        /system/lib/libEGL.so
+422f6000-422f8000 rw-p 00000000 00:00 0 
+422f8000-42316000 r-xp 00000000 b3:13 489        /system/lib/libGLESv2_dbg.so
+42316000-42318000 rw-p 0001e000 b3:13 489        /system/lib/libGLESv2_dbg.so
+42318000-4234a000 r-xp 00000000 b3:13 633        /system/lib/libstlport.so
+4234a000-4234c000 rw-p 00032000 b3:13 633        /system/lib/libstlport.so
+4234c000-42366000 r-xp 00000000 b3:13 591        /system/lib/libpixelflinger.so
+42366000-42368000 rw-p 0001a000 b3:13 591        /system/lib/libpixelflinger.so
+42368000-42369000 r-xp 00000000 b3:13 558        /system/lib/libhardware.so
+42369000-4236a000 rw-p 00001000 b3:13 558        /system/lib/libhardware.so
+4236a000-4248b000 r-xp 00000000 b3:13 610        /system/lib/libskia.so
+4248b000-42490000 rw-p 00121000 b3:13 610        /system/lib/libskia.so
+42490000-42496000 rw-p 00000000 00:00 0 
+42496000-42498000 r-xp 00000000 b3:13 538        /system/lib/libemoji.so
+42498000-42499000 rw-p 00002000 b3:13 538        /system/lib/libemoji.so
+42499000-424ce000 r-xp 00000000 b3:13 566        /system/lib/libjpeg.so
+424ce000-424cf000 rw-p 00035000 b3:13 566        /system/lib/libjpeg.so
+424cf000-424e1000 r-xp 00000000 b3:13 539        /system/lib/libexpat.so
+424e1000-424e3000 rw-p 00012000 b3:13 539        /system/lib/libexpat.so
+424e3000-42531000 r-xp 00000000 b3:13 611        /system/lib/libsonivox.so
+42531000-42532000 rw-p 0004e000 b3:13 611        /system/lib/libsonivox.so
+42532000-42537000 rw-p 00000000 00:00 0 
+42537000-42623000 r-xp 00000000 b3:13 562        /system/lib/libicuuc.so
+42623000-4262d000 rw-p 000ec000 b3:13 562        /system/lib/libicuuc.so
+4262d000-4262f000 rw-p 00000000 00:00 0 
+4262f000-42649000 r-xp 00000000 b3:13 516        /system/lib/libcamera_client.so
+42649000-4264e000 rw-p 0001a000 b3:13 516        /system/lib/libcamera_client.so
+4264e000-42673000 r-xp 00000000 b3:13 557        /system/lib/libgui.so
+42673000-42679000 rw-p 00025000 b3:13 557        /system/lib/libgui.so
+42679000-4267d000 r-xp 00000000 b3:13 500        /system/lib/libQcomUI.so
+4267d000-4267e000 rw-p 00004000 b3:13 500        /system/lib/libQcomUI.so
+4267e000-42688000 r-xp 00000000 b3:13 620        /system/lib/libstagefright_foundation.so
+42688000-42689000 rw-p 0000a000 b3:13 620        /system/lib/libstagefright_foundation.so
+42689000-426a1000 r-xp 00000000 b3:13 641        /system/lib/libvorbisidec.so
+426a1000-426a2000 rw-p 00018000 b3:13 641        /system/lib/libvorbisidec.so
+426a2000-426a4000 r-xp 00000000 b3:13 630        /system/lib/libstagefright_yuv.so
+426a4000-426a5000 rw-p 00002000 b3:13 630        /system/lib/libstagefright_yuv.so
+426a5000-426b9000 r-xp 00000000 b3:13 530        /system/lib/libdrmframework.so
+426b9000-426bc000 rw-p 00014000 b3:13 530        /system/lib/libdrmframework.so
+426bc000-42776000 r-xp 00000000 b3:13 520        /system/lib/libcrypto.so
+42776000-42786000 rw-p 000ba000 b3:13 520        /system/lib/libcrypto.so
+42786000-42788000 rw-p 00000000 00:00 0 
+42788000-427b2000 r-xp 00000000 b3:13 615        /system/lib/libssl.so
+427b2000-427b6000 rw-p 0002a000 b3:13 615        /system/lib/libssl.so
+427b6000-427c2000 r-xp 00000000 b3:13 617        /system/lib/libstagefright_amrnb_common.so
+427c2000-427c3000 rw-p 0000c000 b3:13 617        /system/lib/libstagefright_amrnb_common.so
+427c3000-427c8000 r-xp 00000000 b3:13 618        /system/lib/libstagefright_avc_common.so
+427c8000-427c9000 rw-p 00005000 b3:13 618        /system/lib/libstagefright_avc_common.so
+427c9000-427dc000 r-xp 00000000 b3:13 621        /system/lib/libstagefright_omx.so
+427dc000-427de000 rw-p 00013000 b3:13 621        /system/lib/libstagefright_omx.so
+427de000-427e2000 r-xp 00000000 b3:13 635        /system/lib/libsysutils.so
+427e2000-427e3000 rw-p 00004000 b3:13 635        /system/lib/libsysutils.so
+427e3000-427f5000 r-xp 00000000 b3:13 609        /system/lib/libsensorservice.so
+427f5000-427f7000 rw-p 00012000 b3:13 609        /system/lib/libsensorservice.so
+427f7000-42d25000 r--p 00000000 b3:13 29         /system/b2g/omni.ja
+42d45000-42d46000 ---p 00000000 00:00 0 
+42d46000-42dc5000 rw-p 00000000 00:00 0 
+42de1000-42de2000 rw-p 00000000 00:00 0 
+42e00000-42e12000 rw-p 00000000 00:00 0 
+42e12000-42e13000 r--p 00000000 00:00 0 
+42e13000-42f6f000 rw-p 00000000 00:00 0 
+42f6f000-42f70000 r--p 00000000 00:00 0 
+42f70000-42fbe000 rw-p 00000000 00:00 0 
+42fbe000-42fbf000 r--p 00000000 00:00 0 
+42fbf000-43098000 rw-p 00000000 00:00 0 
+43098000-43099000 r--p 00000000 00:00 0 
+43099000-43100000 rw-p 00000000 00:00 0 
+43100000-43301000 rw-p 00000000 00:00 0 
+43301000-43302000 r--p 00000000 00:00 0 
+43302000-43400000 rw-p 00000000 00:00 0 
+43400000-434fe000 r--p 00000000 00:0b 889        /dev/binder
+434fe000-434ff000 ---p 00000000 00:00 0 
+434ff000-4357e000 rw-p 00000000 00:00 0 
+435fc000-435fd000 ---p 00000000 00:00 0 
+435fd000-436fc000 rw-p 00000000 00:00 0 
+436fc000-436fd000 ---p 00000000 00:00 0 
+436fd000-4371c000 rw-p 00000000 00:00 0 
+437b2000-437b3000 ---p 00000000 00:00 0 
+437b3000-438b2000 rw-p 00000000 00:00 0 
+43900000-43b00000 rw-p 00000000 00:00 0 
+43b8f000-43b90000 ---p 00000000 00:00 0 
+43b90000-43c8f000 rw-p 00000000 00:00 0 
+43c8f000-43c90000 ---p 00000000 00:00 0 
+43c90000-43d8f000 rw-p 00000000 00:00 0 
+43e00000-43f00000 rw-p 00000000 00:00 0 
+44000000-44001000 ---p 00000000 00:00 0 
+44001000-44100000 rw-p 00000000 00:00 0 
+44300000-44500000 rw-p 00000000 00:00 0 
+b0001000-b0009000 r-xp 00001000 b3:13 115        /system/bin/linker
+b0009000-b000a000 rw-p 00008000 b3:13 115        /system/bin/linker
+b000a000-b0015000 rw-p 00000000 00:00 0 
+bee39000-bee5a000 rw-p 00000000 00:00 0          [stack]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]

@@ -1,0 +1,283 @@
+00008000-00022000 r-xp 00000000 b3:13 14         /system/b2g/b2g
+00022000-00023000 rw-p 00019000 b3:13 14         /system/b2g/b2g
+00443000-00450000 rw-p 00000000 00:00 0          [heap]
+10000000-10001000 ---p 00000000 00:00 0 
+10001000-10100000 rw-p 00000000 00:00 0 
+40002000-40004000 r-xp 00000000 b3:13 630        /system/lib/libstagefright_yuv.so
+40004000-40005000 rw-p 00002000 b3:13 630        /system/lib/libstagefright_yuv.so
+40005000-40006000 rw-s 660ac000 00:0b 819        /dev/kgsl-3d0
+40009000-4000a000 r--p 00000000 00:00 0 
+4000a000-40028000 r-xp 00000000 b3:13 489        /system/lib/libGLESv2_dbg.so
+40028000-4002a000 rw-p 0001e000 b3:13 489        /system/lib/libGLESv2_dbg.so
+4002a000-4002c000 r-xp 00000000 b3:13 646        /system/lib/libwpa_client.so
+4002c000-4002d000 rw-p 00002000 b3:13 646        /system/lib/libwpa_client.so
+4002d000-4002e000 r-xp 00000000 b3:13 558        /system/lib/libhardware.so
+4002e000-4002f000 rw-p 00001000 b3:13 558        /system/lib/libhardware.so
+4002f000-40032000 r-xp 00000000 b3:13 594        /system/lib/libpowermanager.so
+40032000-40033000 rw-p 00003000 b3:13 594        /system/lib/libpowermanager.so
+40033000-40037000 r-xp 00000000 b3:13 635        /system/lib/libsysutils.so
+40037000-40038000 rw-p 00004000 b3:13 635        /system/lib/libsysutils.so
+40038000-4004d000 r-xp 00000000 b3:13 571        /system/lib/libm.so
+4004d000-4004e000 rw-p 00015000 b3:13 571        /system/lib/libm.so
+4004e000-40058000 r-xp 00000000 b3:13 620        /system/lib/libstagefright_foundation.so
+40058000-40059000 rw-p 0000a000 b3:13 620        /system/lib/libstagefright_foundation.so
+40059000-4005b000 r-xp 00000000 b3:13 473        /system/lib/hw/copybit.msm7627a.so
+4005b000-4005c000 rw-p 00002000 b3:13 473        /system/lib/hw/copybit.msm7627a.so
+4005c000-40070000 r-xp 00000000 b3:13 25         /system/b2g/libmozglue.so
+40070000-400a1000 r-xp 00013000 b3:13 25         /system/b2g/libmozglue.so
+400a1000-400a3000 rw-p 00043000 b3:13 25         /system/b2g/libmozglue.so
+400a3000-400a6000 rw-p 00000000 00:00 0 
+400a6000-400a9000 r-xp 00000000 b3:13 570        /system/lib/liblog.so
+400a9000-400aa000 rw-p 00003000 b3:13 570        /system/lib/liblog.so
+400aa000-400ec000 r-xp 00000000 b3:13 513        /system/lib/libc.so
+400ec000-400ef000 rw-p 00042000 b3:13 513        /system/lib/libc.so
+400ef000-400fa000 rw-p 00000000 00:00 0 
+400fa000-40111000 r--s 00000000 00:0b 1079       /dev/__properties__ (deleted)
+40111000-40126000 r-xp 00000000 b3:13 638        /system/lib/libui.so
+40126000-40128000 rw-p 00015000 b3:13 638        /system/lib/libui.so
+40128000-40136000 r-xp 00000000 b3:13 522        /system/lib/libcutils.so
+40136000-40137000 rw-p 0000e000 b3:13 522        /system/lib/libcutils.so
+40137000-40146000 rw-p 00000000 00:00 0 
+40146000-40173000 r-xp 00000000 b3:13 640        /system/lib/libutils.so
+40173000-40175000 rw-p 0002d000 b3:13 640        /system/lib/libutils.so
+40175000-4018c000 r-xp 00000000 b3:13 647        /system/lib/libz.so
+4018c000-4018d000 rw-p 00017000 b3:13 647        /system/lib/libz.so
+4018d000-401ad000 r-xp 00000000 b3:13 485        /system/lib/libEGL.so
+401ad000-401b1000 rw-p 00020000 b3:13 485        /system/lib/libEGL.so
+401b1000-401b3000 rw-p 00000000 00:00 0 
+401b3000-401e5000 r-xp 00000000 b3:13 633        /system/lib/libstlport.so
+401e5000-401e7000 rw-p 00032000 b3:13 633        /system/lib/libstlport.so
+401e7000-401e9000 r-xp 00000000 b3:13 538        /system/lib/libemoji.so
+401e9000-401ea000 rw-p 00002000 b3:13 538        /system/lib/libemoji.so
+401ea000-401eb000 r-xp 00000000 b3:13 619        /system/lib/libstagefright_enc_common.so
+401eb000-401ec000 rw-p 00001000 b3:13 619        /system/lib/libstagefright_enc_common.so
+401ec000-401ed000 r-xp 00000000 b3:13 632        /system/lib/libstdc++.so
+401ed000-401ee000 rw-p 00001000 b3:13 632        /system/lib/libstdc++.so
+401ee000-402ee000 rw-p 00000000 00:00 0 
+402ee000-402f3000 r-xp 00000000 b3:13 559        /system/lib/libhardware_legacy.so
+402f3000-402f4000 rw-p 00005000 b3:13 559        /system/lib/libhardware_legacy.so
+402f4000-402f9000 r-xp 00000000 b3:13 583        /system/lib/libnetutils.so
+402f9000-402fa000 rw-p 00005000 b3:13 583        /system/lib/libnetutils.so
+402fa000-402fd000 r-xp 00000000 b3:13 549        /system/lib/libgabi++.so
+402fd000-402fe000 rw-p 00003000 b3:13 549        /system/lib/libgabi++.so
+402fe000-402ff000 r-xp 00000000 b3:13 551        /system/lib/libgenlock.so
+402ff000-40300000 rw-p 00001000 b3:13 551        /system/lib/libgenlock.so
+40300000-40400000 rw-p 00000000 00:00 0 
+40400000-4041a000 r-xp 00000000 b3:13 591        /system/lib/libpixelflinger.so
+4041a000-4041c000 rw-p 0001a000 b3:13 591        /system/lib/libpixelflinger.so
+4041c000-4053d000 r-xp 00000000 b3:13 610        /system/lib/libskia.so
+4053d000-40542000 rw-p 00121000 b3:13 610        /system/lib/libskia.so
+40542000-40548000 rw-p 00000000 00:00 0 
+40548000-4057d000 r-xp 00000000 b3:13 566        /system/lib/libjpeg.so
+4057d000-4057e000 rw-p 00035000 b3:13 566        /system/lib/libjpeg.so
+4057e000-40590000 r-xp 00000000 b3:13 539        /system/lib/libexpat.so
+40590000-40592000 rw-p 00012000 b3:13 539        /system/lib/libexpat.so
+40592000-405b5000 r-xp 00000000 b3:13 508        /system/lib/libbinder.so
+405b5000-405bb000 rw-p 00023000 b3:13 508        /system/lib/libbinder.so
+405bb000-406b9000 r--p 00000000 00:0b 889        /dev/binder
+406b9000-40702000 r-xp 00000000 b3:13 523        /system/lib/libdbus.so
+40702000-40703000 rw-p 00049000 b3:13 523        /system/lib/libdbus.so
+40703000-4071d000 r-xp 00000000 b3:13 516        /system/lib/libcamera_client.so
+4071d000-40722000 rw-p 0001a000 b3:13 516        /system/lib/libcamera_client.so
+40722000-40726000 r-xp 00000000 b3:13 488        /system/lib/libGLESv2.so
+40726000-40727000 rw-p 00004000 b3:13 488        /system/lib/libGLESv2.so
+40727000-4072b000 r-xp 00000000 b3:13 500        /system/lib/libQcomUI.so
+4072b000-4072c000 rw-p 00004000 b3:13 500        /system/lib/libQcomUI.so
+4072c000-40731000 r-xp 00000000 b3:13 618        /system/lib/libstagefright_avc_common.so
+40731000-40732000 rw-p 00005000 b3:13 618        /system/lib/libstagefright_avc_common.so
+40732000-40784000 r-xp 00000000 b3:13 26         /system/b2g/libnss3.so
+40784000-408c3000 r-xp 0004c000 b3:13 26         /system/b2g/libnss3.so
+408c3000-408d0000 rw-p 0018b000 b3:13 26         /system/b2g/libnss3.so
+408d0000-408d3000 rw-p 00000000 00:00 0 
+408d3000-408d4000 ---p 00000000 00:00 0 
+408d4000-409d3000 rw-p 00000000 00:00 0 
+409d3000-40a2f000 r-xp 00000000 b3:13 572        /system/lib/libmedia.so
+40a2f000-40a3f000 rw-p 0005c000 b3:13 572        /system/lib/libmedia.so
+40a3f000-40a64000 r-xp 00000000 b3:13 557        /system/lib/libgui.so
+40a64000-40a6a000 rw-p 00025000 b3:13 557        /system/lib/libgui.so
+40a6a000-40a70000 r-xp 00000000 b3:13 574        /system/lib/libmemalloc.so
+40a70000-40a71000 rw-p 00006000 b3:13 574        /system/lib/libmemalloc.so
+40a71000-40a7d000 r-xp 00000000 b3:13 617        /system/lib/libstagefright_amrnb_common.so
+40a7d000-40a7e000 rw-p 0000c000 b3:13 617        /system/lib/libstagefright_amrnb_common.so
+40a7e000-40a82000 r-xp 00000000 b3:13 477        /system/lib/hw/gralloc.msm7627a.so
+40a82000-40a83000 rw-p 00004000 b3:13 477        /system/lib/hw/gralloc.msm7627a.so
+40a83000-40a85000 r-xp 00000000 b3:13 509        /system/lib/libbluedroid.so
+40a85000-40a86000 rw-p 00002000 b3:13 509        /system/lib/libbluedroid.so
+40a86000-40d25000 r-xp 00000000 b3:13 30         /system/b2g/libxul.so
+40d25000-42226000 r-xp 00090000 b3:13 30         /system/b2g/libxul.so
+42226000-42459000 rw-p 01590000 b3:13 30         /system/b2g/libxul.so
+42459000-425ca000 rw-p 00000000 00:00 0 
+425ca000-42725000 r-xp 00000000 b3:13 616        /system/lib/libstagefright.so
+42725000-42733000 rw-p 0015b000 b3:13 616        /system/lib/libstagefright.so
+42733000-42781000 r-xp 00000000 b3:13 611        /system/lib/libsonivox.so
+42781000-42782000 rw-p 0004e000 b3:13 611        /system/lib/libsonivox.so
+42782000-42787000 rw-p 00000000 00:00 0 
+42787000-42873000 r-xp 00000000 b3:13 562        /system/lib/libicuuc.so
+42873000-4287d000 rw-p 000ec000 b3:13 562        /system/lib/libicuuc.so
+4287d000-4287f000 rw-p 00000000 00:00 0 
+4287f000-42897000 r-xp 00000000 b3:13 641        /system/lib/libvorbisidec.so
+42897000-42898000 rw-p 00018000 b3:13 641        /system/lib/libvorbisidec.so
+42898000-428ac000 r-xp 00000000 b3:13 530        /system/lib/libdrmframework.so
+428ac000-428af000 rw-p 00014000 b3:13 530        /system/lib/libdrmframework.so
+428af000-42969000 r-xp 00000000 b3:13 520        /system/lib/libcrypto.so
+42969000-42979000 rw-p 000ba000 b3:13 520        /system/lib/libcrypto.so
+42979000-4297b000 rw-p 00000000 00:00 0 
+4297b000-429a5000 r-xp 00000000 b3:13 615        /system/lib/libssl.so
+429a5000-429a9000 rw-p 0002a000 b3:13 615        /system/lib/libssl.so
+429a9000-429bc000 r-xp 00000000 b3:13 621        /system/lib/libstagefright_omx.so
+429bc000-429be000 rw-p 00013000 b3:13 621        /system/lib/libstagefright_omx.so
+429be000-429d0000 r-xp 00000000 b3:13 609        /system/lib/libsensorservice.so
+429d0000-429d2000 rw-p 00012000 b3:13 609        /system/lib/libsensorservice.so
+429d2000-429d7000 r-xp 00000000 b3:13 487        /system/lib/libGLESv1_CM.so
+429d7000-429d8000 rw-p 00005000 b3:13 487        /system/lib/libGLESv1_CM.so
+429d8000-429d9000 ---p 00000000 00:00 0 
+429d9000-42ad8000 rw-p 00000000 00:00 0 
+42ad8000-42ae0000 r-xp 00000000 b3:13 588        /system/lib/liboverlay.so
+42ae0000-42ae1000 rw-p 00008000 b3:13 588        /system/lib/liboverlay.so
+42ae1000-42ae2000 ---p 00000000 00:00 0 
+42ae2000-42b01000 rw-p 00000000 00:00 0 
+42b01000-42b30000 r-xp 00000000 b3:13 637        /system/lib/libttspico.so
+42b30000-42b31000 rw-p 0002f000 b3:13 637        /system/lib/libttspico.so
+42b31000-42b38000 r-xp 00000000 b3:13 481        /system/lib/hw/sensors.default.so
+42b38000-42b39000 rw-p 00007000 b3:13 481        /system/lib/hw/sensors.default.so
+42b39000-42b4a000 r-xp 00000000 b3:13 510        /system/lib/libbluetooth.so
+42b4a000-42b4c000 rw-p 00011000 b3:13 510        /system/lib/libbluetooth.so
+42b4c000-42b4d000 rw-p 00000000 00:00 0 
+42b4d000-42b4f000 r-xp 00000000 b3:13 486        /system/lib/libETC1.so
+42b4f000-42b50000 rw-p 00002000 b3:13 486        /system/lib/libETC1.so
+42b50000-42b51000 r--s 20265000 00:0b 819        /dev/kgsl-3d0
+42b51000-42b52000 rw-s 6600e000 00:0b 819        /dev/kgsl-3d0
+42b52000-42b53000 rw-s 6607c000 00:0b 819        /dev/kgsl-3d0
+42b53000-42d15000 rw-s 00f7d000 00:0b 1039       /dev/graphics/fb0
+42d15000-42d35000 rwxp 00000000 00:00 0 
+42d35000-42d36000 rw-s 663fc000 00:0b 819        /dev/kgsl-3d0
+42d36000-42d42000 r--p 00000000 b3:16 8346       /data/b2g/mozilla/0a3qc1pk.default/startupCache/startupCache.4.little
+42d42000-42d52000 rwxp 00000000 00:00 0 
+42d55000-42d56000 ---p 00000000 00:00 0 
+42d56000-42d95000 rw-p 00000000 00:00 0 
+42d95000-42d9a000 r-xp 00000000 b3:13 458        /system/lib/egl/eglsubAndroid.so
+42d9a000-42d9b000 rw-p 00005000 b3:13 458        /system/lib/egl/eglsubAndroid.so
+42d9b000-42d9c000 rw-s 6607e000 00:0b 819        /dev/kgsl-3d0
+42d9c000-42d9d000 rw-s 663fe000 00:0b 819        /dev/kgsl-3d0
+42d9e000-42da1000 r-xp 00000000 b3:13 478        /system/lib/hw/hwcomposer.msm7627a.so
+42da1000-42da2000 rw-p 00003000 b3:13 478        /system/lib/hw/hwcomposer.msm7627a.so
+42da2000-42da3000 ---p 00000000 00:00 0 
+42da3000-42ea2000 rw-p 00000000 00:00 0 
+42ea2000-42eb2000 rwxp 00000000 00:00 0 
+42eb2000-42eb3000 rw-s 66080000 00:0b 819        /dev/kgsl-3d0
+42eb3000-42eb5000 r-xp 00000000 b3:13 480        /system/lib/hw/lights.msm7627a.so
+42eb5000-42eb6000 rw-p 00002000 b3:13 480        /system/lib/hw/lights.msm7627a.so
+42eb9000-433e7000 r--p 00000000 b3:13 29         /system/b2g/omni.ja
+433e7000-433ef000 rw-s 00000000 b3:16 8287       /data/b2g/mozilla/0a3qc1pk.default/webappsstore.sqlite-shm
+433ef000-43402000 r-xp 00000000 b3:13 460        /system/lib/egl/libGLES_android.so
+43402000-43403000 rw-p 00013000 b3:13 460        /system/lib/egl/libGLES_android.so
+43403000-43422000 r-xp 00000000 b3:13 459        /system/lib/egl/libEGL_adreno200.so
+43422000-43423000 rw-p 0001f000 b3:13 459        /system/lib/egl/libEGL_adreno200.so
+43423000-4342f000 r-xp 00000000 b3:13 555        /system/lib/libgsl.so
+4342f000-43430000 rw-p 0000c000 b3:13 555        /system/lib/libgsl.so
+43430000-4345f000 r-xp 00000000 b3:13 461        /system/lib/egl/libGLESv1_CM_adreno200.so
+4345f000-43460000 rw-p 0002f000 b3:13 461        /system/lib/egl/libGLESv1_CM_adreno200.so
+43460000-43461000 rw-p 00000000 00:00 0 
+43461000-43494000 r-xp 00000000 b3:13 463        /system/lib/egl/libq3dtools_adreno200.so
+43494000-43495000 rw-p 00033000 b3:13 463        /system/lib/egl/libq3dtools_adreno200.so
+4349a000-4349b000 ---p 00000000 00:00 0 
+4349b000-4359a000 rw-p 00000000 00:00 0 
+4359a000-435aa000 rw-s 6605c000 00:0b 819        /dev/kgsl-3d0
+435aa000-435c3000 rw-s 66082000 00:0b 819        /dev/kgsl-3d0
+435c3000-435d3000 rw-s 66682000 00:0b 819        /dev/kgsl-3d0
+435d3000-435e3000 rw-s 660ae000 00:0b 819        /dev/kgsl-3d0
+435e3000-435eb000 rw-s 00000000 b3:16 8298       /data/b2g/mozilla/0a3qc1pk.default/cookies.sqlite-shm
+435eb000-435fb000 rw-s 66692000 00:0b 819        /dev/kgsl-3d0
+43600000-43800000 rw-p 00000000 00:00 0 
+43800000-43889000 r-xp 00000000 b3:13 462        /system/lib/egl/libGLESv2_adreno200.so
+43889000-4388d000 rw-p 00089000 b3:13 462        /system/lib/egl/libGLESv2_adreno200.so
+4388d000-4389d000 rw-s 6606c000 00:0b 819        /dev/kgsl-3d0
+4389d000-438ad000 rw-s 6609c000 00:0b 819        /dev/kgsl-3d0
+438ad000-438bd000 rw-s 666a2000 00:0b 819        /dev/kgsl-3d0
+438bf000-438c0000 ---p 00000000 00:00 0 
+438c0000-439bf000 rw-p 00000000 00:00 0 
+439bf000-439c0000 ---p 00000000 00:00 0 
+439c0000-43abf000 rw-p 00000000 00:00 0 
+43abf000-43adf000 rw-s 660be000 00:0b 819        /dev/kgsl-3d0
+43adf000-43aff000 rw-s 6652c000 00:0b 819        /dev/kgsl-3d0
+43b00000-43e00000 rw-p 00000000 00:00 0 
+43e00000-43e01000 ---p 00000000 00:00 0 
+43e01000-43f00000 rw-p 00000000 00:00 0 
+43f00000-43f10000 rwxp 00000000 00:00 0 
+43f56000-43f66000 rwxp 00000000 00:00 0 
+43f96000-43fb6000 rw-s 662a0000 00:0b 819        /dev/kgsl-3d0
+43fb6000-43fc6000 rwxp 00000000 00:00 0 
+43fe3000-43fe4000 ---p 00000000 00:00 0 
+43fe4000-440e3000 rw-p 00000000 00:00 0 
+441c8000-441c9000 ---p 00000000 00:00 0 
+441c9000-442c8000 rw-p 00000000 00:00 0 
+442c8000-442c9000 ---p 00000000 00:00 0 
+442c9000-443c8000 rw-p 00000000 00:00 0 
+443d8000-443d9000 ---p 00000000 00:00 0 
+443d9000-444d8000 rw-p 00000000 00:00 0 
+44500000-44600000 rw-p 00000000 00:00 0 
+44600000-44601000 ---p 00000000 00:00 0 
+44601000-44700000 rw-p 00000000 00:00 0 
+44700000-44900000 rw-p 00000000 00:00 0 
+44900000-44901000 ---p 00000000 00:00 0 
+44901000-44a00000 rw-p 00000000 00:00 0 
+44a00000-44b00000 rw-p 00000000 00:00 0 
+44b04000-44b05000 ---p 00000000 00:00 0 
+44b05000-44c04000 rw-p 00000000 00:00 0 
+44d00000-45000000 rw-p 00000000 00:00 0 
+45097000-45098000 ---p 00000000 00:00 0 
+45098000-45197000 rw-p 00000000 00:00 0 
+45200000-45300000 rw-p 00000000 00:00 0 
+45300000-45301000 ---p 00000000 00:00 0 
+45301000-45400000 rw-p 00000000 00:00 0 
+4543f000-45440000 ---p 00000000 00:00 0 
+45440000-4553f000 rw-p 00000000 00:00 0 
+4553f000-45540000 ---p 00000000 00:00 0 
+45540000-4563f000 rw-p 00000000 00:00 0 
+45656000-45657000 ---p 00000000 00:00 0 
+45657000-45756000 rw-p 00000000 00:00 0 
+45809000-4580a000 ---p 00000000 00:00 0 
+4580a000-45909000 rw-p 00000000 00:00 0 
+45a00000-45b00000 rw-p 00000000 00:00 0 
+45b00000-45b01000 ---p 00000000 00:00 0 
+45b01000-45c00000 rw-p 00000000 00:00 0 
+45c00000-45c01000 ---p 00000000 00:00 0 
+45c01000-45d00000 rw-p 00000000 00:00 0 
+45d7a000-45d7b000 ---p 00000000 00:00 0 
+45d7b000-45e7a000 rw-p 00000000 00:00 0 
+46013000-46014000 ---p 00000000 00:00 0 
+46014000-46113000 rw-p 00000000 00:00 0 
+46300000-46400000 rw-p 00000000 00:00 0 
+46700000-46900000 rw-p 00000000 00:00 0 
+46a00000-46e00000 rw-p 00000000 00:00 0 
+46e00000-46e01000 ---p 00000000 00:00 0 
+46e01000-46f00000 rw-p 00000000 00:00 0 
+46f00000-47000000 rw-p 00000000 00:00 0 
+47000000-47001000 ---p 00000000 00:00 0 
+47001000-47100000 rw-p 00000000 00:00 0 
+4729b000-4729c000 ---p 00000000 00:00 0 
+4729c000-4739b000 rw-p 00000000 00:00 0 
+4739b000-47593000 r--p 00000000 b3:13 8310       /system/b2g/webapps/communications.gaiamobile.org/application.zip
+47600000-47d00000 rw-p 00000000 00:00 0 
+47d00000-47f62000 r--p 00000000 b3:13 8256       /system/b2g/webapps/system.gaiamobile.org/application.zip
+48000000-48100000 rw-p 00000000 00:00 0 
+48100000-48101000 ---p 00000000 00:00 0 
+48101000-48200000 rw-p 00000000 00:00 0 
+48200000-4834c000 r-xp 00000000 b3:13 608        /system/lib/libsc-a2xx.so
+4834c000-48359000 rw-p 0014c000 b3:13 608        /system/lib/libsc-a2xx.so
+48359000-4835a000 rw-p 00000000 00:00 0 
+48400000-48700000 rw-p 00000000 00:00 0 
+48700000-48c00000 rw-p 00000000 00:00 0 
+48f00000-49500000 rw-p 00000000 00:00 0 
+49500000-49d00000 rw-s 0bc00000 00:0b 873        /dev/pmem
+49d00000-49e00000 rw-p 00000000 00:00 0 
+49e00000-49e01000 ---p 00000000 00:00 0 
+49e01000-49f00000 rw-p 00000000 00:00 0 
+49f00000-49f01000 ---p 00000000 00:00 0 
+49f01000-4a000000 rw-p 00000000 00:00 0 
+4a000000-4a29c000 r--p 00000000 b3:13 8271       /system/b2g/webapps/settings.gaiamobile.org/application.zip
+b0001000-b0009000 r-xp 00001000 b3:13 115        /system/bin/linker
+b0009000-b000a000 rw-p 00008000 b3:13 115        /system/bin/linker
+b000a000-b0015000 rw-p 00000000 00:00 0 
+bea67000-bea88000 rw-p 00000000 00:00 0          [stack]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
