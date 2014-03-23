@@ -16,6 +16,14 @@ processes = {}
 threads = {}
 
 
+class ParseError(Exception):
+  def __init__(self, error_msg):
+    self.msg = error_msg
+    self.log = None
+
+  def set_log(self, log):
+    self.log = log
+
 class BaseObject(object):
   def __init__(self, id, name=''):
     self.id = id
@@ -54,7 +62,7 @@ class Task(BaseObject):
   def add_label(self, timestamp, label):
     self.labels.append(Label(timestamp, label))
 
-def find_char_and_split(string, char=' ', num=-1):
+def find_char_and_split(string, char=' ', num_split=-1):
   """
     Find the delimiter first and then split the string with the delimiter.
 
@@ -63,13 +71,16 @@ def find_char_and_split(string, char=' ', num=-1):
       None when failed to find the delimiter in the string.
   """
   if string.find(char) == -1:
-    print 'Extract error: failed to find \'', char, '\'', ' in \'', string, '\''
-    return None
+    raise ParseError('Extract error: no \'{}\''.format(char))
 
-  if num is -1:
-    num = len(string)
+  if string.count(char) < num_split:
+    raise ParseError('Extract error: not enough \'{}\'s'.format(char))
 
-  return string.split(char, num)
+
+  if num_split == -1:
+    return string.split(char)
+  else:
+    return string.split(char, num_split)
 
 def extract_info(log):
   """
@@ -83,50 +94,44 @@ def extract_info(log):
       None is returned if the input is redundant.
       False is returned  when an error occurred.
   """
-  # Remove dummy log like '--------- beginning of ...'
-  if log.startswith('-'):
-    return None
+  raw_log = log
+  try:
+    # Remove tag name. Ex. 'I/TaskTracer( 1570):'
+    tokens = find_char_and_split(log, ':', 1)
+    log = tokens[1].strip()
 
-  # Remove tag name. Ex. 'I/TaskTracer( 1570):'
-  tokens = find_char_and_split(log, ':', 1)
-  if not tokens: return False
-  log = tokens[1].strip()
+    # Retrieve log type
+    tokens = find_char_and_split(log, ' ', 1)
+    log_type = int(tokens[0])
+    log = tokens[1].strip()
 
-  # Retrieve log type
-  tokens = find_char_and_split(log, ' ', 1)
-  if not tokens: return False
-  log_type = int(tokens[0])
-  log = tokens[1].strip()
+    # log_type:
+    #   0 - DISPATCH. Ex. 0 taskId dispatch sourceEventId sourceEventType parentTaskId
+    #   1 - BEGIN.    Ex. 1 taskId begin processId "processName" threadId "threadName"
+    #   2 - STOP.     Ex. 2 taskId stop
+    #   3 - LABEL.    Ex. 3 taskId timestamp "label"
+    #   4 - VTABLE.   Ex. 4 address
+    info = None
 
-  # log_type:
-  #   0 - DISPATCH. Ex. 0 taskId dispatch sourceEventId sourceEventType parentTaskId
-  #   1 - BEGIN.    Ex. 1 taskId begin processId "processName" threadId "threadName"
-  #   2 - STOP.     Ex. 2 taskId stop
-  #   3 - LABEL.    Ex. 3 taskId timestamp "label"
-  #   4 - VTABLE.   Ex. 4 address
-  info = None
-  if log_type == 3:
-    tokens = find_char_and_split(log, ' ', 2)
-    if not tokens: return False
-    info = [log_type] + tokens[0:2]
+    if log_type == 3:
+      tokens = find_char_and_split(log, ' ', 2)
+      info = [log_type] + tokens[0:2]
 
-    tokens = find_char_and_split(tokens[2], '"', 2)
-    if not tokens: return False
-    info.append(tokens[1])
-  elif log_type == 1:
-    tokens = find_char_and_split(log, ' ', 3)
-    if not tokens: return False
-    info = [log_type] + tokens[0:3]
+      tokens = find_char_and_split(tokens[2], '"', 2)
+      info.append(tokens[1])
+    elif log_type == 1:
+      tokens = find_char_and_split(log, ' ', 3)
+      info = [log_type] + tokens[0:3]
 
-    tokens = find_char_and_split(tokens[3], '"', 4)
-    if not tokens: return False
-    info.append(tokens[1])
-    info.append(tokens[2].strip())
-    info.append(tokens[3])
-  else:
-    tokens = find_char_and_split(log)
-    if not tokens: return False
-    info = [log_type] + tokens
+      tokens = find_char_and_split(tokens[3], '"', 4)
+      info.append(tokens[1])
+      info.append(tokens[2].strip())
+      info.append(tokens[3])
+    else:
+      tokens = find_char_and_split(log)
+      info = [log_type] + tokens
+  except ParseError:
+    raise
 
   return info
 
@@ -142,17 +147,13 @@ def verify_info(info):
   """
   log_type = int(info[0])
   if not log_type in range(0, 5):
-    print 'Verify error: invalid log type (', log_type, ')'
-    return False
+    raise ParseError('Verify error: invalid log type \'{}\''.format(log_type))
 
   if any(((log_type == 0) and (len(info) != 6),
           (log_type == 1) and (len(info) != 7),
           (log_type == 2) and (len(info) != 3),
-           (log_type == 3) and (len(info) != 4))):
-     print 'Verify error: incomplete data ', info
-     return False
-
-  return True
+          (log_type == 3) and (len(info) != 4))):
+     raise ParseError('Verify error: incomplete information')
 
 def set_task_info(info):
   """
@@ -167,21 +168,18 @@ def set_task_info(info):
   """
   log_type = int(info[0])
 
-  # TODO
-  if log_type == 4:
-    if show_warnings:
-      print ('Skip since the feature haven\'t completed yet. \'' +
-             line.strip() + '\'');
-    return
-
   task_id = info[1]
   if task_id not in tasks:
     if log_type == 0:
       tasks[task_id] = Task(int(task_id))
     else:
       if show_warnings:
-        print 'Skip because of incomplete logs. \'', line.strip(), '\''
+        print 'Skip task {} because of incomplete logs.'.format(task_id)
       return
+
+  if log_type == 4:
+    tasks[task_id]._vptr = int(info[2], 16)
+    return
 
   timestamp = int(info[2])
   if log_type == 0:
@@ -225,21 +223,18 @@ def parse_log(input_name):
     all_log = log_file.readlines()
 
   for line in all_log:
-    info = extract_info(line.strip())
-    if not info:
+    # Remove dummy log like '----------- beginning of...'
+    if line.startswith('-'):
       continue
-    elif info is False:
-      return False
 
-    result = verify_info(info)
-    if not result:
-      continue
-    elif result is False:
-      return False
+    try:
+      info = extract_info(line.strip())
+      verify_info(info)
+    except ParseError as error:
+      error.set_log(line.strip())
+      raise
 
     set_task_info(info)
-
-  return True
 
 def retrieve_begin_end_time():
   """Scan through all timestamps and return the min and the max."""
@@ -413,10 +408,17 @@ def main(argv=sys.argv[:]):
   print 'Input:', args.input_file
   print 'Output:', args.output_file
 
+  global show_warnings
   show_warnings = args.show_warnings
-  if parse_log(args.input_file) is False:
+
+  try:
+    parse_log(args.input_file)
+    print len(tasks), 'tasks has been created successfully.'
+  except ParseError as error:
+    print error.msg
+    if error.log:
+      print '@line: \'{}\''.format(error.log)
     sys.exit()
-  print len(tasks), 'tasks has been created successfully.'
 
   if args.check_parent_task_id:
     check_parent_task_id()
