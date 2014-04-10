@@ -21,10 +21,6 @@ class ParseError(Exception):
     self.msg = error_msg
     self.log = ''
 
-class NotFoundError(Exception):
-  def __init__(self):
-    self.task_id = 0
-
 class BaseObject(object):
   def __init__(self, id, name=''):
     self.id = id
@@ -60,6 +56,10 @@ class Task(BaseObject):
     self.dispatch = 0
     self.begin = 0
     self.end = 0
+    self.latency = 0
+    self.executionTime = 0
+    self._userCpuTime = 0
+    self._sysCpuTime = 0
 
   def add_label(self, timestamp, label):
     self.labels.append(Label(timestamp, label))
@@ -109,8 +109,8 @@ def extract_info(log):
 
     # log_type:
     #   0 - DISPATCH. Ex. 0 taskId dispatch sourceEventId sourceEventType parentTaskId
-    #   1 - BEGIN.    Ex. 1 taskId begin processId "processName" threadId "threadName"
-    #   2 - STOP.     Ex. 2 taskId stop
+    #   1 - BEGIN.    Ex. 1 taskId begin userCpuTime sysCpuTime processId "processName" threadId "threadName"
+    #   2 - END.      Ex. 2 taskId end userCpuTime sysCpuTime
     #   3 - LABEL.    Ex. 3 taskId timestamp "label"
     #   4 - VPTR.     Ex. 4 address
     info = None
@@ -122,10 +122,10 @@ def extract_info(log):
       tokens = find_char_and_split(tokens[2], '"', 2)
       info.append(tokens[1])
     elif log_type == 1:
-      tokens = find_char_and_split(log, ' ', 3)
-      info = [log_type] + tokens[0:3]
+      tokens = find_char_and_split(log, ' ', 5)
+      info = [log_type] + tokens[0:5]
 
-      tokens = find_char_and_split(tokens[3], '"', 4)
+      tokens = find_char_and_split(tokens[5], '"', 4)
       info.append(tokens[1])
       info.append(tokens[2].strip())
       info.append(tokens[3])
@@ -152,8 +152,8 @@ def verify_info(info):
     raise ParseError('Verify error: invalid log type \'{}\''.format(log_type))
 
   if any(((log_type == 0) and (len(info) != 6),
-          (log_type == 1) and (len(info) != 7),
-          (log_type == 2) and (len(info) != 3),
+          (log_type == 1) and (len(info) != 9),
+          (log_type == 2) and (len(info) != 5),
           (log_type == 3) and (len(info) != 4))):
      raise ParseError('Verify error: incomplete information')
 
@@ -163,8 +163,8 @@ def set_task_info(info):
 
     info: A list of information. Each type has its own format.
       DISPATCH: [0 taskId dispatch sourceEventId sourceEventType parentTaskId]
-      BEGIN:    [1 taskId begin processId processName threadId threadName]
-      END:      [2 taskId end]
+      BEGIN:    [1 taskId begin userCpuTime sysCpuTime processId processName threadId threadName]
+      END:      [2 taskId end userCpuTime sysCpuTime]
       LABEL:    [3 taskId timestamp, label]
       VPTR:     [4 taskId vptr]
   """
@@ -191,25 +191,39 @@ def set_task_info(info):
     tasks[task_id].parentTaskId = int(info[5])
   elif log_type == 1:
     tasks[task_id].begin = timestamp
+    tasks[task_id].latency = tasks[task_id].begin - tasks[task_id].dispatch
+    tasks[task_id]._userCpuTime = int(info[3])
+    tasks[task_id]._sysCpuTime = int(info[4])
 
-    process_id = int(info[3])
+    process_id = int(info[5])
     tasks[task_id].processId = process_id
     if process_id not in processes:
-      processes[process_id] = Process(process_id, info[4])
-    elif all((info[4] != processes[process_id].name,
-              info[4] != "(Preallocated app)")):
-      processes[process_id].name = info[4]
+      processes[process_id] = Process(process_id, info[6])
+    elif all((info[6] != processes[process_id].name,
+              info[6] != '(Preallocated app)')):
+      processes[process_id].name = info[6]
 
-    thread_id = int(info[5])
+    thread_id = int(info[7])
     tasks[task_id].threadId = thread_id
     if thread_id not in threads:
-      threads[thread_id] = Thread(thread_id, info[6])
+      threads[thread_id] = Thread(thread_id, info[8])
     else:
-      threads[thread_id].name = info[6]
+      threads[thread_id].name = info[8]
   elif log_type == 2:
     tasks[task_id].end = timestamp
+    tasks[task_id].executionTime = tasks[task_id].end - tasks[task_id].begin
+    tasks[task_id]._userCpuTime -= int(info[3])
+    tasks[task_id]._sysCpuTime -= int(info[4])
+
+    if tasks[task_id]._userCpuTime != 0:
+      cpuTime = -tasks[task_id]._userCpuTime / float(tasks[task_id].executionTime) * 100.0
+      tasks[task_id].add_label(timestamp, 'UserCpuTime:{}'.format(round(cpuTime, 2)))
+
+    if tasks[task_id]._sysCpuTime != 0:
+      cpuTime = -tasks[task_id]._sysCpuTime / float(tasks[task_id].executionTime) * 100.0
+      tasks[task_id].add_label(timestamp, 'SysCpuTime: {}'.format(round(cpuTime, 2)))
   elif log_type == 3:
-    tasks[task_id].add_label(int(info[2]), info[3])
+    tasks[task_id].add_label(timestamp, info[3])
 
 def parse_log(input_name):
   """
@@ -420,8 +434,6 @@ def binary_search(address, x, lo=0, hi=None):
       else:
         return mid
 
-  raise NotFoundError()
-
 def retrieve_task_name():
   """
     
@@ -468,11 +480,7 @@ def retrieve_task_name():
 
     offset = task_obj._vptr - processes[task_obj.processId]._mem_offset
 
-    try:
-      task_obj.name = binary_search(address, offset)
-    except NotFoundError as error:
-      error.task_id = task_id
-      raise
+    task_obj.name = binary_search(address, offset)
 
 def main(argv=sys.argv[:]):
   args = get_arguments(argv)
@@ -493,9 +501,6 @@ def main(argv=sys.argv[:]):
     if error.log:
       print '@line: \'{}\''.format(error.log)
     sys.exit()
-  except NotFoundError as error:
-    if show_warnings:
-      print 'Failed to find task name for', error.task_id
 
   if args.check_parent_task_id:
     check_parent_task_id()
