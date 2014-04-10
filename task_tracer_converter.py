@@ -207,7 +207,8 @@ def set_task_info(info):
     if process_id not in processes:
       processes[process_id] = Process(process_id, info[6])
     elif all((info[6] != processes[process_id].name,
-              info[6] != '(Preallocated app)')):
+              info[6] != '(Preallocated app)',
+              info[6] != '')):
       processes[process_id].name = info[6]
 
     thread_id = int(info[7])
