@@ -449,7 +449,7 @@ def retrieve_task_name():
   address = []
   for line in all_symbols:
     try:
-      tokens = find_char_and_split(line)
+      tokens = find_char_and_split(line, ' ', 4)
     except ParseError:
       raise
 
