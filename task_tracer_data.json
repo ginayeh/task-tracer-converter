@@ -88,26 +88,26 @@
         "latency": 19928, 
         "executionTime": 664276, 
         "labels": [
-            [
-                1397108030944727, 
-                "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
-            ], 
-            [
-                1397108030960139, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108030961787, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
-            ], 
-            [
-                1397108030969599, 
-                "UserCpuTime:39.14"
-            ], 
-            [
-                1397108030969599, 
-                "SysCpuTime: 1.51"
-            ]
+            {
+                "timestamp": 1397108030944727, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
+            }, 
+            {
+                "timestamp": 1397108030960139, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108030961787, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
+            }, 
+            {
+                "timestamp": 1397108030969599, 
+                "label": "UserCpuTime:39.14"
+            }, 
+            {
+                "timestamp": 1397108030969599, 
+                "label": "SysCpuTime: 1.51"
+            }
         ], 
         "dispatch": 1397108030285395, 
         "sourceEventType": 1, 
@@ -469,10 +469,10 @@
         "latency": 98328, 
         "executionTime": 62011, 
         "labels": [
-            [
-                1397108030019312, 
-                "UserCpuTime:32.25"
-            ]
+            {
+                "timestamp": 1397108030019312, 
+                "label": "UserCpuTime:32.25"
+            }
         ], 
         "dispatch": 1397108029858973, 
         "sourceEventType": 0, 
@@ -504,10 +504,10 @@
         "latency": 153320, 
         "executionTime": 4151, 
         "labels": [
-            [
-                1397108030026118, 
-                "UserCpuTime:240.91"
-            ]
+            {
+                "timestamp": 1397108030026118, 
+                "label": "UserCpuTime:240.91"
+            }
         ], 
         "dispatch": 1397108029868647, 
         "sourceEventType": 0, 
@@ -554,10 +554,10 @@
         "latency": 242065, 
         "executionTime": 6501, 
         "labels": [
-            [
-                1397108032969752, 
-                "UserCpuTime:153.82"
-            ]
+            {
+                "timestamp": 1397108032969752, 
+                "label": "UserCpuTime:153.82"
+            }
         ], 
         "dispatch": 1397108032721186, 
         "sourceEventType": 1, 
@@ -664,10 +664,10 @@
         "latency": 76446, 
         "executionTime": 16480, 
         "labels": [
-            [
-                1397108032746882, 
-                "UserCpuTime:60.68"
-            ]
+            {
+                "timestamp": 1397108032746882, 
+                "label": "UserCpuTime:60.68"
+            }
         ], 
         "dispatch": 1397108032653956, 
         "sourceEventType": 1, 
@@ -864,14 +864,14 @@
         "latency": 52124, 
         "executionTime": 129791, 
         "labels": [
-            [
-                1397108031147974, 
-                "UserCpuTime:15.41"
-            ], 
-            [
-                1397108031147974, 
-                "SysCpuTime: 7.7"
-            ]
+            {
+                "timestamp": 1397108031147974, 
+                "label": "UserCpuTime:15.41"
+            }, 
+            {
+                "timestamp": 1397108031147974, 
+                "label": "SysCpuTime: 7.7"
+            }
         ], 
         "dispatch": 1397108030966059, 
         "sourceEventType": 1, 
@@ -888,22 +888,22 @@
         "latency": 169738, 
         "executionTime": 95765, 
         "labels": [
-            [
-                1397108031282435, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031283228, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031283778, 
-                "UserCpuTime:10.44"
-            ], 
-            [
-                1397108031283778, 
-                "SysCpuTime: 10.44"
-            ]
+            {
+                "timestamp": 1397108031282435, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031283228, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031283778, 
+                "label": "UserCpuTime:10.44"
+            }, 
+            {
+                "timestamp": 1397108031283778, 
+                "label": "SysCpuTime: 10.44"
+            }
         ], 
         "dispatch": 1397108031018275, 
         "sourceEventType": 1, 
@@ -950,10 +950,10 @@
         "latency": 763, 
         "executionTime": 122, 
         "labels": [
-            [
-                1397108031162196, 
-                "UserCpuTime:8196.72"
-            ]
+            {
+                "timestamp": 1397108031162196, 
+                "label": "UserCpuTime:8196.72"
+            }
         ], 
         "dispatch": 1397108031161311, 
         "sourceEventType": 0, 
@@ -1000,14 +1000,14 @@
         "latency": 140106, 
         "executionTime": 23804, 
         "labels": [
-            [
-                1397108031298640, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031320918, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108031298640, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031320918, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108031157160, 
         "sourceEventType": 0, 
@@ -1039,22 +1039,22 @@
         "latency": 132447, 
         "executionTime": 66528, 
         "labels": [
-            [
-                1397108031330256, 
-                "[nsEventDispatcher::Dispatch] Event name: transitionend"
-            ], 
-            [
-                1397108031385981, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031386958, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031387873, 
-                "SysCpuTime: 15.03"
-            ]
+            {
+                "timestamp": 1397108031330256, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: transitionend"
+            }, 
+            {
+                "timestamp": 1397108031385981, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031386958, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031387873, 
+                "label": "SysCpuTime: 15.03"
+            }
         ], 
         "dispatch": 1397108031188898, 
         "sourceEventType": 1, 
@@ -1116,10 +1116,10 @@
         "latency": 409943, 
         "executionTime": 472626, 
         "labels": [
-            [
-                1397108032724635, 
-                "UserCpuTime:8.46"
-            ]
+            {
+                "timestamp": 1397108032724635, 
+                "label": "UserCpuTime:8.46"
+            }
         ], 
         "dispatch": 1397108031842066, 
         "sourceEventType": 0, 
@@ -1496,10 +1496,10 @@
         "latency": 17120, 
         "executionTime": 8179, 
         "labels": [
-            [
-                1397108028763972, 
-                "UserCpuTime:122.26"
-            ]
+            {
+                "timestamp": 1397108028763972, 
+                "label": "UserCpuTime:122.26"
+            }
         ], 
         "dispatch": 1397108028738673, 
         "sourceEventType": 1, 
@@ -1576,10 +1576,10 @@
         "latency": 17486, 
         "executionTime": 1923, 
         "labels": [
-            [
-                1397108028811335, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ]
+            {
+                "timestamp": 1397108028811335, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }
         ], 
         "dispatch": 1397108028792811, 
         "sourceEventType": 1, 
@@ -1626,14 +1626,14 @@
         "latency": 16785, 
         "executionTime": 1007, 
         "labels": [
-            [
-                1397108031309657, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ], 
-            [
-                1397108031310267, 
-                "UserCpuTime:993.05"
-            ]
+            {
+                "timestamp": 1397108031309657, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }, 
+            {
+                "timestamp": 1397108031310267, 
+                "label": "UserCpuTime:993.05"
+            }
         ], 
         "dispatch": 1397108031292475, 
         "sourceEventType": 1, 
@@ -1860,10 +1860,10 @@
         "latency": 641, 
         "executionTime": 16204, 
         "labels": [
-            [
-                1397108030201868, 
-                "UserCpuTime:61.71"
-            ]
+            {
+                "timestamp": 1397108030201868, 
+                "label": "UserCpuTime:61.71"
+            }
         ], 
         "dispatch": 1397108030185023, 
         "sourceEventType": 0, 
@@ -1880,10 +1880,10 @@
         "latency": 10650, 
         "executionTime": 15442, 
         "labels": [
-            [
-                1397108029979853, 
-                "UserCpuTime:64.76"
-            ]
+            {
+                "timestamp": 1397108029979853, 
+                "label": "UserCpuTime:64.76"
+            }
         ], 
         "dispatch": 1397108029953761, 
         "sourceEventType": 0, 
@@ -1915,10 +1915,10 @@
         "latency": 15076, 
         "executionTime": 20691, 
         "labels": [
-            [
-                1397108029416041, 
-                "UserCpuTime:96.66"
-            ]
+            {
+                "timestamp": 1397108029416041, 
+                "label": "UserCpuTime:96.66"
+            }
         ], 
         "dispatch": 1397108029380274, 
         "sourceEventType": 1, 
@@ -2085,10 +2085,10 @@
         "latency": 1250335, 
         "executionTime": 245301, 
         "labels": [
-            [
-                1397108032880305, 
-                "UserCpuTime:12.23"
-            ]
+            {
+                "timestamp": 1397108032880305, 
+                "label": "UserCpuTime:12.23"
+            }
         ], 
         "dispatch": 1397108031384669, 
         "sourceEventType": 1, 
@@ -2225,10 +2225,10 @@
         "latency": 16144, 
         "executionTime": 33233, 
         "labels": [
-            [
-                1397108033260065, 
-                "UserCpuTime:30.09"
-            ]
+            {
+                "timestamp": 1397108033260065, 
+                "label": "UserCpuTime:30.09"
+            }
         ], 
         "dispatch": 1397108033210688, 
         "sourceEventType": 1, 
@@ -2530,10 +2530,10 @@
         "latency": 15167, 
         "executionTime": 14496, 
         "labels": [
-            [
-                1397108029979670, 
-                "UserCpuTime:68.98"
-            ]
+            {
+                "timestamp": 1397108029979670, 
+                "label": "UserCpuTime:68.98"
+            }
         ], 
         "dispatch": 1397108029950007, 
         "sourceEventType": 1, 
@@ -2715,10 +2715,10 @@
         "latency": 611, 
         "executionTime": 1129, 
         "labels": [
-            [
-                1397108031310328, 
-                "UserCpuTime:885.74"
-            ]
+            {
+                "timestamp": 1397108031310328, 
+                "label": "UserCpuTime:885.74"
+            }
         ], 
         "dispatch": 1397108031308588, 
         "sourceEventType": 0, 
@@ -2855,10 +2855,10 @@
         "latency": 1068, 
         "executionTime": 11170, 
         "labels": [
-            [
-                1397108028587977, 
-                "UserCpuTime:89.53"
-            ]
+            {
+                "timestamp": 1397108028587977, 
+                "label": "UserCpuTime:89.53"
+            }
         ], 
         "dispatch": 1397108028575739, 
         "sourceEventType": 0, 
@@ -2965,10 +2965,10 @@
         "latency": 460205, 
         "executionTime": 15014, 
         "labels": [
-            [
-                1397108033234003, 
-                "UserCpuTime:66.6"
-            ]
+            {
+                "timestamp": 1397108033234003, 
+                "label": "UserCpuTime:66.6"
+            }
         ], 
         "dispatch": 1397108032758784, 
         "sourceEventType": 0, 
@@ -3075,10 +3075,10 @@
         "latency": 553772, 
         "executionTime": 3417, 
         "labels": [
-            [
-                1397108030025751, 
-                "UserCpuTime:292.65"
-            ]
+            {
+                "timestamp": 1397108030025751, 
+                "label": "UserCpuTime:292.65"
+            }
         ], 
         "dispatch": 1397108029468562, 
         "sourceEventType": 0, 
@@ -3200,10 +3200,10 @@
         "latency": 15473, 
         "executionTime": 4547, 
         "labels": [
-            [
-                1397108029598597, 
-                "SysCpuTime: 219.93"
-            ]
+            {
+                "timestamp": 1397108029598597, 
+                "label": "SysCpuTime: 219.93"
+            }
         ], 
         "dispatch": 1397108029578577, 
         "sourceEventType": 1, 
@@ -3430,10 +3430,10 @@
         "latency": 19592, 
         "executionTime": 37567, 
         "labels": [
-            [
-                1397108031925257, 
-                "SysCpuTime: 26.62"
-            ]
+            {
+                "timestamp": 1397108031925257, 
+                "label": "SysCpuTime: 26.62"
+            }
         ], 
         "dispatch": 1397108031868098, 
         "sourceEventType": 1, 
@@ -3975,10 +3975,10 @@
         "latency": 17395, 
         "executionTime": 12329, 
         "labels": [
-            [
-                1397108030198054, 
-                "UserCpuTime:81.11"
-            ]
+            {
+                "timestamp": 1397108030198054, 
+                "label": "UserCpuTime:81.11"
+            }
         ], 
         "dispatch": 1397108030168330, 
         "sourceEventType": 1, 
@@ -4070,10 +4070,10 @@
         "latency": 1098, 
         "executionTime": 1831, 
         "labels": [
-            [
-                1397108028426752, 
-                "UserCpuTime:546.15"
-            ]
+            {
+                "timestamp": 1397108028426752, 
+                "label": "UserCpuTime:546.15"
+            }
         ], 
         "dispatch": 1397108028423823, 
         "sourceEventType": 0, 
@@ -4240,10 +4240,10 @@
         "latency": 244, 
         "executionTime": 199463, 
         "labels": [
-            [
-                1397108031625758, 
-                "UserCpuTime:15.04"
-            ]
+            {
+                "timestamp": 1397108031625758, 
+                "label": "UserCpuTime:15.04"
+            }
         ], 
         "dispatch": 1397108031426051, 
         "sourceEventType": 0, 
@@ -4335,10 +4335,10 @@
         "latency": 13367, 
         "executionTime": 8575, 
         "labels": [
-            [
-                1397108028764185, 
-                "UserCpuTime:116.62"
-            ]
+            {
+                "timestamp": 1397108028764185, 
+                "label": "UserCpuTime:116.62"
+            }
         ], 
         "dispatch": 1397108028742243, 
         "sourceEventType": 0, 
@@ -4385,10 +4385,10 @@
         "latency": 549, 
         "executionTime": 2533, 
         "labels": [
-            [
-                1397108028678339, 
-                "UserCpuTime:394.79"
-            ]
+            {
+                "timestamp": 1397108028678339, 
+                "label": "UserCpuTime:394.79"
+            }
         ], 
         "dispatch": 1397108028675257, 
         "sourceEventType": 0, 
@@ -4525,14 +4525,14 @@
         "latency": 495484, 
         "executionTime": 380493, 
         "labels": [
-            [
-                1397108033135493, 
-                "UserCpuTime:7.88"
-            ], 
-            [
-                1397108033135493, 
-                "SysCpuTime: 2.63"
-            ]
+            {
+                "timestamp": 1397108033135493, 
+                "label": "UserCpuTime:7.88"
+            }, 
+            {
+                "timestamp": 1397108033135493, 
+                "label": "SysCpuTime: 2.63"
+            }
         ], 
         "dispatch": 1397108032259516, 
         "sourceEventType": 0, 
@@ -4639,10 +4639,10 @@
         "latency": 17273, 
         "executionTime": 4670, 
         "labels": [
-            [
-                1397108029652583, 
-                "UserCpuTime:214.13"
-            ]
+            {
+                "timestamp": 1397108029652583, 
+                "label": "UserCpuTime:214.13"
+            }
         ], 
         "dispatch": 1397108029630640, 
         "sourceEventType": 1, 
@@ -4704,10 +4704,10 @@
         "latency": 67779, 
         "executionTime": 19745, 
         "labels": [
-            [
-                1397108029763819, 
-                "UserCpuTime:50.65"
-            ]
+            {
+                "timestamp": 1397108029763819, 
+                "label": "UserCpuTime:50.65"
+            }
         ], 
         "dispatch": 1397108029676295, 
         "sourceEventType": 1, 
@@ -4799,10 +4799,10 @@
         "latency": 44251, 
         "executionTime": 29724, 
         "labels": [
-            [
-                1397108030066462, 
-                "UserCpuTime:33.64"
-            ]
+            {
+                "timestamp": 1397108030066462, 
+                "label": "UserCpuTime:33.64"
+            }
         ], 
         "dispatch": 1397108029992487, 
         "sourceEventType": 1, 
@@ -4819,18 +4819,18 @@
         "latency": 76599, 
         "executionTime": 76050, 
         "labels": [
-            [
-                1397108030084681, 
-                "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
-            ], 
-            [
-                1397108030140528, 
-                "[nsEventDispatcher::Dispatch] Event name: resize"
-            ], 
-            [
-                1397108030145899, 
-                "UserCpuTime:13.15"
-            ]
+            {
+                "timestamp": 1397108030084681, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
+            }, 
+            {
+                "timestamp": 1397108030140528, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: resize"
+            }, 
+            {
+                "timestamp": 1397108030145899, 
+                "label": "UserCpuTime:13.15"
+            }
         ], 
         "dispatch": 1397108029993250, 
         "sourceEventType": 1, 
@@ -4862,22 +4862,22 @@
         "latency": 45746, 
         "executionTime": 28412, 
         "labels": [
-            [
-                1397108030038874, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:Register"
-            ], 
-            [
-                1397108030045435, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetContext"
-            ], 
-            [
-                1397108030055201, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
-            ], 
-            [
-                1397108030065516, 
-                "UserCpuTime:35.2"
-            ]
+            {
+                "timestamp": 1397108030038874, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:Register"
+            }, 
+            {
+                "timestamp": 1397108030045435, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetContext"
+            }, 
+            {
+                "timestamp": 1397108030055201, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
+            }, 
+            {
+                "timestamp": 1397108030065516, 
+                "label": "UserCpuTime:35.2"
+            }
         ], 
         "dispatch": 1397108029991358, 
         "sourceEventType": 1, 
@@ -4909,18 +4909,18 @@
         "latency": 91584, 
         "executionTime": 80810, 
         "labels": [
-            [
-                1397108030181361, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108030230647, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetText"
-            ], 
-            [
-                1397108030253565, 
-                "UserCpuTime:12.37"
-            ]
+            {
+                "timestamp": 1397108030181361, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108030230647, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetText"
+            }, 
+            {
+                "timestamp": 1397108030253565, 
+                "label": "UserCpuTime:12.37"
+            }
         ], 
         "dispatch": 1397108030081171, 
         "sourceEventType": 1, 
@@ -4937,10 +4937,10 @@
         "latency": 74524, 
         "executionTime": 77576, 
         "labels": [
-            [
-                1397108030146449, 
-                "UserCpuTime:12.89"
-            ]
+            {
+                "timestamp": 1397108030146449, 
+                "label": "UserCpuTime:12.89"
+            }
         ], 
         "dispatch": 1397108029994349, 
         "sourceEventType": 1, 
@@ -4972,10 +4972,10 @@
         "latency": 91095, 
         "executionTime": 81634, 
         "labels": [
-            [
-                1397108030253992, 
-                "UserCpuTime:12.25"
-            ]
+            {
+                "timestamp": 1397108030253992, 
+                "label": "UserCpuTime:12.25"
+            }
         ], 
         "dispatch": 1397108030081263, 
         "sourceEventType": 1, 
@@ -5097,10 +5097,10 @@
         "latency": 397, 
         "executionTime": 377319, 
         "labels": [
-            [
-                1397108033261744, 
-                "UserCpuTime:7.95"
-            ]
+            {
+                "timestamp": 1397108033261744, 
+                "label": "UserCpuTime:7.95"
+            }
         ], 
         "dispatch": 1397108032884028, 
         "sourceEventType": 1, 
@@ -5237,10 +5237,10 @@
         "latency": 20294, 
         "executionTime": 24476, 
         "labels": [
-            [
-                1397108032610957, 
-                "UserCpuTime:40.86"
-            ]
+            {
+                "timestamp": 1397108032610957, 
+                "label": "UserCpuTime:40.86"
+            }
         ], 
         "dispatch": 1397108032566187, 
         "sourceEventType": 1, 
@@ -5782,10 +5782,10 @@
         "latency": 24261, 
         "executionTime": 20874, 
         "labels": [
-            [
-                1397108031650843, 
-                "SysCpuTime: 47.91"
-            ]
+            {
+                "timestamp": 1397108031650843, 
+                "label": "SysCpuTime: 47.91"
+            }
         ], 
         "dispatch": 1397108031605708, 
         "sourceEventType": 1, 
@@ -6132,58 +6132,58 @@
         "latency": 11352, 
         "executionTime": 105133, 
         "labels": [
-            [
-                1397108029863856, 
-                "[nsEventDispatcher::Dispatch] Event name: mouseout"
-            ], 
-            [
-                1397108029866663, 
-                "[nsEventDispatcher::Dispatch] Event name: mouseover"
-            ], 
-            [
-                1397108029870631, 
-                "[nsEventDispatcher::Dispatch] Event name: mousemove"
-            ], 
-            [
-                1397108029882594, 
-                "[nsEventDispatcher::Dispatch] Event name: mousedown"
-            ], 
-            [
-                1397108029884272, 
-                "[nsEventDispatcher::Dispatch] Event name: blur"
-            ], 
-            [
-                1397108029886897, 
-                "[nsEventDispatcher::Dispatch] Event name: focus"
-            ], 
-            [
-                1397108029895930, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Forms:Input"
-            ], 
-            [
-                1397108029908930, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Forms:SelectionChange"
-            ], 
-            [
-                1397108029919794, 
-                "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
-            ], 
-            [
-                1397108029923426, 
-                "[nsEventDispatcher::Dispatch] Event name: mouseup"
-            ], 
-            [
-                1397108029947962, 
-                "[nsEventDispatcher::Dispatch] Event name: click"
-            ], 
-            [
-                1397108029955042, 
-                "UserCpuTime:28.54"
-            ], 
-            [
-                1397108029955042, 
-                "SysCpuTime: 9.51"
-            ]
+            {
+                "timestamp": 1397108029863856, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: mouseout"
+            }, 
+            {
+                "timestamp": 1397108029866663, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: mouseover"
+            }, 
+            {
+                "timestamp": 1397108029870631, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: mousemove"
+            }, 
+            {
+                "timestamp": 1397108029882594, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: mousedown"
+            }, 
+            {
+                "timestamp": 1397108029884272, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: blur"
+            }, 
+            {
+                "timestamp": 1397108029886897, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: focus"
+            }, 
+            {
+                "timestamp": 1397108029895930, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Forms:Input"
+            }, 
+            {
+                "timestamp": 1397108029908930, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Forms:SelectionChange"
+            }, 
+            {
+                "timestamp": 1397108029919794, 
+                "label": "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
+            }, 
+            {
+                "timestamp": 1397108029923426, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: mouseup"
+            }, 
+            {
+                "timestamp": 1397108029947962, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: click"
+            }, 
+            {
+                "timestamp": 1397108029955042, 
+                "label": "UserCpuTime:28.54"
+            }, 
+            {
+                "timestamp": 1397108029955042, 
+                "label": "SysCpuTime: 9.51"
+            }
         ], 
         "dispatch": 1397108029838557, 
         "sourceEventType": 1, 
@@ -6215,10 +6215,10 @@
         "latency": 855, 
         "executionTime": 122, 
         "labels": [
-            [
-                1397108029818812, 
-                "UserCpuTime:8196.72"
-            ]
+            {
+                "timestamp": 1397108029818812, 
+                "label": "UserCpuTime:8196.72"
+            }
         ], 
         "dispatch": 1397108029817835, 
         "sourceEventType": 1, 
@@ -6250,10 +6250,10 @@
         "latency": 21637, 
         "executionTime": 2442, 
         "labels": [
-            [
-                1397108029803675, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ]
+            {
+                "timestamp": 1397108029803675, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }
         ], 
         "dispatch": 1397108029780634, 
         "sourceEventType": 1, 
@@ -6345,14 +6345,14 @@
         "latency": 463104, 
         "executionTime": 13946, 
         "labels": [
-            [
-                1397108033219355, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ], 
-            [
-                1397108033232996, 
-                "UserCpuTime:71.71"
-            ]
+            {
+                "timestamp": 1397108033219355, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }, 
+            {
+                "timestamp": 1397108033232996, 
+                "label": "UserCpuTime:71.71"
+            }
         ], 
         "dispatch": 1397108032755946, 
         "sourceEventType": 1, 
@@ -6489,10 +6489,10 @@
         "latency": 1373, 
         "executionTime": 6744, 
         "labels": [
-            [
-                1397108029200617, 
-                "SysCpuTime: 148.28"
-            ]
+            {
+                "timestamp": 1397108029200617, 
+                "label": "SysCpuTime: 148.28"
+            }
         ], 
         "dispatch": 1397108029192500, 
         "sourceEventType": 0, 
@@ -6614,10 +6614,10 @@
         "latency": 1459168, 
         "executionTime": 20355, 
         "labels": [
-            [
-                1397108032902949, 
-                "UserCpuTime:49.13"
-            ]
+            {
+                "timestamp": 1397108032902949, 
+                "label": "UserCpuTime:49.13"
+            }
         ], 
         "dispatch": 1397108031423426, 
         "sourceEventType": 1, 
@@ -6649,14 +6649,14 @@
         "latency": 1414826, 
         "executionTime": 122436, 
         "labels": [
-            [
-                1397108033037348, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108033038172, 
-                "UserCpuTime:8.17"
-            ]
+            {
+                "timestamp": 1397108033037348, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108033038172, 
+                "label": "UserCpuTime:8.17"
+            }
         ], 
         "dispatch": 1397108031500910, 
         "sourceEventType": 1, 
@@ -6823,10 +6823,10 @@
         "latency": 1488922, 
         "executionTime": 367, 
         "labels": [
-            [
-                1397108032881586, 
-                "[nsEventDispatcher::Dispatch] Event name: complete"
-            ]
+            {
+                "timestamp": 1397108032881586, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: complete"
+            }
         ], 
         "dispatch": 1397108031392420, 
         "sourceEventType": 0, 
@@ -6858,10 +6858,10 @@
         "latency": 1451751, 
         "executionTime": 11139, 
         "labels": [
-            [
-                1397108032628382, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108032628382, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108031167323, 
         "sourceEventType": 0, 
@@ -6893,18 +6893,18 @@
         "latency": 679352, 
         "executionTime": 20721, 
         "labels": [
-            [
-                1397108030979365, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108030980769, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Changed"
-            ], 
-            [
-                1397108030994288, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108030979365, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108030980769, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Changed"
+            }, 
+            {
+                "timestamp": 1397108030994288, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108030299555, 
         "sourceEventType": 0, 
@@ -6936,10 +6936,10 @@
         "latency": 25055, 
         "executionTime": 15930, 
         "labels": [
-            [
-                1397108030286066, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108030286066, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108030260767, 
         "sourceEventType": 0, 
@@ -6956,10 +6956,10 @@
         "latency": 31311, 
         "executionTime": 1953, 
         "labels": [
-            [
-                1397108030285670, 
-                "SysCpuTime: 512.03"
-            ]
+            {
+                "timestamp": 1397108030285670, 
+                "label": "SysCpuTime: 512.03"
+            }
         ], 
         "dispatch": 1397108030252406, 
         "sourceEventType": 1, 
@@ -6976,10 +6976,10 @@
         "latency": 14191, 
         "executionTime": 7141, 
         "labels": [
-            [
-                1397108032538264, 
-                "UserCpuTime:140.04"
-            ]
+            {
+                "timestamp": 1397108032538264, 
+                "label": "UserCpuTime:140.04"
+            }
         ], 
         "dispatch": 1397108032516932, 
         "sourceEventType": 1, 
@@ -7011,10 +7011,10 @@
         "latency": 305787, 
         "executionTime": 1495, 
         "labels": [
-            [
-                1397108032822535, 
-                "UserCpuTime:668.9"
-            ]
+            {
+                "timestamp": 1397108032822535, 
+                "label": "UserCpuTime:668.9"
+            }
         ], 
         "dispatch": 1397108032515253, 
         "sourceEventType": 1, 
@@ -7181,10 +7181,10 @@
         "latency": 36255, 
         "executionTime": 37323, 
         "labels": [
-            [
-                1397108033167231, 
-                "UserCpuTime:26.79"
-            ]
+            {
+                "timestamp": 1397108033167231, 
+                "label": "UserCpuTime:26.79"
+            }
         ], 
         "dispatch": 1397108033093653, 
         "sourceEventType": 1, 
@@ -7546,10 +7546,10 @@
         "latency": 18249, 
         "executionTime": 14954, 
         "labels": [
-            [
-                1397108031711512, 
-                "UserCpuTime:66.87"
-            ]
+            {
+                "timestamp": 1397108031711512, 
+                "label": "UserCpuTime:66.87"
+            }
         ], 
         "dispatch": 1397108031678309, 
         "sourceEventType": 1, 
@@ -7596,10 +7596,10 @@
         "latency": 19471, 
         "executionTime": 15258, 
         "labels": [
-            [
-                1397108031505579, 
-                "SysCpuTime: 65.54"
-            ]
+            {
+                "timestamp": 1397108031505579, 
+                "label": "SysCpuTime: 65.54"
+            }
         ], 
         "dispatch": 1397108031470850, 
         "sourceEventType": 1, 
@@ -7616,10 +7616,10 @@
         "latency": 501008, 
         "executionTime": 305, 
         "labels": [
-            [
-                1397108030420008, 
-                "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
-            ]
+            {
+                "timestamp": 1397108030420008, 
+                "label": "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
+            }
         ], 
         "dispatch": 1397108029918909, 
         "sourceEventType": 1, 
@@ -7651,14 +7651,14 @@
         "latency": 8362, 
         "executionTime": 106994, 
         "labels": [
-            [
-                1397108029956690, 
-                "UserCpuTime:28.04"
-            ], 
-            [
-                1397108029956690, 
-                "SysCpuTime: 9.35"
-            ]
+            {
+                "timestamp": 1397108029956690, 
+                "label": "UserCpuTime:28.04"
+            }, 
+            {
+                "timestamp": 1397108029956690, 
+                "label": "SysCpuTime: 9.35"
+            }
         ], 
         "dispatch": 1397108029841334, 
         "sourceEventType": 1, 
@@ -7675,22 +7675,22 @@
         "latency": 114075, 
         "executionTime": 61432, 
         "labels": [
-            [
-                1397108030016261, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108030016962, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108030017451, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108030019099, 
-                "UserCpuTime:32.56"
-            ]
+            {
+                "timestamp": 1397108030016261, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108030016962, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108030017451, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108030019099, 
+                "label": "UserCpuTime:32.56"
+            }
         ], 
         "dispatch": 1397108029843592, 
         "sourceEventType": 1, 
@@ -7917,10 +7917,10 @@
         "latency": 274, 
         "executionTime": 123, 
         "labels": [
-            [
-                1397108032940791, 
-                "SysCpuTime: 8130.08"
-            ]
+            {
+                "timestamp": 1397108032940791, 
+                "label": "SysCpuTime: 8130.08"
+            }
         ], 
         "dispatch": 1397108032940394, 
         "sourceEventType": 1, 
@@ -8342,10 +8342,10 @@
         "latency": 24108, 
         "executionTime": 7233, 
         "labels": [
-            [
-                1397108030096125, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108030096125, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108030064906, 
         "sourceEventType": 1, 
@@ -8422,10 +8422,10 @@
         "latency": 5737, 
         "executionTime": 489, 
         "labels": [
-            [
-                1397108031261378, 
-                "SysCpuTime: 2044.99"
-            ]
+            {
+                "timestamp": 1397108031261378, 
+                "label": "SysCpuTime: 2044.99"
+            }
         ], 
         "dispatch": 1397108031255152, 
         "sourceEventType": 1, 
@@ -8502,10 +8502,10 @@
         "latency": 4974, 
         "executionTime": 15412, 
         "labels": [
-            [
-                1397108031284022, 
-                "UserCpuTime:64.88"
-            ]
+            {
+                "timestamp": 1397108031284022, 
+                "label": "UserCpuTime:64.88"
+            }
         ], 
         "dispatch": 1397108031263636, 
         "sourceEventType": 1, 
@@ -8612,10 +8612,10 @@
         "latency": 489, 
         "executionTime": 885, 
         "labels": [
-            [
-                1397108030726710, 
-                "UserCpuTime:1129.94"
-            ]
+            {
+                "timestamp": 1397108030726710, 
+                "label": "UserCpuTime:1129.94"
+            }
         ], 
         "dispatch": 1397108030725336, 
         "sourceEventType": 0, 
@@ -8692,10 +8692,10 @@
         "latency": 1374, 
         "executionTime": 8178, 
         "labels": [
-            [
-                1397108029301752, 
-                "UserCpuTime:122.28"
-            ]
+            {
+                "timestamp": 1397108029301752, 
+                "label": "UserCpuTime:122.28"
+            }
         ], 
         "dispatch": 1397108029292200, 
         "sourceEventType": 0, 
@@ -8757,10 +8757,10 @@
         "latency": 1923, 
         "executionTime": 6927, 
         "labels": [
-            [
-                1397108029234766, 
-                "SysCpuTime: 144.36"
-            ]
+            {
+                "timestamp": 1397108029234766, 
+                "label": "SysCpuTime: 144.36"
+            }
         ], 
         "dispatch": 1397108029225916, 
         "sourceEventType": 0, 
@@ -8807,10 +8807,10 @@
         "latency": 1434, 
         "executionTime": 6988, 
         "labels": [
-            [
-                1397108029251276, 
-                "UserCpuTime:143.1"
-            ]
+            {
+                "timestamp": 1397108029251276, 
+                "label": "UserCpuTime:143.1"
+            }
         ], 
         "dispatch": 1397108029242854, 
         "sourceEventType": 0, 
@@ -8917,10 +8917,10 @@
         "latency": 427, 
         "executionTime": 408539, 
         "labels": [
-            [
-                1397108032241175, 
-                "UserCpuTime:12.24"
-            ]
+            {
+                "timestamp": 1397108032241175, 
+                "label": "UserCpuTime:12.24"
+            }
         ], 
         "dispatch": 1397108031832209, 
         "sourceEventType": 1, 
@@ -8937,26 +8937,26 @@
         "latency": 641, 
         "executionTime": 398254, 
         "labels": [
-            [
-                1397108031924586, 
-                "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
-            ], 
-            [
-                1397108032009821, 
-                "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
-            ], 
-            [
-                1397108032145319, 
-                "[nsEventDispatcher::Dispatch] Event name: resize"
-            ], 
-            [
-                1397108032178675, 
-                "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
-            ], 
-            [
-                1397108032230982, 
-                "UserCpuTime:12.55"
-            ]
+            {
+                "timestamp": 1397108031924586, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
+            }, 
+            {
+                "timestamp": 1397108032009821, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
+            }, 
+            {
+                "timestamp": 1397108032145319, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: resize"
+            }, 
+            {
+                "timestamp": 1397108032178675, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozScrolledAreaChanged"
+            }, 
+            {
+                "timestamp": 1397108032230982, 
+                "label": "UserCpuTime:12.55"
+            }
         ], 
         "dispatch": 1397108031832087, 
         "sourceEventType": 1, 
@@ -8988,18 +8988,18 @@
         "latency": 457, 
         "executionTime": 2930, 
         "labels": [
-            [
-                1397108031172694, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031173487, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031174189, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108031172694, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031173487, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031174189, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108031170924, 
         "sourceEventType": 0, 
@@ -9031,10 +9031,10 @@
         "latency": 580, 
         "executionTime": 2258, 
         "labels": [
-            [
-                1397108030247095, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetText:Result:OK"
-            ]
+            {
+                "timestamp": 1397108030247095, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetText:Result:OK"
+            }
         ], 
         "dispatch": 1397108030245783, 
         "sourceEventType": 1, 
@@ -9381,30 +9381,30 @@
         "latency": 488, 
         "executionTime": 44037, 
         "labels": [
-            [
-                1397108029901972, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108029930262, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
-            ], 
-            [
-                1397108029930872, 
-                "[nsFrameLoader::DoSendAsyncMessage] msg: browser-element-api:call send to tabParent"
-            ], 
-            [
-                1397108029938959, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
-            ], 
-            [
-                1397108029939539, 
-                "[nsFrameLoader::DoSendAsyncMessage] msg: browser-element-api:call send to tabParent"
-            ], 
-            [
-                1397108029942133, 
-                "UserCpuTime:45.42"
-            ]
+            {
+                "timestamp": 1397108029901972, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108029930262, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
+            }, 
+            {
+                "timestamp": 1397108029930872, 
+                "label": "[nsFrameLoader::DoSendAsyncMessage] msg: browser-element-api:call send to tabParent"
+            }, 
+            {
+                "timestamp": 1397108029938959, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:browser-element-api:call"
+            }, 
+            {
+                "timestamp": 1397108029939539, 
+                "label": "[nsFrameLoader::DoSendAsyncMessage] msg: browser-element-api:call send to tabParent"
+            }, 
+            {
+                "timestamp": 1397108029942133, 
+                "label": "UserCpuTime:45.42"
+            }
         ], 
         "dispatch": 1397108029897608, 
         "sourceEventType": 1, 
@@ -9451,10 +9451,10 @@
         "latency": 275, 
         "executionTime": 44556, 
         "labels": [
-            [
-                1397108029942561, 
-                "UserCpuTime:44.89"
-            ]
+            {
+                "timestamp": 1397108029942561, 
+                "label": "UserCpuTime:44.89"
+            }
         ], 
         "dispatch": 1397108029897730, 
         "sourceEventType": 1, 
@@ -9501,10 +9501,10 @@
         "latency": 16784, 
         "executionTime": 15839, 
         "labels": [
-            [
-                1397108032068873, 
-                "UserCpuTime:63.14"
-            ]
+            {
+                "timestamp": 1397108032068873, 
+                "label": "UserCpuTime:63.14"
+            }
         ], 
         "dispatch": 1397108032036250, 
         "sourceEventType": 1, 
@@ -9656,10 +9656,10 @@
         "latency": 22552, 
         "executionTime": 69885, 
         "labels": [
-            [
-                1397108033089014, 
-                "UserCpuTime:14.31"
-            ]
+            {
+                "timestamp": 1397108033089014, 
+                "label": "UserCpuTime:14.31"
+            }
         ], 
         "dispatch": 1397108032996577, 
         "sourceEventType": 0, 
@@ -9676,10 +9676,10 @@
         "latency": 7751, 
         "executionTime": 42236, 
         "labels": [
-            [
-                1397108033165430, 
-                "UserCpuTime:23.68"
-            ]
+            {
+                "timestamp": 1397108033165430, 
+                "label": "UserCpuTime:23.68"
+            }
         ], 
         "dispatch": 1397108033115443, 
         "sourceEventType": 0, 
@@ -10476,46 +10476,46 @@
         "latency": 109405, 
         "executionTime": 1345673, 
         "labels": [
-            [
-                1397108031435725, 
-                "[nsEventDispatcher::Dispatch] Event name: transitionend"
-            ], 
-            [
-                1397108031438105, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031487238, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031564143, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031582575, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031583247, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108031877589, 
-                "[nsEventDispatcher::Dispatch] Event name: underflow"
-            ], 
-            [
-                1397108032776301, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108032776423, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108032776545, 
-                "UserCpuTime:14.12"
-            ]
+            {
+                "timestamp": 1397108031435725, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: transitionend"
+            }, 
+            {
+                "timestamp": 1397108031438105, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031487238, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031564143, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031582575, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031583247, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108031877589, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: underflow"
+            }, 
+            {
+                "timestamp": 1397108032776301, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108032776423, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108032776545, 
+                "label": "UserCpuTime:14.12"
+            }
         ], 
         "dispatch": 1397108031321467, 
         "sourceEventType": 1, 
@@ -10562,10 +10562,10 @@
         "latency": 519, 
         "executionTime": 1953, 
         "labels": [
-            [
-                1397108030058314, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetContext:Result:OK"
-            ]
+            {
+                "timestamp": 1397108030058314, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetContext:Result:OK"
+            }
         ], 
         "dispatch": 1397108030056696, 
         "sourceEventType": 1, 
@@ -10612,18 +10612,18 @@
         "latency": 2259, 
         "executionTime": 55786, 
         "labels": [
-            [
-                1397108029702692, 
-                "[nsEventDispatcher::Dispatch] Event name: touchstart"
-            ], 
-            [
-                1397108029742518, 
-                "UserCpuTime:17.93"
-            ], 
-            [
-                1397108029742518, 
-                "SysCpuTime: 17.93"
-            ]
+            {
+                "timestamp": 1397108029702692, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: touchstart"
+            }, 
+            {
+                "timestamp": 1397108029742518, 
+                "label": "UserCpuTime:17.93"
+            }, 
+            {
+                "timestamp": 1397108029742518, 
+                "label": "SysCpuTime: 17.93"
+            }
         ], 
         "dispatch": 1397108029684473, 
         "sourceEventType": 1, 
@@ -10640,14 +10640,14 @@
         "latency": 1862, 
         "executionTime": 56610, 
         "labels": [
-            [
-                1397108029743067, 
-                "UserCpuTime:17.66"
-            ], 
-            [
-                1397108029743067, 
-                "SysCpuTime: 17.66"
-            ]
+            {
+                "timestamp": 1397108029743067, 
+                "label": "UserCpuTime:17.66"
+            }, 
+            {
+                "timestamp": 1397108029743067, 
+                "label": "SysCpuTime: 17.66"
+            }
         ], 
         "dispatch": 1397108029684595, 
         "sourceEventType": 1, 
@@ -10664,10 +10664,10 @@
         "latency": 11109, 
         "executionTime": 16266, 
         "labels": [
-            [
-                1397108029810664, 
-                "[nsEventDispatcher::Dispatch] Event name: touchend"
-            ]
+            {
+                "timestamp": 1397108029810664, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: touchend"
+            }
         ], 
         "dispatch": 1397108029796137, 
         "sourceEventType": 1, 
@@ -10699,10 +10699,10 @@
         "latency": 9704, 
         "executionTime": 2015, 
         "labels": [
-            [
-                1397108029840083, 
-                "UserCpuTime:496.28"
-            ]
+            {
+                "timestamp": 1397108029840083, 
+                "label": "UserCpuTime:496.28"
+            }
         ], 
         "dispatch": 1397108029828364, 
         "sourceEventType": 1, 
@@ -10719,10 +10719,10 @@
         "latency": 9125, 
         "executionTime": 2899, 
         "labels": [
-            [
-                1397108029840479, 
-                "UserCpuTime:344.95"
-            ]
+            {
+                "timestamp": 1397108029840479, 
+                "label": "UserCpuTime:344.95"
+            }
         ], 
         "dispatch": 1397108029828455, 
         "sourceEventType": 1, 
@@ -11069,10 +11069,10 @@
         "latency": 403595, 
         "executionTime": 129028, 
         "labels": [
-            [
-                1397108029115809, 
-                "UserCpuTime:15.5"
-            ]
+            {
+                "timestamp": 1397108029115809, 
+                "label": "UserCpuTime:15.5"
+            }
         ], 
         "dispatch": 1397108028583186, 
         "sourceEventType": 1, 
@@ -11134,10 +11134,10 @@
         "latency": 32471, 
         "executionTime": 76446, 
         "labels": [
-            [
-                1397108033242426, 
-                "SysCpuTime: 13.08"
-            ]
+            {
+                "timestamp": 1397108033242426, 
+                "label": "SysCpuTime: 13.08"
+            }
         ], 
         "dispatch": 1397108033133509, 
         "sourceEventType": 0, 
@@ -11199,10 +11199,10 @@
         "latency": 14893, 
         "executionTime": 18738, 
         "labels": [
-            [
-                1397108033101466, 
-                "UserCpuTime:53.37"
-            ]
+            {
+                "timestamp": 1397108033101466, 
+                "label": "UserCpuTime:53.37"
+            }
         ], 
         "dispatch": 1397108033067835, 
         "sourceEventType": 1, 
@@ -11249,10 +11249,10 @@
         "latency": 667420, 
         "executionTime": 20813, 
         "labels": [
-            [
-                1397108031425776, 
-                "UserCpuTime:48.05"
-            ]
+            {
+                "timestamp": 1397108031425776, 
+                "label": "UserCpuTime:48.05"
+            }
         ], 
         "dispatch": 1397108030737543, 
         "sourceEventType": 1, 
@@ -11374,14 +11374,14 @@
         "latency": 580, 
         "executionTime": 67138, 
         "labels": [
-            [
-                1397108030494501, 
-                "UserCpuTime:14.89"
-            ], 
-            [
-                1397108030494501, 
-                "SysCpuTime: 14.89"
-            ]
+            {
+                "timestamp": 1397108030494501, 
+                "label": "UserCpuTime:14.89"
+            }, 
+            {
+                "timestamp": 1397108030494501, 
+                "label": "SysCpuTime: 14.89"
+            }
         ], 
         "dispatch": 1397108030426783, 
         "sourceEventType": 0, 
@@ -11533,10 +11533,10 @@
         "latency": 15075, 
         "executionTime": 17456, 
         "labels": [
-            [
-                1397108032376978, 
-                "SysCpuTime: 57.29"
-            ]
+            {
+                "timestamp": 1397108032376978, 
+                "label": "SysCpuTime: 57.29"
+            }
         ], 
         "dispatch": 1397108032344447, 
         "sourceEventType": 1, 
@@ -11658,10 +11658,10 @@
         "latency": 20630, 
         "executionTime": 22705, 
         "labels": [
-            [
-                1397108032405604, 
-                "UserCpuTime:44.04"
-            ]
+            {
+                "timestamp": 1397108032405604, 
+                "label": "UserCpuTime:44.04"
+            }
         ], 
         "dispatch": 1397108032362269, 
         "sourceEventType": 1, 
@@ -11783,22 +11783,22 @@
         "latency": 158234, 
         "executionTime": 29358, 
         "labels": [
-            [
-                1397108031156916, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
-            ], 
-            [
-                1397108031160822, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
-            ], 
-            [
-                1397108031165644, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
-            ], 
-            [
-                1397108031169184, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
-            ]
+            {
+                "timestamp": 1397108031156916, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
+            }, 
+            {
+                "timestamp": 1397108031160822, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
+            }, 
+            {
+                "timestamp": 1397108031165644, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
+            }, 
+            {
+                "timestamp": 1397108031169184, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Settings:Change:Return:OK"
+            }
         ], 
         "dispatch": 1397108030991724, 
         "sourceEventType": 0, 
@@ -11875,14 +11875,14 @@
         "latency": 518, 
         "executionTime": 53803, 
         "labels": [
-            [
-                1397108030965327, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ], 
-            [
-                1397108030968378, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108030965327, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }, 
+            {
+                "timestamp": 1397108030968378, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108030963496, 
         "sourceEventType": 1, 
@@ -11929,10 +11929,10 @@
         "latency": 1373, 
         "executionTime": 7080, 
         "labels": [
-            [
-                1397108028933985, 
-                "SysCpuTime: 141.24"
-            ]
+            {
+                "timestamp": 1397108028933985, 
+                "label": "SysCpuTime: 141.24"
+            }
         ], 
         "dispatch": 1397108028925532, 
         "sourceEventType": 0, 
@@ -11994,10 +11994,10 @@
         "latency": 1923, 
         "executionTime": 13153, 
         "labels": [
-            [
-                1397108028991267, 
-                "UserCpuTime:76.03"
-            ]
+            {
+                "timestamp": 1397108028991267, 
+                "label": "UserCpuTime:76.03"
+            }
         ], 
         "dispatch": 1397108028976191, 
         "sourceEventType": 0, 
@@ -12044,10 +12044,10 @@
         "latency": 1617, 
         "executionTime": 38818, 
         "labels": [
-            [
-                1397108029056757, 
-                "SysCpuTime: 25.76"
-            ]
+            {
+                "timestamp": 1397108029056757, 
+                "label": "SysCpuTime: 25.76"
+            }
         ], 
         "dispatch": 1397108029016322, 
         "sourceEventType": 0, 
@@ -12139,10 +12139,10 @@
         "latency": 16571, 
         "executionTime": 50354, 
         "labels": [
-            [
-                1397108030376307, 
-                "UserCpuTime:39.72"
-            ]
+            {
+                "timestamp": 1397108030376307, 
+                "label": "UserCpuTime:39.72"
+            }
         ], 
         "dispatch": 1397108030309382, 
         "sourceEventType": 1, 
@@ -12189,10 +12189,10 @@
         "latency": 500488, 
         "executionTime": 397, 
         "labels": [
-            [
-                1397108030920771, 
-                "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
-            ]
+            {
+                "timestamp": 1397108030920771, 
+                "label": "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
+            }
         ], 
         "dispatch": 1397108030420100, 
         "sourceEventType": 1, 
@@ -12209,26 +12209,26 @@
         "latency": 17730, 
         "executionTime": 66834, 
         "labels": [
-            [
-                1397108030493006, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108030493464, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108030493891, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108030494288, 
-                "UserCpuTime:14.96"
-            ], 
-            [
-                1397108030494288, 
-                "SysCpuTime: 14.96"
-            ]
+            {
+                "timestamp": 1397108030493006, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108030493464, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108030493891, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108030494288, 
+                "label": "UserCpuTime:14.96"
+            }, 
+            {
+                "timestamp": 1397108030494288, 
+                "label": "SysCpuTime: 14.96"
+            }
         ], 
         "dispatch": 1397108030409724, 
         "sourceEventType": 1, 
@@ -12290,14 +12290,14 @@
         "latency": 406341, 
         "executionTime": 2777, 
         "labels": [
-            [
-                1397108032245142, 
-                "[nsEventDispatcher::Dispatch] Event name: overflow"
-            ], 
-            [
-                1397108032246851, 
-                "UserCpuTime:360.1"
-            ]
+            {
+                "timestamp": 1397108032245142, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: overflow"
+            }, 
+            {
+                "timestamp": 1397108032246851, 
+                "label": "UserCpuTime:360.1"
+            }
         ], 
         "dispatch": 1397108031837733, 
         "sourceEventType": 1, 
@@ -12494,10 +12494,10 @@
         "latency": 519, 
         "executionTime": 1770, 
         "labels": [
-            [
-                1397108030660517, 
-                "UserCpuTime:564.97"
-            ]
+            {
+                "timestamp": 1397108030660517, 
+                "label": "UserCpuTime:564.97"
+            }
         ], 
         "dispatch": 1397108030658228, 
         "sourceEventType": 0, 
@@ -12634,10 +12634,10 @@
         "latency": 17395, 
         "executionTime": 10163, 
         "labels": [
-            [
-                1397108028587794, 
-                "UserCpuTime:98.4"
-            ]
+            {
+                "timestamp": 1397108028587794, 
+                "label": "UserCpuTime:98.4"
+            }
         ], 
         "dispatch": 1397108028560236, 
         "sourceEventType": 1, 
@@ -12804,10 +12804,10 @@
         "latency": 2288, 
         "executionTime": 130616, 
         "labels": [
-            [
-                1397108029116328, 
-                "UserCpuTime:15.31"
-            ]
+            {
+                "timestamp": 1397108029116328, 
+                "label": "UserCpuTime:15.31"
+            }
         ], 
         "dispatch": 1397108028983424, 
         "sourceEventType": 0, 
@@ -12899,10 +12899,10 @@
         "latency": 214, 
         "executionTime": 763, 
         "labels": [
-            [
-                1397108030576533, 
-                "UserCpuTime:1310.62"
-            ]
+            {
+                "timestamp": 1397108030576533, 
+                "label": "UserCpuTime:1310.62"
+            }
         ], 
         "dispatch": 1397108030575556, 
         "sourceEventType": 0, 
@@ -13099,10 +13099,10 @@
         "latency": 15656, 
         "executionTime": 27130, 
         "labels": [
-            [
-                1397108032318751, 
-                "SysCpuTime: 36.86"
-            ]
+            {
+                "timestamp": 1397108032318751, 
+                "label": "SysCpuTime: 36.86"
+            }
         ], 
         "dispatch": 1397108032275965, 
         "sourceEventType": 1, 
@@ -13434,10 +13434,10 @@
         "latency": 427, 
         "executionTime": 6012, 
         "labels": [
-            [
-                1397108028865076, 
-                "UserCpuTime:166.33"
-            ]
+            {
+                "timestamp": 1397108028865076, 
+                "label": "UserCpuTime:166.33"
+            }
         ], 
         "dispatch": 1397108028858637, 
         "sourceEventType": 0, 
@@ -13649,10 +13649,10 @@
         "latency": 16601, 
         "executionTime": 1648, 
         "labels": [
-            [
-                1397108030310419, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ]
+            {
+                "timestamp": 1397108030310419, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }
         ], 
         "dispatch": 1397108030292689, 
         "sourceEventType": 1, 
@@ -13789,30 +13789,30 @@
         "latency": 501893, 
         "executionTime": 379608, 
         "labels": [
-            [
-                1397108032759333, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ], 
-            [
-                1397108033132868, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108033133021, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108033135065, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108033135432, 
-                "UserCpuTime:7.9"
-            ], 
-            [
-                1397108033135432, 
-                "SysCpuTime: 2.63"
-            ]
+            {
+                "timestamp": 1397108032759333, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }, 
+            {
+                "timestamp": 1397108033132868, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108033133021, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108033135065, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108033135432, 
+                "label": "UserCpuTime:7.9"
+            }, 
+            {
+                "timestamp": 1397108033135432, 
+                "label": "SysCpuTime: 2.63"
+            }
         ], 
         "dispatch": 1397108032253931, 
         "sourceEventType": 1, 
@@ -13844,10 +13844,10 @@
         "latency": 4181, 
         "executionTime": 7232, 
         "labels": [
-            [
-                1397108029654230, 
-                "UserCpuTime:138.27"
-            ]
+            {
+                "timestamp": 1397108029654230, 
+                "label": "UserCpuTime:138.27"
+            }
         ], 
         "dispatch": 1397108029642817, 
         "sourceEventType": 0, 
@@ -14224,10 +14224,10 @@
         "latency": 488, 
         "executionTime": 213, 
         "labels": [
-            [
-                1397108030287775, 
-                "UserCpuTime:4694.84"
-            ]
+            {
+                "timestamp": 1397108030287775, 
+                "label": "UserCpuTime:4694.84"
+            }
         ], 
         "dispatch": 1397108030287074, 
         "sourceEventType": 0, 
@@ -14289,14 +14289,14 @@
         "latency": 1190, 
         "executionTime": 13489, 
         "labels": [
-            [
-                1397108030240351, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetText"
-            ], 
-            [
-                1397108030240961, 
-                "[nsFrameLoader::DoSendAsyncMessage] msg: Forms:GetText send to tabParent"
-            ]
+            {
+                "timestamp": 1397108030240351, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetText"
+            }, 
+            {
+                "timestamp": 1397108030240961, 
+                "label": "[nsFrameLoader::DoSendAsyncMessage] msg: Forms:GetText send to tabParent"
+            }
         ], 
         "dispatch": 1397108030235926, 
         "sourceEventType": 1, 
@@ -14328,10 +14328,10 @@
         "latency": 732, 
         "executionTime": 7324, 
         "labels": [
-            [
-                1397108030251673, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetText:Result:OK"
-            ]
+            {
+                "timestamp": 1397108030251673, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetText:Result:OK"
+            }
         ], 
         "dispatch": 1397108030250178, 
         "sourceEventType": 1, 
@@ -14408,10 +14408,10 @@
         "latency": 143952, 
         "executionTime": 6683, 
         "labels": [
-            [
-                1397108031430506, 
-                "SysCpuTime: 149.63"
-            ]
+            {
+                "timestamp": 1397108031430506, 
+                "label": "SysCpuTime: 149.63"
+            }
         ], 
         "dispatch": 1397108031279871, 
         "sourceEventType": 1, 
@@ -14428,10 +14428,10 @@
         "latency": 144195, 
         "executionTime": 6470, 
         "labels": [
-            [
-                1397108031430384, 
-                "SysCpuTime: 154.56"
-            ]
+            {
+                "timestamp": 1397108031430384, 
+                "label": "SysCpuTime: 154.56"
+            }
         ], 
         "dispatch": 1397108031279719, 
         "sourceEventType": 1, 
@@ -14613,10 +14613,10 @@
         "latency": 30487, 
         "executionTime": 519, 
         "labels": [
-            [
-                1397108033018824, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108033018824, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108032988001, 
         "sourceEventType": 1, 
@@ -14663,14 +14663,14 @@
         "latency": 549, 
         "executionTime": 107788, 
         "labels": [
-            [
-                1397108029957026, 
-                "UserCpuTime:27.83"
-            ], 
-            [
-                1397108029957026, 
-                "SysCpuTime: 9.28"
-            ]
+            {
+                "timestamp": 1397108029957026, 
+                "label": "UserCpuTime:27.83"
+            }, 
+            {
+                "timestamp": 1397108029957026, 
+                "label": "SysCpuTime: 9.28"
+            }
         ], 
         "dispatch": 1397108029848689, 
         "sourceEventType": 0, 
@@ -14702,10 +14702,10 @@
         "latency": 22369, 
         "executionTime": 15503, 
         "labels": [
-            [
-                1397108031989100, 
-                "UserCpuTime:64.5"
-            ]
+            {
+                "timestamp": 1397108031989100, 
+                "label": "UserCpuTime:64.5"
+            }
         ], 
         "dispatch": 1397108031951228, 
         "sourceEventType": 1, 
@@ -14812,10 +14812,10 @@
         "latency": 16785, 
         "executionTime": 641, 
         "labels": [
-            [
-                1397108030576472, 
-                "UserCpuTime:1560.06"
-            ]
+            {
+                "timestamp": 1397108030576472, 
+                "label": "UserCpuTime:1560.06"
+            }
         ], 
         "dispatch": 1397108030559046, 
         "sourceEventType": 1, 
@@ -14937,10 +14937,10 @@
         "latency": 15534, 
         "executionTime": 1587, 
         "labels": [
-            [
-                1397108030660426, 
-                "UserCpuTime:630.12"
-            ]
+            {
+                "timestamp": 1397108030660426, 
+                "label": "UserCpuTime:630.12"
+            }
         ], 
         "dispatch": 1397108030643305, 
         "sourceEventType": 1, 
@@ -14987,14 +14987,14 @@
         "latency": 397, 
         "executionTime": 10498, 
         "labels": [
-            [
-                1397108029697535, 
-                "Mouse at (164, 117)"
-            ], 
-            [
-                1397108029704310, 
-                "[nsEventDispatcher::Dispatch] Event name: mousedown"
-            ]
+            {
+                "timestamp": 1397108029697535, 
+                "label": "Mouse at (164, 117)"
+            }, 
+            {
+                "timestamp": 1397108029704310, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: mousedown"
+            }
         ], 
         "dispatch": 1397108029695643, 
         "sourceEventType": 2, 
@@ -15056,18 +15056,18 @@
         "latency": 34302, 
         "executionTime": 22095, 
         "labels": [
-            [
-                1397108029735407, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108029735926, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108029736384, 
-                "SysCpuTime: 45.26"
-            ]
+            {
+                "timestamp": 1397108029735407, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108029735926, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108029736384, 
+                "label": "SysCpuTime: 45.26"
+            }
         ], 
         "dispatch": 1397108029679987, 
         "sourceEventType": 1, 
@@ -15144,10 +15144,10 @@
         "latency": 16601, 
         "executionTime": 641, 
         "labels": [
-            [
-                1397108031710047, 
-                "UserCpuTime:1560.06"
-            ]
+            {
+                "timestamp": 1397108031710047, 
+                "label": "UserCpuTime:1560.06"
+            }
         ], 
         "dispatch": 1397108031692805, 
         "sourceEventType": 1, 
@@ -15389,10 +15389,10 @@
         "latency": 519, 
         "executionTime": 76324, 
         "labels": [
-            [
-                1397108031002161, 
-                "UserCpuTime:26.2"
-            ]
+            {
+                "timestamp": 1397108031002161, 
+                "label": "UserCpuTime:26.2"
+            }
         ], 
         "dispatch": 1397108030925318, 
         "sourceEventType": 0, 
@@ -15424,10 +15424,10 @@
         "latency": 274, 
         "executionTime": 54047, 
         "labels": [
-            [
-                1397108031017939, 
-                "UserCpuTime:18.5"
-            ]
+            {
+                "timestamp": 1397108031017939, 
+                "label": "UserCpuTime:18.5"
+            }
         ], 
         "dispatch": 1397108030963618, 
         "sourceEventType": 1, 
@@ -15489,10 +15489,10 @@
         "latency": 2941041, 
         "executionTime": 0, 
         "labels": [
-            [
-                1397108033265620, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108033265620, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108030324335, 
         "sourceEventType": 1, 
@@ -15524,10 +15524,10 @@
         "latency": 393555, 
         "executionTime": 2548095, 
         "labels": [
-            [
-                1397108033265253, 
-                "UserCpuTime:1.57"
-            ]
+            {
+                "timestamp": 1397108033265253, 
+                "label": "UserCpuTime:1.57"
+            }
         ], 
         "dispatch": 1397108030323603, 
         "sourceEventType": 1, 
@@ -15574,10 +15574,10 @@
         "latency": 518, 
         "executionTime": 1130, 
         "labels": [
-            [
-                1397108031163844, 
-                "[nsEventDispatcher::Dispatch] Event name: (null)"
-            ]
+            {
+                "timestamp": 1397108031163844, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: (null)"
+            }
         ], 
         "dispatch": 1397108031162379, 
         "sourceEventType": 0, 
@@ -15624,10 +15624,10 @@
         "latency": 26428, 
         "executionTime": 21668, 
         "labels": [
-            [
-                1397108031576899, 
-                "SysCpuTime: 46.15"
-            ]
+            {
+                "timestamp": 1397108031576899, 
+                "label": "SysCpuTime: 46.15"
+            }
         ], 
         "dispatch": 1397108031528803, 
         "sourceEventType": 1, 
@@ -16259,10 +16259,10 @@
         "latency": 122375, 
         "executionTime": 69153, 
         "labels": [
-            [
-                1397108033088343, 
-                "UserCpuTime:14.46"
-            ]
+            {
+                "timestamp": 1397108033088343, 
+                "label": "UserCpuTime:14.46"
+            }
         ], 
         "dispatch": 1397108032896815, 
         "sourceEventType": 0, 
@@ -16534,10 +16534,10 @@
         "latency": 21393, 
         "executionTime": 1129, 
         "labels": [
-            [
-                1397108032674799, 
-                "UserCpuTime:885.74"
-            ]
+            {
+                "timestamp": 1397108032674799, 
+                "label": "UserCpuTime:885.74"
+            }
         ], 
         "dispatch": 1397108032652277, 
         "sourceEventType": 1, 
@@ -16704,18 +16704,18 @@
         "latency": 366, 
         "executionTime": 13947, 
         "labels": [
-            [
-                1397108029798701, 
-                "Mouse at (164, 117)"
-            ], 
-            [
-                1397108029801203, 
-                "[nsEventDispatcher::Dispatch] Event name: mouseup"
-            ], 
-            [
-                1397108029810145, 
-                "[nsEventDispatcher::Dispatch] Event name: click"
-            ]
+            {
+                "timestamp": 1397108029798701, 
+                "label": "Mouse at (164, 117)"
+            }, 
+            {
+                "timestamp": 1397108029801203, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: mouseup"
+            }, 
+            {
+                "timestamp": 1397108029810145, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: click"
+            }
         ], 
         "dispatch": 1397108029797938, 
         "sourceEventType": 2, 
@@ -16792,18 +16792,18 @@
         "latency": 92, 
         "executionTime": 5859, 
         "labels": [
-            [
-                1397108029791773, 
-                "Touch at (164, 117)"
-            ], 
-            [
-                1397108029792323, 
-                "[nsEventDispatcher::Dispatch] Event name: touchend"
-            ], 
-            [
-                1397108029797327, 
-                "Capture? 0"
-            ]
+            {
+                "timestamp": 1397108029791773, 
+                "label": "Touch at (164, 117)"
+            }, 
+            {
+                "timestamp": 1397108029792323, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: touchend"
+            }, 
+            {
+                "timestamp": 1397108029797327, 
+                "label": "Capture? 0"
+            }
         ], 
         "dispatch": 1397108029791590, 
         "sourceEventType": 1, 
@@ -16925,10 +16925,10 @@
         "latency": 16632, 
         "executionTime": 1648, 
         "labels": [
-            [
-                1397108031809962, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ]
+            {
+                "timestamp": 1397108031809962, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }
         ], 
         "dispatch": 1397108031792536, 
         "sourceEventType": 1, 
@@ -16960,30 +16960,30 @@
         "latency": 426483, 
         "executionTime": 471405, 
         "labels": [
-            [
-                1397108032255915, 
-                "[nsEventDispatcher::Dispatch] Event name: resize"
-            ], 
-            [
-                1397108032280329, 
-                "[nsEventDispatcher::Dispatch] Event name: resize"
-            ], 
-            [
-                1397108032724329, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108032724451, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108032724512, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108032724604, 
-                "UserCpuTime:8.49"
-            ]
+            {
+                "timestamp": 1397108032255915, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: resize"
+            }, 
+            {
+                "timestamp": 1397108032280329, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: resize"
+            }, 
+            {
+                "timestamp": 1397108032724329, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108032724451, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108032724512, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108032724604, 
+                "label": "UserCpuTime:8.49"
+            }
         ], 
         "dispatch": 1397108031826716, 
         "sourceEventType": 1, 
@@ -17210,10 +17210,10 @@
         "latency": 305, 
         "executionTime": 824, 
         "labels": [
-            [
-                1397108031710139, 
-                "UserCpuTime:1213.59"
-            ]
+            {
+                "timestamp": 1397108031710139, 
+                "label": "UserCpuTime:1213.59"
+            }
         ], 
         "dispatch": 1397108031709010, 
         "sourceEventType": 0, 
@@ -17350,10 +17350,10 @@
         "latency": 78431, 
         "executionTime": 22094, 
         "labels": [
-            [
-                1397108030166254, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ]
+            {
+                "timestamp": 1397108030166254, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }
         ], 
         "dispatch": 1397108030070734, 
         "sourceEventType": 1, 
@@ -17685,14 +17685,14 @@
         "latency": 6165, 
         "executionTime": 15045, 
         "labels": [
-            [
-                1397108030078577, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetContext:Result:OK"
-            ], 
-            [
-                1397108030082392, 
-                "UserCpuTime:66.47"
-            ]
+            {
+                "timestamp": 1397108030078577, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:GetContext:Result:OK"
+            }, 
+            {
+                "timestamp": 1397108030082392, 
+                "label": "UserCpuTime:66.47"
+            }
         ], 
         "dispatch": 1397108030061182, 
         "sourceEventType": 1, 
@@ -17709,10 +17709,10 @@
         "latency": 4731, 
         "executionTime": 17212, 
         "labels": [
-            [
-                1397108030083247, 
-                "UserCpuTime:58.1"
-            ]
+            {
+                "timestamp": 1397108030083247, 
+                "label": "UserCpuTime:58.1"
+            }
         ], 
         "dispatch": 1397108030061304, 
         "sourceEventType": 1, 
@@ -17819,10 +17819,10 @@
         "latency": 1373, 
         "executionTime": 6867, 
         "labels": [
-            [
-                1397108029599696, 
-                "SysCpuTime: 145.62"
-            ]
+            {
+                "timestamp": 1397108029599696, 
+                "label": "SysCpuTime: 145.62"
+            }
         ], 
         "dispatch": 1397108029591456, 
         "sourceEventType": 0, 
@@ -17884,10 +17884,10 @@
         "latency": 2227, 
         "executionTime": 4181, 
         "labels": [
-            [
-                1397108029538538, 
-                "UserCpuTime:239.18"
-            ]
+            {
+                "timestamp": 1397108029538538, 
+                "label": "UserCpuTime:239.18"
+            }
         ], 
         "dispatch": 1397108029532130, 
         "sourceEventType": 0, 
@@ -18054,10 +18054,10 @@
         "latency": 16449, 
         "executionTime": 9979, 
         "labels": [
-            [
-                1397108032489069, 
-                "UserCpuTime:100.21"
-            ]
+            {
+                "timestamp": 1397108032489069, 
+                "label": "UserCpuTime:100.21"
+            }
         ], 
         "dispatch": 1397108032462641, 
         "sourceEventType": 1, 
@@ -18269,10 +18269,10 @@
         "latency": 17670, 
         "executionTime": 19287, 
         "labels": [
-            [
-                1397108031774378, 
-                "UserCpuTime:51.85"
-            ]
+            {
+                "timestamp": 1397108031774378, 
+                "label": "UserCpuTime:51.85"
+            }
         ], 
         "dispatch": 1397108031737421, 
         "sourceEventType": 1, 
@@ -18424,10 +18424,10 @@
         "latency": 1412445, 
         "executionTime": 122589, 
         "labels": [
-            [
-                1397108033038233, 
-                "UserCpuTime:8.16"
-            ]
+            {
+                "timestamp": 1397108033038233, 
+                "label": "UserCpuTime:8.16"
+            }
         ], 
         "dispatch": 1397108031503199, 
         "sourceEventType": 0, 
@@ -18534,10 +18534,10 @@
         "latency": 500274, 
         "executionTime": 366, 
         "labels": [
-            [
-                1397108031421320, 
-                "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
-            ]
+            {
+                "timestamp": 1397108031421320, 
+                "label": "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
+            }
         ], 
         "dispatch": 1397108030920863, 
         "sourceEventType": 1, 
@@ -18644,22 +18644,22 @@
         "latency": 16693, 
         "executionTime": 76142, 
         "labels": [
-            [
-                1397108030996607, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031000147, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031000239, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031002070, 
-                "UserCpuTime:26.27"
-            ]
+            {
+                "timestamp": 1397108030996607, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031000147, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031000239, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031002070, 
+                "label": "UserCpuTime:26.27"
+            }
         ], 
         "dispatch": 1397108030909235, 
         "sourceEventType": 1, 
@@ -18691,18 +18691,18 @@
         "latency": 702, 
         "executionTime": 14495, 
         "labels": [
-            [
-                1397108030049158, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:LayoutsChange"
-            ], 
-            [
-                1397108030052393, 
-                "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetContext"
-            ], 
-            [
-                1397108030054285, 
-                "[nsFrameLoader::DoSendAsyncMessage] msg: Forms:GetContext send to tabParent"
-            ]
+            {
+                "timestamp": 1397108030049158, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Keyboard:LayoutsChange"
+            }, 
+            {
+                "timestamp": 1397108030052393, 
+                "label": "[nsFrameMessageManager::SendAsyncMessage] type:Forms:GetContext"
+            }, 
+            {
+                "timestamp": 1397108030054285, 
+                "label": "[nsFrameLoader::DoSendAsyncMessage] msg: Forms:GetContext send to tabParent"
+            }
         ], 
         "dispatch": 1397108030046992, 
         "sourceEventType": 1, 
@@ -18959,10 +18959,10 @@
         "latency": 45563, 
         "executionTime": 183, 
         "labels": [
-            [
-                1397108029098902, 
-                "UserCpuTime:5464.48"
-            ]
+            {
+                "timestamp": 1397108029098902, 
+                "label": "UserCpuTime:5464.48"
+            }
         ], 
         "dispatch": 1397108029053156, 
         "sourceEventType": 1, 
@@ -19249,10 +19249,10 @@
         "latency": 397, 
         "executionTime": 113464, 
         "labels": [
-            [
-                1397108033216730, 
-                "UserCpuTime:8.81"
-            ]
+            {
+                "timestamp": 1397108033216730, 
+                "label": "UserCpuTime:8.81"
+            }
         ], 
         "dispatch": 1397108033102869, 
         "sourceEventType": 1, 
@@ -19434,10 +19434,10 @@
         "latency": 3052, 
         "executionTime": 16296, 
         "labels": [
-            [
-                1397108032430445, 
-                "UserCpuTime:61.36"
-            ]
+            {
+                "timestamp": 1397108032430445, 
+                "label": "UserCpuTime:61.36"
+            }
         ], 
         "dispatch": 1397108032411097, 
         "sourceEventType": 1, 
@@ -19604,10 +19604,10 @@
         "latency": 18616, 
         "executionTime": 18158, 
         "labels": [
-            [
-                1397108032129969, 
-                "UserCpuTime:55.07"
-            ]
+            {
+                "timestamp": 1397108032129969, 
+                "label": "UserCpuTime:55.07"
+            }
         ], 
         "dispatch": 1397108032093195, 
         "sourceEventType": 1, 
@@ -19684,10 +19684,10 @@
         "latency": 213, 
         "executionTime": 44617, 
         "labels": [
-            [
-                1397108029775843, 
-                "UserCpuTime:22.41"
-            ]
+            {
+                "timestamp": 1397108029775843, 
+                "label": "UserCpuTime:22.41"
+            }
         ], 
         "dispatch": 1397108029731013, 
         "sourceEventType": 1, 
@@ -19794,10 +19794,10 @@
         "latency": 10101, 
         "executionTime": 42114, 
         "labels": [
-            [
-                1397108033165369, 
-                "UserCpuTime:23.75"
-            ]
+            {
+                "timestamp": 1397108033165369, 
+                "label": "UserCpuTime:23.75"
+            }
         ], 
         "dispatch": 1397108033113154, 
         "sourceEventType": 1, 
@@ -19829,10 +19829,10 @@
         "latency": 42694, 
         "executionTime": 76324, 
         "labels": [
-            [
-                1397108033242365, 
-                "SysCpuTime: 13.1"
-            ]
+            {
+                "timestamp": 1397108033242365, 
+                "label": "SysCpuTime: 13.1"
+            }
         ], 
         "dispatch": 1397108033123347, 
         "sourceEventType": 1, 
@@ -19879,10 +19879,10 @@
         "latency": 1374, 
         "executionTime": 22918, 
         "labels": [
-            [
-                1397108029417078, 
-                "UserCpuTime:87.27"
-            ]
+            {
+                "timestamp": 1397108029417078, 
+                "label": "UserCpuTime:87.27"
+            }
         ], 
         "dispatch": 1397108029392786, 
         "sourceEventType": 0, 
@@ -19959,10 +19959,10 @@
         "latency": 3143, 
         "executionTime": 3967, 
         "labels": [
-            [
-                1397108029466547, 
-                "UserCpuTime:252.08"
-            ]
+            {
+                "timestamp": 1397108029466547, 
+                "label": "UserCpuTime:252.08"
+            }
         ], 
         "dispatch": 1397108029459437, 
         "sourceEventType": 0, 
@@ -20189,10 +20189,10 @@
         "latency": 16144, 
         "executionTime": 21057, 
         "labels": [
-            [
-                1397108031843867, 
-                "SysCpuTime: 47.49"
-            ]
+            {
+                "timestamp": 1397108031843867, 
+                "label": "SysCpuTime: 47.49"
+            }
         ], 
         "dispatch": 1397108031806666, 
         "sourceEventType": 1, 
@@ -20344,18 +20344,18 @@
         "latency": 122, 
         "executionTime": 15961, 
         "labels": [
-            [
-                1397108029679499, 
-                "Touch at (164, 117)"
-            ], 
-            [
-                1397108029681879, 
-                "[nsEventDispatcher::Dispatch] Event name: touchstart"
-            ], 
-            [
-                1397108029694880, 
-                "Capture? 0"
-            ]
+            {
+                "timestamp": 1397108029679499, 
+                "label": "Touch at (164, 117)"
+            }, 
+            {
+                "timestamp": 1397108029681879, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: touchstart"
+            }, 
+            {
+                "timestamp": 1397108029694880, 
+                "label": "Capture? 0"
+            }
         ], 
         "dispatch": 1397108029679194, 
         "sourceEventType": 1, 
@@ -20417,18 +20417,18 @@
         "latency": 497773, 
         "executionTime": 1108978, 
         "labels": [
-            [
-                1397108032607600, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108032608027, 
-                "UserCpuTime:11.72"
-            ], 
-            [
-                1397108032608027, 
-                "SysCpuTime: 0.9"
-            ]
+            {
+                "timestamp": 1397108032607600, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108032608027, 
+                "label": "UserCpuTime:11.72"
+            }, 
+            {
+                "timestamp": 1397108032608027, 
+                "label": "SysCpuTime: 0.9"
+            }
         ], 
         "dispatch": 1397108031001276, 
         "sourceEventType": 1, 
@@ -20460,10 +20460,10 @@
         "latency": 16602, 
         "executionTime": 5493, 
         "labels": [
-            [
-                1397108030809138, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ]
+            {
+                "timestamp": 1397108030809138, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }
         ], 
         "dispatch": 1397108030792200, 
         "sourceEventType": 1, 
@@ -20630,10 +20630,10 @@
         "latency": 1249542, 
         "executionTime": 245483, 
         "labels": [
-            [
-                1397108032880396, 
-                "UserCpuTime:12.22"
-            ]
+            {
+                "timestamp": 1397108032880396, 
+                "label": "UserCpuTime:12.22"
+            }
         ], 
         "dispatch": 1397108031385371, 
         "sourceEventType": 0, 
@@ -20695,14 +20695,14 @@
         "latency": 630890, 
         "executionTime": 276734, 
         "labels": [
-            [
-                1397108031277827, 
-                "UserCpuTime:10.84"
-            ], 
-            [
-                1397108031277827, 
-                "SysCpuTime: 7.23"
-            ]
+            {
+                "timestamp": 1397108031277827, 
+                "label": "UserCpuTime:10.84"
+            }, 
+            {
+                "timestamp": 1397108031277827, 
+                "label": "SysCpuTime: 7.23"
+            }
         ], 
         "dispatch": 1397108030370203, 
         "sourceEventType": 0, 
@@ -20749,10 +20749,10 @@
         "latency": 709137, 
         "executionTime": 109405, 
         "labels": [
-            [
-                1397108031387354, 
-                "UserCpuTime:9.14"
-            ]
+            {
+                "timestamp": 1397108031387354, 
+                "label": "UserCpuTime:9.14"
+            }
         ], 
         "dispatch": 1397108030568812, 
         "sourceEventType": 0, 
@@ -20784,14 +20784,14 @@
         "latency": 495850, 
         "executionTime": 1109100, 
         "labels": [
-            [
-                1397108032608088, 
-                "UserCpuTime:11.72"
-            ], 
-            [
-                1397108032608088, 
-                "SysCpuTime: 0.9"
-            ]
+            {
+                "timestamp": 1397108032608088, 
+                "label": "UserCpuTime:11.72"
+            }, 
+            {
+                "timestamp": 1397108032608088, 
+                "label": "SysCpuTime: 0.9"
+            }
         ], 
         "dispatch": 1397108031003138, 
         "sourceEventType": 0, 
@@ -21138,10 +21138,10 @@
         "latency": 51452, 
         "executionTime": 20539, 
         "labels": [
-            [
-                1397108029764155, 
-                "UserCpuTime:48.69"
-            ]
+            {
+                "timestamp": 1397108029764155, 
+                "label": "UserCpuTime:48.69"
+            }
         ], 
         "dispatch": 1397108029692164, 
         "sourceEventType": 0, 
@@ -21158,22 +21158,22 @@
         "latency": 647370, 
         "executionTime": 276581, 
         "labels": [
-            [
-                1397108031004389, 
-                "[nsEventDispatcher::Dispatch] Event name: overflow"
-            ], 
-            [
-                1397108031277644, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031277766, 
-                "UserCpuTime:10.85"
-            ], 
-            [
-                1397108031277766, 
-                "SysCpuTime: 7.23"
-            ]
+            {
+                "timestamp": 1397108031004389, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: overflow"
+            }, 
+            {
+                "timestamp": 1397108031277644, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031277766, 
+                "label": "UserCpuTime:10.85"
+            }, 
+            {
+                "timestamp": 1397108031277766, 
+                "label": "SysCpuTime: 7.23"
+            }
         ], 
         "dispatch": 1397108030353815, 
         "sourceEventType": 1, 
@@ -21265,10 +21265,10 @@
         "latency": 715179, 
         "executionTime": 108399, 
         "labels": [
-            [
-                1397108031386439, 
-                "UserCpuTime:9.23"
-            ]
+            {
+                "timestamp": 1397108031386439, 
+                "label": "UserCpuTime:9.23"
+            }
         ], 
         "dispatch": 1397108030562861, 
         "sourceEventType": 1, 
@@ -21420,10 +21420,10 @@
         "latency": 14954, 
         "executionTime": 13519, 
         "labels": [
-            [
-                1397108032246180, 
-                "UserCpuTime:73.97"
-            ]
+            {
+                "timestamp": 1397108032246180, 
+                "label": "UserCpuTime:73.97"
+            }
         ], 
         "dispatch": 1397108032217707, 
         "sourceEventType": 1, 
@@ -21815,10 +21815,10 @@
         "latency": 427, 
         "executionTime": 51361, 
         "labels": [
-            [
-                1397108030377222, 
-                "UserCpuTime:38.94"
-            ]
+            {
+                "timestamp": 1397108030377222, 
+                "label": "UserCpuTime:38.94"
+            }
         ], 
         "dispatch": 1397108030325434, 
         "sourceEventType": 0, 
@@ -21985,10 +21985,10 @@
         "latency": 17090, 
         "executionTime": 23224, 
         "labels": [
-            [
-                1397108029736781, 
-                "SysCpuTime: 43.06"
-            ]
+            {
+                "timestamp": 1397108029736781, 
+                "label": "SysCpuTime: 43.06"
+            }
         ], 
         "dispatch": 1397108029696467, 
         "sourceEventType": 0, 
@@ -22260,10 +22260,10 @@
         "latency": 275, 
         "executionTime": 824, 
         "labels": [
-            [
-                1397108031760310, 
-                "UserCpuTime:1213.59"
-            ]
+            {
+                "timestamp": 1397108031760310, 
+                "label": "UserCpuTime:1213.59"
+            }
         ], 
         "dispatch": 1397108031759211, 
         "sourceEventType": 0, 
@@ -22550,10 +22550,10 @@
         "latency": 13733, 
         "executionTime": 10895, 
         "labels": [
-            [
-                1397108028990168, 
-                "UserCpuTime:91.79"
-            ]
+            {
+                "timestamp": 1397108028990168, 
+                "label": "UserCpuTime:91.79"
+            }
         ], 
         "dispatch": 1397108028965540, 
         "sourceEventType": 1, 
@@ -22615,10 +22615,10 @@
         "latency": 16052, 
         "executionTime": 4853, 
         "labels": [
-            [
-                1397108028932948, 
-                "SysCpuTime: 206.06"
-            ]
+            {
+                "timestamp": 1397108028932948, 
+                "label": "SysCpuTime: 206.06"
+            }
         ], 
         "dispatch": 1397108028912043, 
         "sourceEventType": 1, 
@@ -22755,22 +22755,22 @@
         "latency": 17761, 
         "executionTime": 199341, 
         "labels": [
-            [
-                1397108031625422, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031625544, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031625605, 
-                "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
-            ], 
-            [
-                1397108031625697, 
-                "UserCpuTime:15.05"
-            ]
+            {
+                "timestamp": 1397108031625422, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031625544, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031625605, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: MozAfterPaint"
+            }, 
+            {
+                "timestamp": 1397108031625697, 
+                "label": "UserCpuTime:15.05"
+            }
         ], 
         "dispatch": 1397108031408595, 
         "sourceEventType": 1, 
@@ -22802,10 +22802,10 @@
         "latency": 1303467, 
         "executionTime": 335, 
         "labels": [
-            [
-                1397108032725031, 
-                "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
-            ]
+            {
+                "timestamp": 1397108032725031, 
+                "label": "[nsCaret::DrawAtPositionWithHint] SchedulePaint to caret frame."
+            }
         ], 
         "dispatch": 1397108031421412, 
         "sourceEventType": 1, 
@@ -22882,10 +22882,10 @@
         "latency": 1433014, 
         "executionTime": 125335, 
         "labels": [
-            [
-                1397108032902155, 
-                "UserCpuTime:15.96"
-            ]
+            {
+                "timestamp": 1397108032902155, 
+                "label": "UserCpuTime:15.96"
+            }
         ], 
         "dispatch": 1397108031343806, 
         "sourceEventType": 0, 
@@ -22902,10 +22902,10 @@
         "latency": 97992, 
         "executionTime": 1345795, 
         "labels": [
-            [
-                1397108032776606, 
-                "UserCpuTime:14.12"
-            ]
+            {
+                "timestamp": 1397108032776606, 
+                "label": "UserCpuTime:14.12"
+            }
         ], 
         "dispatch": 1397108031332819, 
         "sourceEventType": 0, 
@@ -22922,10 +22922,10 @@
         "latency": 122437, 
         "executionTime": 66650, 
         "labels": [
-            [
-                1397108031387934, 
-                "SysCpuTime: 15.0"
-            ]
+            {
+                "timestamp": 1397108031387934, 
+                "label": "SysCpuTime: 15.0"
+            }
         ], 
         "dispatch": 1397108031198847, 
         "sourceEventType": 0, 
@@ -23017,14 +23017,14 @@
         "latency": 154541, 
         "executionTime": 97748, 
         "labels": [
-            [
-                1397108031284846, 
-                "UserCpuTime:10.23"
-            ], 
-            [
-                1397108031284846, 
-                "SysCpuTime: 10.23"
-            ]
+            {
+                "timestamp": 1397108031284846, 
+                "label": "UserCpuTime:10.23"
+            }, 
+            {
+                "timestamp": 1397108031284846, 
+                "label": "SysCpuTime: 10.23"
+            }
         ], 
         "dispatch": 1397108031032557, 
         "sourceEventType": 0, 
@@ -23041,14 +23041,14 @@
         "latency": 35705, 
         "executionTime": 130463, 
         "labels": [
-            [
-                1397108031148585, 
-                "UserCpuTime:23.0"
-            ], 
-            [
-                1397108031148585, 
-                "SysCpuTime: 7.67"
-            ]
+            {
+                "timestamp": 1397108031148585, 
+                "label": "UserCpuTime:23.0"
+            }, 
+            {
+                "timestamp": 1397108031148585, 
+                "label": "SysCpuTime: 7.67"
+            }
         ], 
         "dispatch": 1397108030982417, 
         "sourceEventType": 0, 
@@ -23155,10 +23155,10 @@
         "latency": 14832, 
         "executionTime": 5981, 
         "labels": [
-            [
-                1397108029298670, 
-                "[nsEventDispatcher::Dispatch] Event name: animationiteration"
-            ]
+            {
+                "timestamp": 1397108029298670, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: animationiteration"
+            }
         ], 
         "dispatch": 1397108029279932, 
         "sourceEventType": 1, 
@@ -23205,10 +23205,10 @@
         "latency": 15137, 
         "executionTime": 4700, 
         "labels": [
-            [
-                1397108029250239, 
-                "UserCpuTime:212.77"
-            ]
+            {
+                "timestamp": 1397108029250239, 
+                "label": "UserCpuTime:212.77"
+            }
         ], 
         "dispatch": 1397108029230402, 
         "sourceEventType": 1, 
@@ -23255,10 +23255,10 @@
         "latency": 274, 
         "executionTime": 366, 
         "labels": [
-            [
-                1397108030287836, 
-                "UserCpuTime:2732.24"
-            ]
+            {
+                "timestamp": 1397108030287836, 
+                "label": "UserCpuTime:2732.24"
+            }
         ], 
         "dispatch": 1397108030287196, 
         "sourceEventType": 0, 
@@ -23275,10 +23275,10 @@
         "latency": 21057, 
         "executionTime": 19348, 
         "labels": [
-            [
-                1397108031347437, 
-                "UserCpuTime:51.68"
-            ]
+            {
+                "timestamp": 1397108031347437, 
+                "label": "UserCpuTime:51.68"
+            }
         ], 
         "dispatch": 1397108031307032, 
         "sourceEventType": 1, 
@@ -23310,10 +23310,10 @@
         "latency": 144287, 
         "executionTime": 6073, 
         "labels": [
-            [
-                1397108031390437, 
-                "[nsEventDispatcher::Dispatch] Event name: complete"
-            ]
+            {
+                "timestamp": 1397108031390437, 
+                "label": "[nsEventDispatcher::Dispatch] Event name: complete"
+            }
         ], 
         "dispatch": 1397108031244624, 
         "sourceEventType": 0, 

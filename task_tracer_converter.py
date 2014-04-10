@@ -38,7 +38,14 @@ class Thread(BaseObject):
   def __init__(self, id, name):
     super(Thread, self).__init__(id, name)
 
-Label = namedtuple('Label', 'timestamp label')
+class Label(object):
+  def __init__(self, timestamp, label):
+    super(Label, self).__init__()
+    self.timestamp = timestamp
+    self.label = label
+
+  def pretty_dict(self):
+    return self.__dict__
 
 class Task(BaseObject):
   def __init__(self, id):
