@@ -255,7 +255,7 @@ def parse_log(input_name):
       info = extract_info(line.strip())
       verify_info(info)
     except ParseError as error:
-      error.log(line.strip())
+      error.log = line.strip()
       raise
 
     set_task_info(info)
