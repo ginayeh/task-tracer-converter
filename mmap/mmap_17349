@@ -1,0 +1,292 @@
+00008000-0000a000 r-xp 00000000 b3:0c 42         /system/b2g/plugin-container
+0000a000-0000b000 r--p 00001000 b3:0c 42         /system/b2g/plugin-container
+0000b000-0000c000 rw-p 00000000 00:00 0 
+013a4000-013b2000 rw-p 00000000 00:00 0          [heap]
+acd00000-ace00000 rw-p 00000000 00:00 0          [anon:jemalloc]
+ad300000-ad400000 rw-p 00000000 00:00 0          [anon:jemalloc]
+adc00000-add00000 rw-p 00000000 00:00 0          [anon:jemalloc]
+ae700000-ae800000 rw-p 00000000 00:00 0          [anon:jemalloc]
+af900000-afa00000 rw-p 00000000 00:00 0          [anon:jemalloc]
+afd00000-afe00000 rw-p 00000000 00:00 0          [anon:jemalloc]
+afe02000-afe03000 ---p 00000000 00:00 0 
+afe03000-aff00000 rw-p 00000000 00:00 0          [stack:17633]
+aff00000-b0200000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b1100000-b1200000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b12c0000-b1300000 rw-p 00000000 00:00 0          [anon:js-gc-heap]
+b1480000-b1500000 rw-p 00000000 00:00 0          [anon:js-gc-heap]
+b1500000-b1600000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b1800000-b1900000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b1900000-b1902000 rw-p 00000000 00:00 0 
+b1902000-b1903000 ---p 00000000 00:00 0 
+b1903000-b1a00000 rw-p 00000000 00:00 0          [stack:17373]
+b1a00000-b1b00000 rw-p 00000000 00:00 0          [anon:js-gc-heap]
+b1b00000-b1d00000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b1d02000-b1d04000 rw-p 00000000 00:00 0 
+b1d04000-b1d05000 ---p 00000000 00:00 0 
+b1d05000-b1e02000 rw-p 00000000 00:00 0          [stack:17365]
+b1e02000-b1e04000 rw-p 00000000 00:00 0 
+b1e04000-b1e05000 ---p 00000000 00:00 0 
+b1e05000-b1f02000 rw-p 00000000 00:00 0          [stack:17364]
+b1f02000-b1f04000 rw-p 00000000 00:00 0 
+b1f04000-b1f05000 ---p 00000000 00:00 0 
+b1f05000-b2002000 rw-p 00000000 00:00 0          [stack:17363]
+b2002000-b2004000 rw-p 00000000 00:00 0 
+b2004000-b2005000 ---p 00000000 00:00 0 
+b2005000-b2102000 rw-p 00000000 00:00 0          [stack:17362]
+b2102000-b2103000 ---p 00000000 00:00 0 
+b2103000-b2200000 rw-p 00000000 00:00 0          [stack:17361]
+b2200000-b2300000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b2300000-b23c0000 rw-p 00000000 00:00 0          [anon:js-gc-heap]
+b23f4000-b23fa000 rw-p 00000000 00:00 0 
+b23fa000-b23fb000 ---p 00000000 00:00 0 
+b23fb000-b24f8000 rw-p 00000000 00:00 0          [stack:17360]
+b24f8000-b2500000 rw-p 00000000 00:00 0 
+b2500000-b3500000 rw-p 00000000 00:00 0          [anon:js-gc-heap]
+b3500000-b3501000 ---p 00000000 00:00 0 
+b3501000-b3580000 rw-p 00000000 00:00 0          [stack:17359]
+b3580000-b3581000 ---p 00000000 00:00 0 
+b3581000-b3600000 rw-p 00000000 00:00 0          [stack:17358]
+b3600000-b3601000 ---p 00000000 00:00 0 
+b3601000-b3680000 rw-p 00000000 00:00 0          [stack:17357]
+b3680000-b3681000 ---p 00000000 00:00 0 
+b3681000-b3700000 rw-p 00000000 00:00 0          [stack:17356]
+b3700000-b3701000 ---p 00000000 00:00 0 
+b3701000-b3780000 rw-p 00000000 00:00 0          [stack:17355]
+b3780000-b3781000 ---p 00000000 00:00 0 
+b3781000-b3800000 rw-p 00000000 00:00 0          [stack:17354]
+b3800000-b3a00000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b3a18000-b3a1f000 r-xp 00000000 b3:0c 693        /system/lib/libqservice.so
+b3a1f000-b3a20000 ---p 00000000 00:00 0 
+b3a20000-b3a22000 r--p 00007000 b3:0c 693        /system/lib/libqservice.so
+b3a22000-b3a23000 rw-p 00009000 b3:0c 693        /system/lib/libqservice.so
+b3a23000-b3a25000 rw-p 00000000 00:00 0 
+b3a25000-b3a26000 ---p 00000000 00:00 0 
+b3a26000-b3b23000 rw-p 00000000 00:00 0          [stack:17353]
+b3b23000-b3b24000 ---p 00000000 00:00 0 
+b3b24000-b3c21000 rw-p 00000000 00:00 0          [stack:17352]
+b3c21000-b4204000 r--p 00000000 b3:0c 34         /system/b2g/omni.ja
+b4204000-b4205000 ---p 00000000 00:00 0 
+b4205000-b4302000 rw-p 00000000 00:00 0          [stack:17351]
+b4302000-b4400000 r--p 00000000 00:0b 6025       /dev/binder
+b4400000-b4500000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b4503000-b4508000 r-xp 00000000 b3:0c 590        /system/lib/libGLESv1_CM.so
+b4508000-b4509000 r--p 00004000 b3:0c 590        /system/lib/libGLESv1_CM.so
+b4509000-b450a000 rw-p 00005000 b3:0c 590        /system/lib/libGLESv1_CM.so
+b450a000-b450f000 r-xp 00000000 b3:0c 690        /system/lib/libqdutils.so
+b450f000-b4510000 r--p 00004000 b3:0c 690        /system/lib/libqdutils.so
+b4510000-b4511000 rw-p 00005000 b3:0c 690        /system/lib/libqdutils.so
+b4516000-b4519000 rw-s 00000000 00:04 1846747    /dev/ashmem (deleted)
+b4519000-b451b000 rw-s 00000000 00:04 1847353    /dev/ashmem (deleted)
+b451b000-b451c000 r--p 00000000 00:00 0 
+b451c000-b451f000 r-xp 00000000 b3:0c 670        /system/lib/libmemalloc.so
+b451f000-b4520000 r--p 00002000 b3:0c 670        /system/lib/libmemalloc.so
+b4520000-b4521000 rw-p 00003000 b3:0c 670        /system/lib/libmemalloc.so
+b4521000-b4524000 r-xp 00000000 b3:0c 576        /system/lib/hw/gralloc.msm8610.so
+b4524000-b4525000 r--p 00002000 b3:0c 576        /system/lib/hw/gralloc.msm8610.so
+b4525000-b4526000 rw-p 00003000 b3:0c 576        /system/lib/hw/gralloc.msm8610.so
+b4527000-b4529000 rw-p 00000000 00:00 0 
+b4529000-b452e000 rw-s 00000000 00:04 1845940    /dev/ashmem (deleted)
+b4530000-b4540000 rwxp 00000000 00:00 0          [anon:js-jit-code]
+b4540000-b4580000 rw-p 00000000 00:00 0          [anon:js-gc-heap]
+b4580000-b4586000 rw-p 00000000 00:00 0 
+b4586000-b4686000 rw-p 00000000 00:00 0          [anon:jemalloc]
+b4686000-b46a6000 r--s 00000000 00:0b 4527       /dev/__properties__
+b46a6000-b46a8000 r-xp 00000000 b3:0c 744        /system/lib/libusbhost.so
+b46a8000-b46a9000 r--p 00001000 b3:0c 744        /system/lib/libusbhost.so
+b46a9000-b46aa000 rw-p 00002000 b3:0c 744        /system/lib/libusbhost.so
+b46aa000-b46bb000 r-xp 00000000 b3:0c 675        /system/lib/libmtp.so
+b46bb000-b46bc000 ---p 00000000 00:00 0 
+b46bc000-b46bd000 r--p 00011000 b3:0c 675        /system/lib/libmtp.so
+b46bd000-b46be000 rw-p 00012000 b3:0c 675        /system/lib/libmtp.so
+b46be000-b46ca000 r-xp 00000000 b3:0c 699        /system/lib/libsensorservice.so
+b46ca000-b46cb000 ---p 00000000 00:00 0 
+b46cb000-b46cd000 r--p 0000c000 b3:0c 699        /system/lib/libsensorservice.so
+b46cd000-b46ce000 rw-p 0000e000 b3:0c 699        /system/lib/libsensorservice.so
+b46ce000-b46d3000 r-xp 00000000 b3:0c 738        /system/lib/libsysutils.so
+b46d3000-b46d4000 r--p 00004000 b3:0c 738        /system/lib/libsysutils.so
+b46d4000-b46d5000 rw-p 00005000 b3:0c 738        /system/lib/libsysutils.so
+b46d5000-b46da000 r-xp 00000000 b3:0c 679        /system/lib/libnetutils.so
+b46da000-b46db000 r--p 00004000 b3:0c 679        /system/lib/libnetutils.so
+b46db000-b46dc000 rw-p 00005000 b3:0c 679        /system/lib/libnetutils.so
+b46dc000-b46de000 r-xp 00000000 b3:0c 754        /system/lib/libwpa_client.so
+b46de000-b46df000 r--p 00001000 b3:0c 754        /system/lib/libwpa_client.so
+b46df000-b46e0000 rw-p 00002000 b3:0c 754        /system/lib/libwpa_client.so
+b46e0000-b46e4000 r-xp 00000000 b3:0c 649        /system/lib/libhardware_legacy.so
+b46e4000-b46e5000 ---p 00000000 00:00 0 
+b46e5000-b46e6000 r--p 00004000 b3:0c 649        /system/lib/libhardware_legacy.so
+b46e6000-b46e7000 rw-p 00005000 b3:0c 649        /system/lib/libhardware_legacy.so
+b46e7000-b46e8000 rw-p 00000000 00:00 0 
+b46e8000-b46ed000 r-xp 00000000 b3:0c 709        /system/lib/libstagefright_avc_common.so
+b46ed000-b46ee000 r--p 00004000 b3:0c 709        /system/lib/libstagefright_avc_common.so
+b46ee000-b46ef000 rw-p 00005000 b3:0c 709        /system/lib/libstagefright_avc_common.so
+b46ef000-b46f0000 r-xp 00000000 b3:0c 710        /system/lib/libstagefright_enc_common.so
+b46f0000-b46f1000 r--p 00000000 b3:0c 710        /system/lib/libstagefright_enc_common.so
+b46f1000-b46f2000 rw-p 00001000 b3:0c 710        /system/lib/libstagefright_enc_common.so
+b46f2000-b46f5000 r-xp 00000000 b3:0c 688        /system/lib/libpowermanager.so
+b46f5000-b46f6000 r--p 00002000 b3:0c 688        /system/lib/libpowermanager.so
+b46f6000-b46f7000 rw-p 00003000 b3:0c 688        /system/lib/libpowermanager.so
+b46f7000-b470d000 r-xp 00000000 b3:0c 755        /system/lib/libz.so
+b470d000-b470e000 ---p 00000000 00:00 0 
+b470e000-b470f000 r--p 00016000 b3:0c 755        /system/lib/libz.so
+b470f000-b4710000 rw-p 00017000 b3:0c 755        /system/lib/libz.so
+b4710000-b4711000 r--p 00000000 00:00 0 
+b4711000-b4729000 r-xp 00000000 b3:0c 751        /system/lib/libvorbisidec.so
+b4729000-b472a000 r--p 00017000 b3:0c 751        /system/lib/libvorbisidec.so
+b472a000-b472b000 rw-p 00018000 b3:0c 751        /system/lib/libvorbisidec.so
+b472b000-b472d000 r-xp 00000000 b3:0c 732        /system/lib/libstagefright_yuv.so
+b472d000-b472e000 r--p 00001000 b3:0c 732        /system/lib/libstagefright_yuv.so
+b472e000-b472f000 rw-p 00002000 b3:0c 732        /system/lib/libstagefright_yuv.so
+b472f000-b4746000 r-xp 00000000 b3:0c 713        /system/lib/libstagefright_omx.so
+b4746000-b4747000 ---p 00000000 00:00 0 
+b4747000-b4749000 r--p 00017000 b3:0c 713        /system/lib/libstagefright_omx.so
+b4749000-b474a000 rw-p 00019000 b3:0c 713        /system/lib/libstagefright_omx.so
+b474a000-b480e000 r-xp 00000000 b3:0c 624        /system/lib/libcrypto.so
+b480e000-b480f000 ---p 00000000 00:00 0 
+b480f000-b481b000 r--p 000c4000 b3:0c 624        /system/lib/libcrypto.so
+b481b000-b4821000 rw-p 000d0000 b3:0c 624        /system/lib/libcrypto.so
+b4821000-b4823000 rw-p 00000000 00:00 0 
+b4823000-b4857000 r-xp 00000000 b3:0c 706        /system/lib/libssl.so
+b4857000-b4858000 ---p 00000000 00:00 0 
+b4858000-b485a000 r--p 00034000 b3:0c 706        /system/lib/libssl.so
+b485a000-b485d000 rw-p 00036000 b3:0c 706        /system/lib/libssl.so
+b485d000-b485f000 r-xp 00000000 b3:0c 607        /system/lib/libaudioparameter.so
+b485f000-b4860000 ---p 00000000 00:00 0 
+b4860000-b4861000 r--p 00002000 b3:0c 607        /system/lib/libaudioparameter.so
+b4861000-b4862000 rw-p 00003000 b3:0c 607        /system/lib/libaudioparameter.so
+b4862000-b4866000 r-xp 00000000 b3:0c 704        /system/lib/libspeexresampler.so
+b4866000-b4867000 r--p 00003000 b3:0c 704        /system/lib/libspeexresampler.so
+b4867000-b4868000 rw-p 00004000 b3:0c 704        /system/lib/libspeexresampler.so
+b4868000-b486a000 r-xp 00000000 b3:0c 609        /system/lib/libaudioutils.so
+b486a000-b486b000 r--p 00001000 b3:0c 609        /system/lib/libaudioutils.so
+b486b000-b486c000 rw-p 00002000 b3:0c 609        /system/lib/libaudioutils.so
+b486c000-b487c000 r-xp 00000000 b3:0c 711        /system/lib/libstagefright_foundation.so
+b487c000-b487d000 r--p 0000f000 b3:0c 711        /system/lib/libstagefright_foundation.so
+b487d000-b487e000 rw-p 00010000 b3:0c 711        /system/lib/libstagefright_foundation.so
+b487e000-b48cc000 r-xp 00000000 b3:0c 702        /system/lib/libsonivox.so
+b48cc000-b48cd000 r--p 0004d000 b3:0c 702        /system/lib/libsonivox.so
+b48cd000-b48ce000 rw-p 0004e000 b3:0c 702        /system/lib/libsonivox.so
+b48ce000-b48d3000 rw-p 00000000 00:00 0 
+b48d3000-b4948000 r-xp 00000000 b3:0c 667        /system/lib/libmedia.so
+b4948000-b4949000 ---p 00000000 00:00 0 
+b4949000-b495f000 r--p 00075000 b3:0c 667        /system/lib/libmedia.so
+b495f000-b4960000 rw-p 0008b000 b3:0c 667        /system/lib/libmedia.so
+b4960000-b4964000 r-xp 00000000 b3:0c 644        /system/lib/libgabi++.so
+b4964000-b4965000 r--p 00003000 b3:0c 644        /system/lib/libgabi++.so
+b4965000-b4966000 rw-p 00004000 b3:0c 644        /system/lib/libgabi++.so
+b4966000-b4a57000 r-xp 00000000 b3:0c 652        /system/lib/libicuuc.so
+b4a57000-b4a60000 r--p 000f0000 b3:0c 652        /system/lib/libicuuc.so
+b4a60000-b4a61000 rw-p 000f9000 b3:0c 652        /system/lib/libicuuc.so
+b4a61000-b4a65000 rw-p 00000000 00:00 0 
+b4a65000-b4b95000 r-xp 00000000 b3:0c 651        /system/lib/libicui18n.so
+b4b95000-b4b96000 ---p 00000000 00:00 0 
+b4b96000-b4b9d000 r--p 00130000 b3:0c 651        /system/lib/libicui18n.so
+b4b9d000-b4b9e000 rw-p 00137000 b3:0c 651        /system/lib/libicui18n.so
+b4b9e000-b4b9f000 r--p 00000000 00:00 0 
+b4b9f000-b4bb2000 r-xp 00000000 b3:0c 634        /system/lib/libexpat.so
+b4bb2000-b4bb3000 ---p 00000000 00:00 0 
+b4bb3000-b4bb5000 r--p 00013000 b3:0c 634        /system/lib/libexpat.so
+b4bb5000-b4bb6000 rw-p 00015000 b3:0c 634        /system/lib/libexpat.so
+b4bb6000-b4bca000 r-xp 00000000 b3:0c 631        /system/lib/libdrmframework.so
+b4bca000-b4bcd000 r--p 00013000 b3:0c 631        /system/lib/libdrmframework.so
+b4bcd000-b4bce000 rw-p 00016000 b3:0c 631        /system/lib/libdrmframework.so
+b4bce000-b4bcf000 r-xp 00000000 b3:0c 622        /system/lib/libconnectivitymanager.so
+b4bcf000-b4bd0000 r--p 00000000 b3:0c 622        /system/lib/libconnectivitymanager.so
+b4bd0000-b4bd1000 rw-p 00001000 b3:0c 622        /system/lib/libconnectivitymanager.so
+b4bd1000-b4bd6000 r-xp 00000000 b3:0c 618        /system/lib/libcamera_metadata.so
+b4bd6000-b4bd7000 r--p 00004000 b3:0c 618        /system/lib/libcamera_metadata.so
+b4bd7000-b4bd8000 rw-p 00005000 b3:0c 618        /system/lib/libcamera_metadata.so
+b4bd8000-b4bd9000 r-xp 00000000 b3:0c 689        /system/lib/libqdMetaData.so
+b4bd9000-b4bda000 r--p 00000000 b3:0c 689        /system/lib/libqdMetaData.so
+b4bda000-b4bdb000 rw-p 00001000 b3:0c 689        /system/lib/libqdMetaData.so
+b4bdb000-b4be1000 r-xp 00000000 b3:0c 591        /system/lib/libGLESv2.so
+b4be1000-b4be2000 r--p 00005000 b3:0c 591        /system/lib/libGLESv2.so
+b4be2000-b4be3000 rw-p 00006000 b3:0c 591        /system/lib/libGLESv2.so
+b4be3000-b4c15000 r-xp 00000000 b3:0c 735        /system/lib/libstlport.so
+b4c15000-b4c17000 r--p 00031000 b3:0c 735        /system/lib/libstlport.so
+b4c17000-b4c18000 rw-p 00033000 b3:0c 735        /system/lib/libstlport.so
+b4c18000-b4c64000 r-xp 00000000 b3:0c 589        /system/lib/libGLES_trace.so
+b4c64000-b4c65000 ---p 00000000 00:00 0 
+b4c65000-b4c66000 r--p 0004c000 b3:0c 589        /system/lib/libGLES_trace.so
+b4c66000-b4c67000 rw-p 0004d000 b3:0c 589        /system/lib/libGLES_trace.so
+b4c67000-b4cb1000 r-xp 00000000 b3:0c 587        /system/lib/libEGL.so
+b4cb1000-b4cb3000 r--p 00049000 b3:0c 587        /system/lib/libEGL.so
+b4cb3000-b4cb9000 rw-p 0004b000 b3:0c 587        /system/lib/libEGL.so
+b4cb9000-b4cbc000 rw-p 00000000 00:00 0 
+b4cbc000-b4cf1000 r-xp 00000000 b3:0c 647        /system/lib/libgui.so
+b4cf1000-b4cf2000 ---p 00000000 00:00 0 
+b4cf2000-b4cfb000 r--p 00035000 b3:0c 647        /system/lib/libgui.so
+b4cfb000-b4cfc000 rw-p 0003e000 b3:0c 647        /system/lib/libgui.so
+b4cfc000-b4cfd000 r-xp 00000000 b3:0c 737        /system/lib/libsync.so
+b4cfd000-b4cfe000 r--p 00000000 b3:0c 737        /system/lib/libsync.so
+b4cfe000-b4cff000 rw-p 00001000 b3:0c 737        /system/lib/libsync.so
+b4cff000-b4d08000 r-xp 00000000 b3:0c 743        /system/lib/libui.so
+b4d08000-b4d09000 r--p 00008000 b3:0c 743        /system/lib/libui.so
+b4d09000-b4d0a000 rw-p 00009000 b3:0c 743        /system/lib/libui.so
+b4d0a000-b4d0b000 r-xp 00000000 b3:0c 648        /system/lib/libhardware.so
+b4d0b000-b4d0c000 r--p 00000000 b3:0c 648        /system/lib/libhardware.so
+b4d0c000-b4d0d000 rw-p 00001000 b3:0c 648        /system/lib/libhardware.so
+b4d0d000-b4d37000 r-xp 00000000 b3:0c 617        /system/lib/libcamera_client.so
+b4d37000-b4d40000 r--p 00029000 b3:0c 617        /system/lib/libcamera_client.so
+b4d40000-b4d41000 rw-p 00032000 b3:0c 617        /system/lib/libcamera_client.so
+b4d41000-b4d42000 r--p 00000000 00:00 0 
+b4d42000-b4d46000 r-xp 00000000 b3:0c 645        /system/lib/libgccdemangle.so
+b4d46000-b4d47000 ---p 00000000 00:00 0 
+b4d47000-b4d48000 r--p 00004000 b3:0c 645        /system/lib/libgccdemangle.so
+b4d48000-b4d49000 rw-p 00005000 b3:0c 645        /system/lib/libgccdemangle.so
+b4d49000-b4d4c000 r-xp 00000000 b3:0c 623        /system/lib/libcorkscrew.so
+b4d4c000-b4d4d000 r--p 00002000 b3:0c 623        /system/lib/libcorkscrew.so
+b4d4d000-b4d4e000 rw-p 00003000 b3:0c 623        /system/lib/libcorkscrew.so
+b4d4e000-b4d61000 r-xp 00000000 b3:0c 745        /system/lib/libutils.so
+b4d61000-b4d62000 ---p 00000000 00:00 0 
+b4d62000-b4d63000 r--p 00013000 b3:0c 745        /system/lib/libutils.so
+b4d63000-b4d64000 rw-p 00014000 b3:0c 745        /system/lib/libutils.so
+b4d64000-b4d6d000 r-xp 00000000 b3:0c 626        /system/lib/libcutils.so
+b4d6d000-b4d6e000 r--p 00008000 b3:0c 626        /system/lib/libcutils.so
+b4d6e000-b4d6f000 rw-p 00009000 b3:0c 626        /system/lib/libcutils.so
+b4d6f000-b4d94000 r-xp 00000000 b3:0c 610        /system/lib/libbinder.so
+b4d94000-b4d95000 ---p 00000000 00:00 0 
+b4d95000-b4d9b000 r--p 00025000 b3:0c 610        /system/lib/libbinder.so
+b4d9b000-b4d9c000 rw-p 0002b000 b3:0c 610        /system/lib/libbinder.so
+b4d9c000-b4e96000 r-xp 00000000 b3:0c 707        /system/lib/libstagefright.so
+b4e96000-b4e97000 ---p 00000000 00:00 0 
+b4e97000-b4e9d000 r--p 000fa000 b3:0c 707        /system/lib/libstagefright.so
+b4e9d000-b4e9e000 rw-p 00100000 b3:0c 707        /system/lib/libstagefright.so
+b4e9e000-b4ea5000 r-xp 00000000 b3:0c 48         /system/b2g/libmozsandbox.so
+b4ea5000-b4ea6000 r--p 00006000 b3:0c 48         /system/b2g/libmozsandbox.so
+b4ea6000-b4ea7000 rw-p 00007000 b3:0c 48         /system/b2g/libmozsandbox.so
+b4ea7000-b6970000 r-xp 00000000 b3:0c 37         /system/b2g/libxul.so
+b6970000-b6971000 ---p 00000000 00:00 0 
+b6971000-b6b9d000 r--p 01ac9000 b3:0c 37         /system/b2g/libxul.so
+b6b9d000-b6bf5000 rw-p 01cf5000 b3:0c 37         /system/b2g/libxul.so
+b6bf5000-b6d46000 rw-p 00000000 00:00 0 
+b6d46000-b6e8b000 r-xp 00000000 b3:0c 35         /system/b2g/libnss3.so
+b6e8b000-b6e8c000 ---p 00000000 00:00 0 
+b6e8c000-b6e96000 r--p 00145000 b3:0c 35         /system/b2g/libnss3.so
+b6e96000-b6e98000 rw-p 0014f000 b3:0c 35         /system/b2g/libnss3.so
+b6e98000-b6e9c000 rw-p 00000000 00:00 0 
+b6e9c000-b6eb4000 r-xp 00000000 b3:0c 665        /system/lib/libm.so
+b6eb4000-b6eb5000 ---p 00000000 00:00 0 
+b6eb5000-b6eb6000 r--p 00018000 b3:0c 665        /system/lib/libm.so
+b6eb6000-b6eb7000 rw-p 00019000 b3:0c 665        /system/lib/libm.so
+b6eb7000-b6eb8000 r-xp 00000000 b3:0c 734        /system/lib/libstdc++.so
+b6eb8000-b6eb9000 r--p 00000000 b3:0c 734        /system/lib/libstdc++.so
+b6eb9000-b6eba000 rw-p 00001000 b3:0c 734        /system/lib/libstdc++.so
+b6eba000-b6f02000 r-xp 00000000 b3:0c 613        /system/lib/libc.so
+b6f02000-b6f04000 r--p 00047000 b3:0c 613        /system/lib/libc.so
+b6f04000-b6f07000 rw-p 00049000 b3:0c 613        /system/lib/libc.so
+b6f07000-b6f15000 rw-p 00000000 00:00 0 
+b6f15000-b6f18000 r-xp 00000000 b3:0c 663        /system/lib/liblog.so
+b6f18000-b6f19000 r--p 00002000 b3:0c 663        /system/lib/liblog.so
+b6f19000-b6f1a000 rw-p 00003000 b3:0c 663        /system/lib/liblog.so
+b6f1a000-b6f71000 r-xp 00000000 b3:0c 41         /system/b2g/libmozglue.so
+b6f71000-b6f73000 r--p 00056000 b3:0c 41         /system/b2g/libmozglue.so
+b6f73000-b6f74000 rw-p 00058000 b3:0c 41         /system/b2g/libmozglue.so
+b6f74000-b6f76000 r--p 00000000 00:00 0 
+b6f76000-b6f78000 rw-p 00000000 00:00 0 
+b6f78000-b6f79000 r-xp 00000000 00:00 0          [sigpage]
+b6f79000-b6f88000 r-xp 00000000 b3:0c 127        /system/bin/linker
+b6f88000-b6f89000 r--p 0000e000 b3:0c 127        /system/bin/linker
+b6f89000-b6f8a000 rw-p 0000f000 b3:0c 127        /system/bin/linker
+b6f8a000-b6f8b000 rw-p 00000000 00:00 0 
+be8f1000-be912000 rw-p 00000000 00:00 0          [stack]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
