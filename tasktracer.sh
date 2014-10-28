@@ -61,8 +61,14 @@ cmd_get_mmaps() {
     fi
   done))
 
+  if [ ! -d "./mmap" ]; then
+    mkdir mmap
+  fi
+
+  rm ./mmap/*
+
   for pid in ${B2G_PIDS[*]}; do
-    filename="./mmaps/mmaps_"${pid}
+    filename="./mmap/mmap_"${pid}
     adb shell cat /proc/${pid}/maps > $filename
     echo "Memory maps of "${pid}" saved to file: "$filename
   done
