@@ -18,6 +18,8 @@ show_warnings = False
 processes = {}
 threads = {}
 
+_unwanted_dup_names = set(['vtable for mozilla::ipc::DoWorkRunnable',
+                           'vtable for nsTimerEvent'])
 
 class ReadError(Exception):
   def __init__(self, error_msg):
@@ -458,6 +460,20 @@ def read_mmap(input_folder):
         processes[str(process_id)]._mem_offset = int(mem_offset, 16)
         break
 
+def remove_dup_tasks():
+  """
+    Remove tasks that is a wrapper or dequeuer of another task or tasks.
+
+    This would reduce annonying nested task phenomenons.
+  """
+  removing_list = [task_id
+                   for task_id, task_obj in tasks.iteritems()
+                   if task_obj.name in _unwanted_dup_names]
+  for task_id in removing_list:
+    tasks.pop(task_id)
+    pass
+  pass
+
 def main(argv=sys.argv[:]):
   args = get_arguments(argv)
 
@@ -477,6 +493,7 @@ def main(argv=sys.argv[:]):
 
     read_mmap(args.input_mmap_folder)
     retrieve_task_name(args.nm_path, args.symbol_path)
+    remove_dup_tasks()
   except ParseError as error:
     print error.msg
     if error.log:
