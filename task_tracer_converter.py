@@ -15,6 +15,9 @@ show_warnings = False
 processes = {}
 threads = {}
 
+_unwanted_dup_names = set(['mozilla::ipc::DoWorkRunnable',
+                           'nsTimerEvent'])
+
 
 class ParseError(Exception):
   def __init__(self, error_msg):
@@ -490,6 +493,20 @@ def retrieve_task_name():
 
     task_obj.name = binary_search(address, offset)
 
+def remove_dup_tasks():
+  '''
+  Remove tasks that is a wrapper or dequeuer of another task or tasks.
+
+  This would reduce annonying nested task phenomenons.
+  '''
+  removing_list = [task_id
+                   for task_id, task_obj in tasks.iteritems()
+                   if task_obj.name in _unwanted_dup_names]
+  for task_id in removing_list:
+    tasks.pop(task_id)
+    pass
+  pass
+
 def main(argv=sys.argv[:]):
   args = get_arguments(argv)
 
@@ -504,6 +521,7 @@ def main(argv=sys.argv[:]):
     print len(tasks), 'tasks has been created successfully.'
 
     retrieve_task_name()
+    remove_dup_tasks()
   except ParseError as error:
     print error.msg
     if error.log:
